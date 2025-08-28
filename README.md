@@ -8,7 +8,7 @@
 
 - **Webpage:** [Link]()
 - **Bioinformatics Wiki:** [Link]()
-- **DECODeR:** [Link]()
+- **DECODeR:** [Link](https://devbcb-sr.rc.ufl.edu/decoder/)
 - **atacreportR:** [Link]()
 - **Project Reporting:** [Link]()
 - **HeatPath:** [Link]()
