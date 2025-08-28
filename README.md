@@ -13,7 +13,7 @@
 - **Project Reporting:** [Link]()
 - **HeatPath:** [Link]()
 - **ClusterPicker:** [Link]()
-- **Example html report (atac-seq):** [Link]()
+- **Example html report (atac-seq):** [Link to Example Report](https://ufhcc-bcbsr.github.io/atac-reportR/)
 - **Example html report (rna-seq):** [Link]()
   
 ## 3. Github Repositories 
