@@ -18,10 +18,11 @@
   
 ## 3. Github Repositories 
 
-- **DECODeR:** [Link]()
-- **atacreportR:** [Link]()
+- **DECODeR:** [Link](https://github.com/UFHCC-BCBSR/swamp-seq-dev)
+- **atacreportR:** [Link](https://github.com/UFHCC-BCBSR/atac-reportR)
 - **project-tracking:** [Link]()
 - **Bioinformatics wiki:** [Link]()
+- **HeatPath:** [Link](https://github.com/UFHCC-BCBSR/heath-path-app)
 
 ## 3. Timeline & Checklist
 
