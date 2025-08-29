@@ -4,57 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFHCC Bioinformatics - Presentation Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
             height: 100vh;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            padding: 20px;
+            color: #ffffff;
         }
-
+        
         .wheel-container {
             position: relative;
             width: 90vw;
             height: 85vh;
-            max-width: 1200px;
-            max-height: 750px;
-            transform: scale(1.5);
+            max-width: 1400px;
+            max-height: 800px;
+            transform: scale(1.4);
         }
-
+        
         .title {
             position: absolute;
-            top: -35px;
+            top: -40px;
             left: 50%;
             transform: translateX(-50%);
-            color: #1e293b;
-            font-size: 1.7em;
+            color: #ffffff;
+            font-size: 1.8em;
             font-weight: 600;
             text-align: center;
-            background: white;
-            padding: 10px 30px;
-            border-radius: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            padding: 12px 32px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             white-space: nowrap;
+            letter-spacing: -0.5px;
         }
-
+        
+        .subtitle {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9em;
+            font-weight: 400;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        
         .central-hub {
             position: absolute;
-            top: 35%;
+            top: 21%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+            width: 220px;
+            height: 220px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -62,415 +78,368 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size: 1.3em;
-            font-weight: 800;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            box-shadow: 0 12px 35px rgba(234, 88, 12, 0.4);
-            border: 5px solid #b91c1c;
+            font-size: 1.1em;
+            font-weight: 600;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 10;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            letter-spacing: -0.3px;
         }
-
+        
         .central-hub:hover {
-            transform: translate(-50%, -50%) scale(1.05);
-            box-shadow: 0 15px 45px rgba(234, 88, 12, 0.5);
+            transform: translate(-50%, -50%) scale(1.02);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+            border-color: rgba(59, 130, 246, 0.3);
         }
-
-        .central-hub .icon {
-            font-size: 1.8em;
-            margin-bottom: 8px;
+        
+        .central-hub .tagline {
+            font-size: 0.4em;
+            margin-top: 12px;
+            opacity: 0.7;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
-
-       .subtitle {
-        position: absolute;
-        top: 15px;
-        left: 50%;
-        transform: translateX(-20%);
-        color: #64748b;
-        font-size: 1em;
-        font-weight: 500;
-        text-align: center;
-        font-style: italic;
-        }
-
+        
         .spoke-section {
             position: absolute;
-            background: white;
-            border-radius: 20px;
-            padding: 18px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
             cursor: pointer;
         }
-
+        
         .spoke-section:hover {
-            transform: scale(1.06) translateY(-5px);
-            box-shadow: 0 18px 35px rgba(0,0,0,0.25);
-            z-index: 20;
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-
+        
         .section-title {
-            color: #1e293b;
+            color: #ffffff;
             font-size: 1.1em;
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
-            margin-bottom: 12px;
-            padding-bottom: 6px;
-            border-bottom: 3px solid #e5e7eb;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            letter-spacing: -0.3px;
         }
-
-        /* More compact positioning */
+        
+        .section-title a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s ease;
+        }
+        
+        .section-title a:hover {
+            color: #3b82f6;
+        }
+        
+        /* Positioning */
         .resources-section {
-            top: 12%;
-            left: 8%;
-            width: 290px;
-            border-top: 4px solid #3b82f6;
+            top: 8%;
+            left: 6%;
+            width: 320px;
         }
-
+        
         .demos-section {
-            top: 12%;
-            right: 8%;
-            width: 290px;
-            border-top: 4px solid #8b5cf6;
+            top: 8%;
+            right: 6%;
+            width: 320px;
         }
-
+        
         .expertise-section {
-            bottom: 8%;
+            bottom: 6%;
             left: 50%;
             transform: translateX(-50%);
-            width: 420px;
-            border-top: 4px solid #059669;
+            width: 480px;
         }
-
+        
         .node-grid {
             display: grid;
-            gap: 8px;
+            gap: 12px;
         }
-
+        
         .resources-grid {
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: auto auto;
         }
-
+        
         .resources-grid .node:nth-child(3) {
             grid-column: 1 / -1;
         }
-
+        
         .demos-grid {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
         }
-
+        
         .node {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
-            padding: 11px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            padding: 16px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.3s ease;
             cursor: pointer;
-            border: 2px solid transparent;
         }
-
+        
         .node:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.18);
-            z-index: 15;
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-2px);
         }
-
-        .node .icon {
-            font-size: 1.5em;
-            margin-bottom: 5px;
-        }
-
+        
         .node h3 {
-            font-size: 0.8em;
-            margin-bottom: 5px;
-            font-weight: 700;
-            line-height: 1.2;
-            color: #1e293b;
+            font-size: 0.9em;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: -0.2px;
         }
-
+        
         .node p {
-            font-size: 0.65em;
-            opacity: 0.8;
-            line-height: 1.3;
-            margin-bottom: 7px;
-            font-weight: 500;
-            color: #475569;
+            font-size: 0.75em;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
         }
-
+        
         .links {
             display: flex;
             flex-direction: column;
-            gap: 3px;
+            gap: 6px;
         }
-
+        
         .link-placeholder {
-            background: rgba(0,0,0,0.08);
-            color: #374151;
-            padding: 3px 6px;
-            border-radius: 8px;
-            font-size: 0.55em;
-            font-weight: 600;
+            background: rgba(59, 130, 246, 0.1);
+            color: rgba(59, 130, 246, 0.9);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.7em;
+            font-weight: 500;
             text-decoration: none;
             transition: all 0.2s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            text-align: center;
         }
-
+        
         .link-placeholder:hover {
-            background: rgba(0,0,0,0.15);
-            transform: scale(1.05);
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border-color: rgba(59, 130, 246, 0.4);
         }
-
-        .intro-nodes {
-            border: 2px solid #3b82f6;
-        }
-
-        .intro-nodes .icon {
-            color: #3b82f6;
-        }
-
-        .intro-nodes:hover {
-            border-color: #1d4ed8;
-            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-        }
-
-        .demo-nodes {
-            border: 2px solid #8b5cf6;
-        }
-
-        .demo-nodes .icon {
-            color: #8b5cf6;
-        }
-
-        .demo-nodes:hover {
-            border-color: #6d28d9;
-            background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
-        }
-
+        
         .expertise-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 8px;
+            gap: 20px;
+            margin-top: 12px;
         }
-
+        
         .expertise-list {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 8px;
         }
-
+        
         .expertise-item {
-            background: linear-gradient(135deg, #dcfdf7 0%, #a7f3d0 100%);
+            background: rgba(255, 255, 255, 0.02);
             border-radius: 8px;
-            padding: 7px;
-            font-size: 0.65em;
-            line-height: 1.3;
-            font-weight: 600;
-            color: #065f46;
-            border: 1px solid #6ee7b7;
-            transition: all 0.2s ease;
-        }
-
-        .expertise-item:hover {
-            transform: scale(1.02);
-            background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
-        }
-
-        .expertise-item .icon {
-            margin-right: 5px;
-            font-size: 1.1em;
-            color: #059669;
-        }
-
-        .why-content {
-            background: linear-gradient(135deg, #fef3f2 0%, #fee2e2 100%);
-            border-radius: 10px;
             padding: 12px;
-            border: 2px solid #fca5a5;
+            font-size: 0.75em;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             transition: all 0.2s ease;
         }
-
-        .why-content:hover {
-            transform: scale(1.02);
-            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        
+        .expertise-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.1);
         }
-
-        .why-content h4 {
-            color: #dc2626;
-            font-size: 0.8em;
-            font-weight: 700;
-            margin-bottom: 6px;
-            text-align: center;
-        }
-
-        .why-content p {
-            font-size: 0.65em;
-            line-height: 1.4;
-            color: #374151;
+        
+        .expertise-item strong {
+            color: #ffffff;
             font-weight: 600;
-            text-align: center;
         }
-
-        /* Adjusted connection lines for compact layout */
+        
+        .why-content {
+            background: rgba(59, 130, 246, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .why-content h4 {
+            color: #ffffff;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-align: center;
+            letter-spacing: -0.2px;
+        }
+        
+        .why-content p {
+            font-size: 0.7em;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        /* Minimal connection lines */
         .connection-line {
             position: absolute;
-            background: linear-gradient(45deg, #059669, transparent);
-            height: 2px;
-            border-radius: 1px;
+            background: rgba(59, 130, 246, 0.2);
+            height: 1px;
             z-index: 1;
-            opacity: 0.4;
+            opacity: 0.3;
         }
-
+        
         .line-1 {
             top: 32%;
-            left: 26%;
-            width: 14%;
-            transform: rotate(-25deg);
+            left: 28%;
+            width: 12%;
+            transform: rotate(-20deg);
         }
-
+        
         .line-2 {
             top: 32%;
-            right: 26%;
-            width: 14%;
-            transform: rotate(25deg);
+            right: 28%;
+            width: 12%;
+            transform: rotate(20deg);
         }
-
+        
         .line-3 {
-            bottom: 38%;
+            bottom: 35%;
             left: 50%;
-            width: 10%;
+            width: 8%;
             transform: translateX(-50%) rotate(90deg);
         }
-
-        @media (max-width: 1100px) {
+        
+        @media (max-width: 1200px) {
+            .wheel-container {
+                transform: scale(1.2);
+            }
+            
             .resources-section, .demos-section {
-                width: 270px;
+                width: 300px;
             }
             
             .expertise-section {
-                width: 380px;
-            }
-            
-            .central-hub {
-                width: 180px;
-                height: 180px;
-                font-size: 1.2em;
+                width: 450px;
             }
         }
     </style>
 </head>
 <body>
     <div class="wheel-container">
-        <div class="title">🧬 UFHCC Bioinformatics Unit - 45 Min Presentation</div>
-        <div class="subtitle"> Essential partners from conception to publication</div>
-    
-
+        <div class="title">UFHCC Bioinformatics Unit</div>
+        <div class="subtitle">Essential partners from conception to publication</div>
         
         <!-- Central Hub -->
         <div class="central-hub">
-            <span class="icon">🧬</span>
-            <div>You Need<br>UFHCC Bioinformatics!</div>
+            <div>You Need<br>UFHCC Bioinformatics</div>
+            <div class="tagline">Advancing Cancer Research through Rigorous Analyses</div>
         </div>
-
+        
         <!-- Connection Lines -->
         <div class="connection-line line-1"></div>
         <div class="connection-line line-2"></div>
         <div class="connection-line line-3"></div>
         
-        <!-- Resources Section (Top Left) -->
+        <!-- Resources Section -->
         <div class="spoke-section resources-section">
-            <div class="section-title">1. Our Resources</div>
+            <div class="section-title">Our Resources</div>
             <div class="node-grid resources-grid">
-                <div class="node intro-nodes">
-                    <span class="icon">🌐</span>
-              <h3>Unit Webpage</h3>
-<p>UF branded intro & team</p>
-<div class="links">
-    <a href="https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/" class="link-placeholder">→ Live Demo</a>
-</div>
+                <div class="node">
+                    <h3>Unit Webpage</h3>
+                    <p>UF branded introduction and team overview</p>
+                    <div class="links">
+                        <a href="https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/" class="link-placeholder">View Site</a>
+                    </div>
                 </div>
                 
-                <div class="node intro-nodes">
-                    <span class="icon">📚</span>
+                <div class="node">
                     <h3>Bioinformatics Hub</h3>
-                    <p>Docs & best practices</p>
+                    <p>Comprehensive documentation and best practices</p>
                     <div class="links">
-                        <a href="https://ufhcc-bcbsr.github.io/hub/" class="link-placeholder">→ Live Demo</a>
+                        <a href="https://ufhcc-bcbsr.github.io/hub/" class="link-placeholder">View Hub</a>
                     </div>
                 </div>
                 
-                <div class="node intro-nodes">
-                    <span class="icon">🔗</span>
-                    <h3>Apps Landing</h3>
-                    <p>Our developed tools showcase</p>
+                <div class="node">
+                    <h3>Applications Landing</h3>
+                    <p>Showcase of our developed tools and applications</p>
                     <div class="links">
-                        <a href="https://devbcb-sr.rc.ufl.edu/" class="link-placeholder">→ Live Demo</a>
+                        <a href="https://devbcb-sr.rc.ufl.edu/" class="link-placeholder">View Applications</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Demos Section (Top Right) -->
+        
+        <!-- Demos Section -->
         <div class="spoke-section demos-section">
-            <div class="section-title">2. Live Demos</div>
+            <div class="section-title">Live Demonstrations</div>
             <div class="node-grid demos-grid">
-                <div class="node demo-nodes">
-                    <span class="icon">📊</span>
+                <div class="node">
                     <h3>Interactive Reports</h3>
-                    <p>Standard assay outputs</p>
+                    <p>Standard assay outputs and analysis reports</p>
                     <div class="links">
-                        <a href="#report1" class="link-placeholder">→ RNA-seq Report [TO ADD]</a>
-                        <a href="https://ufhcc-bcbsr.github.io/atac-reportR/" class="link-placeholder">→ ATAC-seq Report</a>
+                        <a href="#report1" class="link-placeholder">RNA-seq Report [Coming Soon]</a>
+                        <a href="https://ufhcc-bcbsr.github.io/atac-reportR/" class="link-placeholder">ATAC-seq Report</a>
                     </div>
                 </div>
                 
-                <div class="node demo-nodes">
-                    <span class="icon">⚙️</span>
+                <div class="node">
                     <h3>Custom Applications</h3>
-                    <p>Tools for specific needs</p>
+                    <p>Specialized tools for specific research needs</p>
                     <div class="links">
-                        <a href="https://devbcb-sr.rc.ufl.edu/decoder/" class="link-placeholder">→ DECODeR Demo</a>
-                        <a href="https://bcb-sr.rc.ufl.edu/heatpathapp/" class="link-placeholder">→ HeatPath Demo</a>
-                        <a href="https://bcb-sr.rc.ufl.edu/clusterpicker/" class="link-placeholder">→ ClusterPicker Demo</a>
-						<a href="https://bcb-sr.rc.ufl.edu/atacreportR/" class="link-placeholder">→ Atac-reportR Demo</a>
-
+                        <a href="https://devbcb-sr.rc.ufl.edu/decoder/" class="link-placeholder">DECODeR</a>
+                        <a href="https://bcb-sr.rc.ufl.edu/heatpathapp/" class="link-placeholder">HeatPath</a>
+                        <a href="https://bcb-sr.rc.ufl.edu/clusterpicker/" class="link-placeholder">ClusterPicker</a>
+                        <a href="https://bcb-sr.rc.ufl.edu/atacreportR/" class="link-placeholder">Atac-reportR</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Expertise Section (Bottom) -->
+        
+        <!-- Expertise Section -->
         <div class="spoke-section expertise-section">
-            <div class="section-title">3. Our Core Expertise: Beyond Tools & Apps</div>
+            <div class="section-title">
+                <a href="https://docs.google.com/presentation/d/1o9k5sznZBza0JpcvMg035jBE_ryfzbLs67_n5CYGJJw/edit?usp=sharing">Core Expertise: Beyond Tools & Applications</a>
+            </div>
             <div class="expertise-content">
                 <div class="expertise-list">
                     <div class="expertise-item">
-                        <span class="icon">📋</span>
-                        <strong>Project Design:</strong> Grant writing, experimental design
+                        <strong>Project Design:</strong> Grant writing and experimental design consultation
                     </div>
                     <div class="expertise-item">
-                        <span class="icon">🔍</span>
-                        <strong>Quality Control:</strong> Extensive QC, troubleshooting
+                        <strong>Quality Control:</strong> Comprehensive QC workflows and troubleshooting
                     </div>
                     <div class="expertise-item">
-                        <span class="icon">💻</span>
-                        <strong>Infrastructure:</strong> HiPerGator, CLI fluency
+                        <strong>Infrastructure:</strong> HiPerGator expertise and CLI proficiency
                     </div>
                     <div class="expertise-item">
-                        <span class="icon">📈</span>
-                        <strong>Analysis:</strong> Statistical modeling, visualization
+                        <strong>Analysis:</strong> Statistical modeling and data visualization
                     </div>
                     <div class="expertise-item">
-                        <span class="icon">📝</span>
-                        <strong>Communication:</strong> Reports, publications
+                        <strong>Communication:</strong> Publication-ready reports and presentations
                     </div>
                 </div>
                 
                 <div class="why-content">
-                    <h4>Why You Need Us From Day One:</h4>
-                    <p>Most projects require bioinformatics expertise from conception: experimental design considerations • grant writing support • extensive QC & troubleshooting • HiPerGator infrastructure • statistical analysis • publication-ready visualizations</p>
+                    <h4>Why Partner With Us From Day One</h4>
+                    <p>Most research projects require bioinformatics expertise from conception through publication. We provide experimental design consultation, grant writing support, extensive quality control, HiPerGator infrastructure management, statistical analysis, and publication-ready visualizations.</p>
                 </div>
             </div>
         </div>
