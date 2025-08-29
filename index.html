@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bioinformatics Unit - Presentation Flow</title>
+    <title>UFHCC Bioinformatics - Presentation Hub</title>
     <style>
         * {
             margin: 0;
@@ -13,410 +13,458 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 20px;
-            min-height: 100vh;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
         }
 
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
+        .wheel-container {
             position: relative;
+            width: 90vw;
+            height: 85vh;
+            max-width: 1200px;
+            max-height: 750px;
         }
 
         .title {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #1e293b;
+            font-size: 1.7em;
+            font-weight: 600;
             text-align: center;
-            color: #1a1a1a;
-            margin-bottom: 30px;
-            font-size: 2.4em;
-            font-weight: 400;
-        }
-
-        .main-flow {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-
-        .presentation-track {
-            flex: 3;
-        }
-
-        .expertise-track {
-            flex: 1;
-            background: linear-gradient(135deg, #2d8f47 0%, #228B22 100%);
-            border-radius: 20px;
-            padding: 25px;
-            color: white;
-            position: sticky;
-            top: 20px;
-            height: fit-content;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-        }
-
-        .expertise-track h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.3em;
-            font-weight: 700;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-        }
-
-        .expertise-item {
-            background: rgba(255, 255, 255, 0.25);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
-            font-size: 0.95em;
-            line-height: 1.5;
-            font-weight: 500;
-            text-shadow: 0 1px 1px rgba(0,0,0,0.1);
-        }
-
-        .expertise-item .icon {
-            display: inline;
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-
-        .flow-section {
-            margin-bottom: 40px;
-            position: relative;
             background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            padding: 10px 30px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            white-space: nowrap;
+        }
+
+        .central-hub {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            box-shadow: 0 12px 35px rgba(234, 88, 12, 0.4);
+            border: 5px solid #b91c1c;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .central-hub:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+            box-shadow: 0 15px 45px rgba(234, 88, 12, 0.5);
+        }
+
+        .central-hub .icon {
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+
+        .central-hub .subtitle {
+            font-size: 0.4em;
+            margin-top: 8px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .spoke-section {
+            position: absolute;
+            background: white;
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .spoke-section:hover {
+            transform: scale(1.06) translateY(-5px);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+            z-index: 20;
         }
 
         .section-title {
-            color: #1a1a1a;
-            font-size: 1.5em;
-            margin-bottom: 25px;
+            color: #1e293b;
+            font-size: 1.1em;
             font-weight: 700;
-            border-bottom: 4px solid #dee2e6;
-            padding-bottom: 15px;
+            text-align: center;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid #e5e7eb;
+        }
+
+        /* More compact positioning */
+        .resources-section {
+            top: 12%;
+            left: 8%;
+            width: 290px;
+            border-top: 4px solid #3b82f6;
+        }
+
+        .demos-section {
+            top: 12%;
+            right: 8%;
+            width: 290px;
+            border-top: 4px solid #8b5cf6;
+        }
+
+        .expertise-section {
+            bottom: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 420px;
+            border-top: 4px solid #059669;
+        }
+
+        .node-grid {
+            display: grid;
+            gap: 8px;
+        }
+
+        .resources-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .resources-grid .node:nth-child(3) {
+            grid-column: 1 / -1;
+        }
+
+        .demos-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
         }
 
         .node {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 12px;
+            padding: 11px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
-            display: inline-block;
-            margin: 10px;
-            min-width: 180px;
-            position: relative;
             cursor: pointer;
-            border: 3px solid transparent;
+            border: 2px solid transparent;
         }
 
         .node:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+            z-index: 15;
         }
 
-        .icon {
-            font-size: 2.2em;
-            margin-bottom: 12px;
-            display: block;
+        .node .icon {
+            font-size: 1.5em;
+            margin-bottom: 5px;
         }
 
         .node h3 {
-            font-size: 1.1em;
-            margin-bottom: 10px;
+            font-size: 0.8em;
+            margin-bottom: 5px;
             font-weight: 700;
-            line-height: 1.3;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            line-height: 1.2;
+            color: #1e293b;
         }
 
         .node p {
-            font-size: 0.9em;
-            opacity: 0.95;
-            line-height: 1.4;
-            margin-bottom: 15px;
+            font-size: 0.65em;
+            opacity: 0.8;
+            line-height: 1.3;
+            margin-bottom: 7px;
             font-weight: 500;
-            text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            color: #475569;
         }
 
         .links {
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 3px;
         }
 
         .link-placeholder {
-            background: rgba(0,0,0,0.2);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 20px;
-            font-size: 0.8em;
+            background: rgba(0,0,0,0.08);
+            color: #374151;
+            padding: 3px 6px;
+            border-radius: 8px;
+            font-size: 0.55em;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.2s ease;
-            border: 2px solid rgba(255,255,255,0.3);
-            text-shadow: 0 1px 1px rgba(0,0,0,0.2);
         }
 
         .link-placeholder:hover {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.15);
             transform: scale(1.05);
-            border-color: rgba(255,255,255,0.5);
         }
 
-        /* Color schemes with better contrast */
         .intro-nodes {
-            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-            color: white;
-            border: 3px solid #1e3a8a;
+            border: 2px solid #3b82f6;
+        }
+
+        .intro-nodes .icon {
+            color: #3b82f6;
+        }
+
+        .intro-nodes:hover {
+            border-color: #1d4ed8;
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
         }
 
         .demo-nodes {
-            background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
-            color: white;
-            border: 3px solid #5b21b6;
+            border: 2px solid #8b5cf6;
         }
 
-        .central-message {
-            background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
-            color: white;
-            border: 4px solid #b91c1c;
-            font-size: 1.6em;
-            font-weight: 800;
-            padding: 35px;
-            text-align: center;
-            margin: 30px 0;
-            border-radius: 20px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        .demo-nodes .icon {
+            color: #8b5cf6;
         }
 
-        .central-message p {
-            font-size: 0.65em;
-            margin-top: 15px;
-            opacity: 0.95;
-            font-weight: 500;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        .demo-nodes:hover {
+            border-color: #6d28d9;
+            background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
         }
 
-        .flow-row {
+        .expertise-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .expertise-list {
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column;
+            gap: 5px;
         }
 
-        .arrow-down {
-            text-align: center;
-            font-size: 2.5em;
-            color: #2d8f47;
-            margin: 25px 0;
-            animation: bounce 2s infinite;
-            font-weight: bold;
+        .expertise-item {
+            background: linear-gradient(135deg, #dcfdf7 0%, #a7f3d0 100%);
+            border-radius: 8px;
+            padding: 7px;
+            font-size: 0.65em;
+            line-height: 1.3;
+            font-weight: 600;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+            transition: all 0.2s ease;
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-6px); }
-            60% { transform: translateY(-3px); }
+        .expertise-item:hover {
+            transform: scale(1.02);
+            background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
         }
 
-        .flow-section::after {
-            content: '';
-            position: absolute;
-            right: -20px;
-            top: 50%;
-            width: 20px;
-            height: 20px;
-            background: #2d8f47;
-            border-radius: 50%;
-            opacity: 0.8;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        .expertise-item .icon {
+            margin-right: 5px;
+            font-size: 1.1em;
+            color: #059669;
         }
 
-        .final-section {
-            border: 4px solid #ea580c;
-            background: linear-gradient(135deg, #fef3f2 0%, #fef2f2 100%);
+        .why-content {
+            background: linear-gradient(135deg, #fef3f2 0%, #fee2e2 100%);
+            border-radius: 10px;
+            padding: 12px;
+            border: 2px solid #fca5a5;
+            transition: all 0.2s ease;
         }
 
-        .final-section .section-title {
+        .why-content:hover {
+            transform: scale(1.02);
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        }
+
+        .why-content h4 {
             color: #dc2626;
-            font-size: 1.6em;
-        }
-
-        .final-content {
-            text-align: center;
-            padding: 25px;
-        }
-
-        .final-content p:first-child {
-            font-size: 1.25em;
-            line-height: 1.6;
-            color: #1a1a1a;
-            margin-bottom: 20px;
+            font-size: 0.8em;
             font-weight: 700;
-        }
-
-        .final-content p:last-child {
-            font-size: 1.05em;
-            line-height: 1.6;
-            color: #374151;
-            font-weight: 500;
-        }
-
-        .expertise-footer {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 2px solid rgba(255,255,255,0.4);
-        }
-
-        .expertise-footer p {
-            font-size: 0.9em;
+            margin-bottom: 6px;
             text-align: center;
-            font-style: italic;
-            font-weight: 500;
-            text-shadow: 0 1px 1px rgba(0,0,0,0.1);
         }
 
-        @media (max-width: 1024px) {
-            .main-flow {
-                flex-direction: column;
+        .why-content p {
+            font-size: 0.65em;
+            line-height: 1.4;
+            color: #374151;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Adjusted connection lines for compact layout */
+        .connection-line {
+            position: absolute;
+            background: linear-gradient(45deg, #059669, transparent);
+            height: 2px;
+            border-radius: 1px;
+            z-index: 1;
+            opacity: 0.4;
+        }
+
+        .line-1 {
+            top: 32%;
+            left: 26%;
+            width: 14%;
+            transform: rotate(-25deg);
+        }
+
+        .line-2 {
+            top: 32%;
+            right: 26%;
+            width: 14%;
+            transform: rotate(25deg);
+        }
+
+        .line-3 {
+            bottom: 38%;
+            left: 50%;
+            width: 10%;
+            transform: translateX(-50%) rotate(90deg);
+        }
+
+        @media (max-width: 1100px) {
+            .resources-section, .demos-section {
+                width: 270px;
             }
-            .expertise-track {
-                order: -1;
-                position: relative;
+            
+            .expertise-section {
+                width: 380px;
             }
-            .flow-section::after {
-                display: none;
-            }
-            .node {
-                min-width: 160px;
+            
+            .central-hub {
+                width: 180px;
+                height: 180px;
+                font-size: 1.2em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="title">Bioinformatics Unit - 45 Min Presentation Flow</div>
+    <div class="wheel-container">
+        <div class="title">🧬 UFHCC Bioinformatics Unit - 45 Min Presentation Hub</div>
+        <div class="subtitle">Essential partners from conception to publication</div>
+
         
-        <div class="main-flow">
-            <div class="presentation-track">
-                
-                <!-- Introduction Section -->
-                <div class="flow-section">
-                    <div class="section-title">1. Our Comprehensive Resources</div>
-                    <div class="flow-row">
-                        <div class="node intro-nodes">
-                            <span class="icon">🌐</span>
-                            <h3>Unit Webpage</h3>
-                            <p>UF branded intro & team snapshot</p>
-                            <div class="links">
-                                <a href="#webpage" class="link-placeholder">→ Live Demo</a>
-                            </div>
-                        </div>
-                        
-                        <div class="node intro-nodes">
-                            <span class="icon">📚</span>
-                            <h3>Bioinformatics Hub</h3>
-                            <p>Comprehensive documentation & best practices</p>
-                            <div class="links">
-                                <a href="#hub" class="link-placeholder">→ Live Demo</a>
-                            </div>
-                        </div>
-                        
-                        <div class="node intro-nodes">
-                            <span class="icon">🔗</span>
-                            <h3>Apps Landing</h3>
-                            <p>Showcase of our developed tools</p>
-                            <div class="links">
-                                <a href="#apps-landing" class="link-placeholder">→ Live Demo</a>
-                            </div>
-                        </div>
+        <!-- Central Hub -->
+        <div class="central-hub">
+            <span class="icon">🧬</span>
+            <div>You Need<br>UFHCC Bioinformatics!</div>
+        </div>
+
+        <!-- Connection Lines -->
+        <div class="connection-line line-1"></div>
+        <div class="connection-line line-2"></div>
+        <div class="connection-line line-3"></div>
+        
+        <!-- Resources Section (Top Left) -->
+        <div class="spoke-section resources-section">
+            <div class="section-title">1. Our Resources</div>
+            <div class="node-grid resources-grid">
+                <div class="node intro-nodes">
+                    <span class="icon">🌐</span>
+                    <h3>Unit Webpage</h3>
+                    <p>UF branded intro & team</p>
+                    <div class="links">
+                        <a href="#webpage" class="link-placeholder">→ Live Demo</a>
                     </div>
-                </div>
-
-                <div class="arrow-down">↓</div>
-
-                <!-- Demonstrations Section -->
-                <div class="flow-section">
-                    <div class="section-title">2. Live Capability Demonstrations</div>
-                    <div class="flow-row">
-                        <div class="node demo-nodes">
-                            <span class="icon">📊</span>
-                            <h3>Interactive Reports</h3>
-                            <p>Standard assay outputs we deliver</p>
-                            <div class="links">
-                                <a href="#report1" class="link-placeholder">→ RNA-seq Report</a>
-                                <a href="#report2" class="link-placeholder">→ ChIP-seq Report</a>
-                            </div>
-                        </div>
-                        
-                        <div class="node demo-nodes">
-                            <span class="icon">⚙️</span>
-                            <h3>Custom Applications</h3>
-                            <p>Tools we build for specific needs</p>
-                            <div class="links">
-                                <a href="#decoder" class="link-placeholder">→ DECODeR Demo</a>
-                                <a href="#app2" class="link-placeholder">→ App Demo 2</a>
-                                <a href="#app3" class="link-placeholder">→ App Demo 3</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="arrow-down">↓</div>
-
-                <!-- Central Message -->
-                <div class="central-message">
-                    <span class="icon">🧬</span>
-                    <div>You Need a Bioinformatician!</div>
-                    <p>We're essential project partners from conception to publication</p>
-                </div>
-
-                <!-- Supporting Evidence -->
-                <div class="flow-section final-section">
-                    <div class="section-title">3. Why: Beyond Tools & Apps</div>
-                    <div class="final-content">
-                        <p>Most projects require bioinformatics expertise from day one:</p>
-                        <p>Experimental design considerations • Grant writing support • Extensive QC & troubleshooting • 
-                            HiPerGator infrastructure • Command-line fluency • Statistical analysis • 
-                            Publication-ready visualizations</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Expertise Sidebar -->
-            <div class="expertise-track">
-                <h3>🎯 Our Core Expertise</h3>
-                <div class="expertise-item">
-                    <span class="icon">📋</span>
-                    <strong>Project Design:</strong> Grant writing, experimental design, power analysis
-                </div>
-                <div class="expertise-item">
-                    <span class="icon">🔍</span>
-                    <strong>Quality Control:</strong> Extensive QC workflows, troubleshooting, optimization
-                </div>
-                <div class="expertise-item">
-                    <span class="icon">💻</span>
-                    <strong>Infrastructure:</strong> HiPerGator expertise, CLI fluency, scalable pipelines
-                </div>
-                <div class="expertise-item">
-                    <span class="icon">📈</span>
-                    <strong>Analysis:</strong> Statistical modeling, visualization, interpretation
-                </div>
-                <div class="expertise-item">
-                    <span class="icon">📝</span>
-                    <strong>Communication:</strong> Reports, publications, presentations
                 </div>
                 
-                <div class="expertise-footer">
-                    <p>This expertise supports every demonstration and resource above</p>
+                <div class="node intro-nodes">
+                    <span class="icon">📚</span>
+                    <h3>Bioinformatics Hub</h3>
+                    <p>Docs & best practices</p>
+                    <div class="links">
+                        <a href="#hub" class="link-placeholder">→ Live Demo</a>
+                    </div>
+                </div>
+                
+                <div class="node intro-nodes">
+                    <span class="icon">🔗</span>
+                    <h3>Apps Landing</h3>
+                    <p>Our developed tools showcase</p>
+                    <div class="links">
+                        <a href="#apps-landing" class="link-placeholder">→ Live Demo</a>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Demos Section (Top Right) -->
+        <div class="spoke-section demos-section">
+            <div class="section-title">2. Live Demos</div>
+            <div class="node-grid demos-grid">
+                <div class="node demo-nodes">
+                    <span class="icon">📊</span>
+                    <h3>Interactive Reports</h3>
+                    <p>Standard assay outputs</p>
+                    <div class="links">
+                        <a href="#report1" class="link-placeholder">→ RNA-seq Report</a>
+                        <a href="#report2" class="link-placeholder">→ ChIP-seq Report</a>
+                    </div>
+                </div>
+                
+                <div class="node demo-nodes">
+                    <span class="icon">⚙️</span>
+                    <h3>Custom Applications</h3>
+                    <p>Tools for specific needs</p>
+                    <div class="links">
+                        <a href="#decoder" class="link-placeholder">→ DECODeR Demo</a>
+                        <a href="#app2" class="link-placeholder">→ App Demo 2</a>
+                        <a href="#app3" class="link-placeholder">→ App Demo 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise Section (Bottom) -->
+        <div class="spoke-section expertise-section">
+            <div class="section-title">3. Our Core Expertise: Beyond Tools & Apps</div>
+            <div class="expertise-content">
+                <div class="expertise-list">
+                    <div class="expertise-item">
+                        <span class="icon">📋</span>
+                        <strong>Project Design:</strong> Grant writing, experimental design
+                    </div>
+                    <div class="expertise-item">
+                        <span class="icon">🔍</span>
+                        <strong>Quality Control:</strong> Extensive QC, troubleshooting
+                    </div>
+                    <div class="expertise-item">
+                        <span class="icon">💻</span>
+                        <strong>Infrastructure:</strong> HiPerGator, CLI fluency
+                    </div>
+                    <div class="expertise-item">
+                        <span class="icon">📈</span>
+                        <strong>Analysis:</strong> Statistical modeling, visualization
+                    </div>
+                    <div class="expertise-item">
+                        <span class="icon">📝</span>
+                        <strong>Communication:</strong> Reports, publications
+                    </div>
+                </div>
+                
+                <div class="why-content">
+                    <h4>Why You Need Us From Day One:</h4>
+                    <p>Most projects require bioinformatics expertise from conception: experimental design considerations • grant writing support • extensive QC & troubleshooting • HiPerGator infrastructure • statistical analysis • publication-ready visualizations</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
