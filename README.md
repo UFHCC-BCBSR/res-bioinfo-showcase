@@ -6,13 +6,13 @@
 
 ## 2. Live Demos
 
-- **Webpage:** [Link]()
-- **Bioinformatics Wiki:** [Link]()
+- **Webpage:** [Link](https://cancer.ufl.edu/research/shared-resources/bioinformatics-unit/)
+- **Bioinformatics Wiki:** [Link](https://ufhcc-bcbsr.github.io/wiki/)
 - **DECODeR:** [Link](https://devbcb-sr.rc.ufl.edu/decoder/)
-- **atacreportR:** [Link]()
-- **Project Reporting:** [Link]()
-- **HeatPath:** [Link]()
-- **ClusterPicker:** [Link]()
+- **atacreportR:** [Link](https://devufbcb-sr.rc.ufl.edu/atacreportr/) 
+- **Project Tracking:** [Link](https://bcb-sr.rc.ufl.edu/projecttracking/)
+- **HeatPath:** [Link](https://bcb-sr.rc.ufl.edu/heatpathapp/)
+- **ClusterPicker:** [Link](https://bcb-sr.rc.ufl.edu/clusterpicker/)
 - **Example html report (atac-seq):** [Link to Example Report](https://ufhcc-bcbsr.github.io/atac-reportR/)
 - **Example html report (rna-seq):** [Link]()
   
@@ -20,8 +20,8 @@
 
 - **DECODeR:** [Link](https://github.com/UFHCC-BCBSR/swamp-seq-dev)
 - **atacreportR:** [Link](https://github.com/UFHCC-BCBSR/atac-reportR)
-- **project-tracking:** [Link]()
-- **Bioinformatics wiki:** [Link]()
+- **project-tracking:** [Link](https://github.com/UFHCC-BCBSR/project-tracking-app)
+- **Bioinformatics wiki:** [Link](https://github.com/UFHCC-BCBSR/wiki)
 - **HeatPath:** [Link](https://github.com/UFHCC-BCBSR/heath-path-app)
 
 ## 3. Timeline & Checklist
