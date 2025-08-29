@@ -7,7 +7,7 @@
 ## 2. Live Demos
 
 - **Webpage:** [Link](https://cancer.ufl.edu/research/shared-resources/bioinformatics-unit/)
-- **Bioinformatics Wiki:** [Link](https://ufhcc-bcbsr.github.io/wiki/)
+- **Bioinformatics Hub:** [Link](https://ufhcc-bcbsr.github.io/hub/)
 - **DECODeR:** [Link](https://devbcb-sr.rc.ufl.edu/decoder/)
 - **atacreportR:** [Link](https://devufbcb-sr.rc.ufl.edu/atacreportr/) 
 - **Project Tracking:** [Link](https://bcb-sr.rc.ufl.edu/projecttracking/)
