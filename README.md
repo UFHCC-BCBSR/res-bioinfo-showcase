@@ -18,7 +18,7 @@
   
 ## 3. Github Repositories 
 
-- **DECODeR:** [Link](https://github.com/UFHCC-BCBSR/swamp-seq-dev)
+- **DECODeR:** [Link](https://github.com/UFHCC-BCBSR/decoder)
 - **atacreportR:** [Link](https://github.com/UFHCC-BCBSR/atac-reportR)
 - **project-tracking:** [Link](https://github.com/UFHCC-BCBSR/project-tracking-app)
 - **Bioinformatics wiki:** [Link](https://github.com/UFHCC-BCBSR/wiki)
