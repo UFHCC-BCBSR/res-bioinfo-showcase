@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # UFHCC Bioinformatics Showcase Presentation
 
 **Live Site:** <https://ufhcc-bcbsr.github.io/bioinfo-showcase/>
