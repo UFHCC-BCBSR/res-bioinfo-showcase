@@ -6,186 +6,198 @@ format:
   revealjs:
     theme: dark
     transition: slide
+    include-after-body: |
+      <style>
+      .back-to-hub {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: #3b82f6;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .back-to-hub:hover {
+        background: #2563eb;
+        color: white;
+      }
+      </style>
+      <a href="index.html" class="back-to-hub">← Back to Hub</a>
 ---
 
-## Why Partner With Us From Day One? {.center}
+## Meet Your Bioinformatics Team {.center}
+
+We're a collaborative team of three bioinformaticians with complementary expertise spanning computational biology, statistics, and cancer genomics.
 
 ::: {.fragment}
-**Most research projects require bioinformatics expertise from conception through publication**
+Together, we bring **over 20 years of combined experience** in omics analysis, from method development to clinical applications.
 :::
 
 ::: {.fragment}
-We provide comprehensive support beyond just running tools and apps
-:::
-
-::: {.fragment}
-*Essential partners from conception to publication*
+We work as an **integrated unit** - when you collaborate with one of us, you benefit from all of our collective knowledge and different perspectives on your research questions.
 :::
 
 ---
 
-## Our Core Expertise Areas {.center}
+## Our Collaboration Model {.center}
+
+::: {.fragment}
+We're **not a service core** - we're collaborators.
+:::
 
 ::: {.incremental}
-- 📋 **Project Design** - Grant writing & experimental design
-- 🔍 **Quality Control** - Extensive QC workflows & troubleshooting  
-- 💻 **Infrastructure** - HiPerGator expertise & CLI proficiency
-- 📈 **Analysis** - Statistical modeling & data visualization
-- 📝 **Communication** - Reports, publications & presentations
-:::
-
----
-
-## Project Design {.center}
-
-### More than just analysis planning
-
-::: {.incremental}
-- **Grant Writing Support**
-  - Bioinformatics sections and budgets
-  - Method justification and power calculations
-  
-- **Experimental Design Consultation** 
-  - Sample size determination
-  - Batch effect considerations
-  - Control selection strategies
+- Participate as **key personnel** on grants
+- Help you secure funding with bioinformatics considerations built in
+- Funded through your grants + provide additional resources
+- Walk-in consulting hours & monthly journal clubs
+- Comprehensive resources to the entire cancer center
 :::
 
 ::: {.fragment}
-*Getting it right from the start saves time, money, and publications*
+*This model ensures we're invested in your success and available when you need us.*
 :::
 
 ---
 
-## Project Design: Real Impact {.center}
+## Experience You Can Trust {.center}
 
-### What happens without early consultation?
+Can a postdoc or graduate student analyze a perfectly designed study with simple design and high quality data? **Probably.**
 
 ::: {.fragment}
-❌ **Common Issues:**
-- Underpowered studies
-- Confounded batch effects  
-- Missing essential controls
-- Budget shortfalls for analysis
+But when renovating your kitchen, would you rather watch YouTube tutorials and hope for the best, or hire someone who's done hundreds of kitchens and knows exactly what problems to expect?
 :::
 
 ::: {.fragment}
-✅ **With Our Input:**
-- Properly powered, well-controlled experiments
-- Realistic timelines and budgets
-- Clear analysis pathways
+**Between our team:** We've collectively analyzed **hundreds of datasets** across most major omics assays. We've encountered - and solved - the QC issues that will arise in your projects.
 :::
 
 ---
 
-## Quality Control {.center}
+## Strengthening Your Grant Applications {.center .smaller}
 
-### Your data deserves rigorous QC
-
-::: {.incremental}
-- **Comprehensive QC Workflows**
-  - Raw data assessment and filtering
-  - Library quality evaluation
-  - Contamination screening
-
-- **Expert Troubleshooting**
-  - Failed samples diagnosis
-  - Technical artifact identification  
-  - Protocol optimization recommendations
-:::
-
----
-
-## Infrastructure Expertise {.center}
-
-### Making HiPerGator work for you
-
-::: {.incremental}
-- **HiPerGator Mastery**
-  - Efficient resource allocation
-  - Queue optimization strategies
-  - Storage and backup solutions
-
-- **Command Line Fluency**
-  - Custom pipeline development
-  - Workflow automation
-  - Scalable processing solutions
-:::
-
-::: {.fragment}
-*We speak fluent HPC so you don't have to*
-:::
-
----
-
-## Statistical Analysis & Visualization {.center}
-
-### Turning data into discoveries
-
-::: {.incremental}
-- **Statistical Modeling**
-  - Appropriate method selection
-  - Multiple testing corrections
-  - Effect size calculations
-
-- **Data Visualization**
-  - Publication-ready figures
-  - Interactive exploratory plots
-  - Custom visualization solutions
-:::
-
----
-
-## Communication & Reporting {.center}
-
-### Making your results shine
-
-::: {.incremental}
-- **Comprehensive Reports**
-  - Detailed methodology sections
-  - Clear results interpretation
-  - Reproducible analysis workflows
-
-- **Publication Support**
-  - Methods writing assistance
-  - Figure preparation and optimization
-  - Reviewer response support
-:::
-
----
-
-## Case Study: The Difference We Make {.center}
-
-### Before vs. After Working With Us
+::: {style="font-size: 0.85em;"}
+NIH increasingly emphasizes robust data management and data analysis plans.
 
 ::: {.columns}
 ::: {.column width="50%"}
-**Before:**
-- 6 months troubleshooting failed analysis
-- Underpowered study design
-- Inconsistent results
-- Delayed publication
+🛡️ **Scientific Rigor**  
+✅ **Feasibility**  
+📋 **Analysis Plan**
 :::
 
 ::: {.column width="50%"}
-**After:**
-- Proper experimental design from start
-- Robust QC catches issues early
-- Clear, interpretable results
-- Smooth publication process
+💰 **Justified Budget**  
+🎯 **Reviewer Confidence**
 :::
 :::
-
----
-
-## Ready to Partner With Us? {.center}
-
-### Contact UFHCC Bioinformatics Unit
 
 ::: {.fragment}
-*Let's discuss your project today*
+**We help you craft:** Data management plans • Analytical approaches • Resource budgets
+
+*Our involvement signals you've thought carefully about analytical challenges ahead.*
+:::
 :::
 
 ---
 
-### [← Return to Presentation Hub](index.html) {.center}
+## Assay Expertise Across Platforms {.center}
+
+**[Insert: Horizontal Bar Chart - Assay × Number of Datasets Analyzed]**
+
+::: {.fragment}
+We have deep experience with the **full spectrum of cancer omics:**
+- RNA-seq, ATAC-seq, CUT&RUN
+- Single-cell approaches, spatial transcriptomics  
+- CRISPR screens, AI-driven rare disease research
+:::
+
+::: {.fragment}
+This isn't just familiarity - we understand the **unique analytical challenges, optimal parameters, and common pitfalls** for each platform.
+:::
+
+---
+
+## Quality Control That Prevents Disasters {.center}
+
+::: {.fragment}
+**Poor quality data leads to poor conclusions** - or worse, wasted months of work.
+:::
+
+::: {.incremental}
+We catch critical issues early:
+- Inadequate insert sizes in ATAC-seq → failed library prep
+- High duplication rates in RNA-seq → compromised differential expression  
+- Contamination → invalidated experiments
+:::
+
+::: {.fragment}
+We parse dozens of metrics and plots to answer: **"Did your experiment actually work?"**
+:::
+
+---
+
+## Experimental Design That Works {.center}
+
+::: {.fragment}
+**The best analysis can't save a poorly designed experiment.**
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+**Prevention:**
+- Power calculations
+- Batch effect considerations  
+- Confounding variable control
+:::
+
+::: {.column width="50%"}
+**Complex Analysis:**
+- Repeated measures
+- Time courses
+- Multi-factorial designs
+:::
+:::
+
+::: {.fragment}
+*We help you avoid unusable data AND analyze complex but meaningful study designs.*
+:::
+
+---
+
+## Comprehensive Support Framework {.center}
+
+Everything we've discussed is **documented and accessible** through our Bioinformatics Hub.
+
+::: {.fragment}
+- Best practices & troubleshooting guides
+- Analytical workflows from real-world experience
+- Systematic approach to omics research success
+:::
+
+::: {.fragment}
+**Ready to see our resources in action?**
+:::
+
+---
+
+## Our Resources {.center}
+
+Comprehensive tools and documentation to accelerate your research.
+
+::: {.fragment}
+### [← Return to Main Presentation](index.html) {style="background: #3b82f6; color: white; padding: 15px 25px; border-radius: 10px; text-decoration: none; font-weight: bold;"}
+:::
+
+---
+
+## Live Demonstrations {.center}
+
+Custom applications and interactive tools built for cancer research.
+
+::: {.fragment}
+### [← Return to Main Presentation](index.html) {style="background: #3b82f6; color: white; padding: 15px 25px; border-radius: 10px; text-decoration: none; font-weight: bold;"}
+:::
