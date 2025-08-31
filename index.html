@@ -81,13 +81,22 @@
             line-height: 1.2;
         }
         .central-hub .tagline {
-            font-size: clamp(calc(0.75rem * 0.8), 0.75vw, calc(0.75rem * 1.2));
-            margin-top: 10px;
-            opacity: 0.8;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
+    font-size: clamp(calc(0.75rem * 0.8), 0.75vw, calc(0.75rem * 1.2));
+    margin-top: 10px;
+    opacity: 0.8;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.central-hub .tagline:hover {
+    opacity: 1;
+    color: #60a5fa;
+    transform: scale(1.02);
+}
         .central-hub:hover {
             box-shadow: 0 30px 100px rgba(59, 130, 246, 0.3);
             border-color: rgba(59, 130, 246, 0.4);
@@ -340,10 +349,10 @@
 <body>
     <div class="wheel-container">
         <!-- Central Hub -->
-        <div class="central-hub" id="centralHub">
-            <div class="title">UFHCC Bioinformatics Unit</div>
-            <div class="tagline">Advancing Cancer Research through Rigorous Analyses</div>
-        </div>
+     <div class="central-hub" id="centralHub">
+    <div class="title">UFHCC Bioinformatics Unit</div>
+    <a href="conclusion_slides.html" class="tagline">Advancing Cancer Research through Rigorous Analyses</a>
+</div>
         <!-- Connection Lines -->
         <div class="connection-line line-1"></div>
         <div class="connection-line line-2"></div>
