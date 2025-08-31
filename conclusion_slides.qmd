@@ -1,0 +1,113 @@
+---
+title: "UFHCC Bioinformatics Unit"
+subtitle: "Advancing Cancer Research through Rigorous Analyses"  
+author: "UFHCC BCB-SR Bioinformatics Team"
+format:
+  revealjs:
+    theme: dark
+    transition: slide
+    include-after-body: |
+      <style>
+      .back-to-hub {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: #3b82f6;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .back-to-hub:hover {
+        background: #2563eb;
+        color: white;
+      }
+      </style>
+      <a href="index.html" class="back-to-hub">← Back to Hub</a>
+---
+
+## You Need UFHCC Bioinformatics {.center}
+
+::: {.fragment}
+**From conception to publication, we're your research partners**
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+🎯 **Project Design**  
+📊 **Quality Control**  
+💻 **Infrastructure**
+:::
+
+::: {.column width="50%"}
+📈 **Analysis**  
+📝 **Communication**  
+🤝 **Collaboration**
+:::
+:::
+
+::: {.fragment}
+*Over 20 years of combined expertise • Hundreds of datasets analyzed • Grant success partnership*
+:::
+
+---
+
+## Ready to Partner With Us? {.center}
+
+### Let's discuss your research today
+
+::: {.columns}
+::: {.column width="50%"}
+**Walk-in Hours**  
+*Tuesdays 2-4 PM*
+
+**Monthly Journal Club**  
+*Cancer genomics focus*
+
+**Grant Consultation**  
+*Project design to publication*
+:::
+
+::: {.column width="50%"}
+**Contact Information**  
+📧 [your-email@ufl.edu]  
+📞 [phone number]  
+🌐 [Bioinformatics Hub link]
+
+**Emergency Consultations**  
+*Available by appointment*
+:::
+:::
+
+---
+
+## Questions & Discussion {.center}
+
+### How can we help advance your cancer research?
+
+::: {.fragment}
+**Topics we love to discuss:**
+- Experimental design challenges
+- Grant application strategies  
+- Quality control concerns
+- Complex analysis needs
+- Custom tool development
+:::
+
+::: {.fragment}
+*No question is too basic or too complex*
+:::
+
+---
+
+## Thank You {.center}
+
+### UFHCC Bioinformatics Unit
+*Essential partners from conception to publication*
+
+::: {.fragment}
+### [← Return to Presentation Hub](index.html) {style="background: #3b82f6; color: white; padding: 20px 30px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.2em;"}
+:::
