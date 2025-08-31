@@ -31,7 +31,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../background.jpeg');
+            background-image: url('background.jpeg');
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -75,13 +75,31 @@
     cursor: pointer;
 }
         .central-hub .title {
-            font-size: clamp(calc(1.6rem _0.8), 1.6vw, calc(1.6rem_ 1.2));
+            /* Larger version */
+            font-size: clamp(calc(1.3rem * 0.8), 1.5vw, calc(2rem * 1.2));
             font-weight: 700;
             margin-bottom: 10px;
             line-height: 1.2;
         }
+        .central-hub .logo {
+    width: 100px;           /* Adjust size as needed */
+    height: 100px;          /* Keep square for circular logos */
+    margin-bottom: 5px;   /* Space between logo and title */
+        margin-top: -90px;      /* Moves logo UP toward top of circle */
+
+    border-radius: 50%;    /* Makes it circular if desired */
+    object-fit: cover;     /* Ensures proper scaling */
+}
+        .central-hub .subtitle {
+        /* Larger version */
+            font-size: clamp(calc(2rem * 0.8), 2vw, calc(2rem * 1.2));
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
         .central-hub .tagline {
-            font-size: clamp(calc(0.75rem _0.8), 0.75vw, calc(0.75rem_ 1.2));
+            font-size: clamp(calc(0.75rem *0.8), 0.75vw, calc(0.75rem* 1.2));
             margin-top: 10px;
             opacity: 0.8;
             font-weight: 400;
@@ -91,6 +109,19 @@
             text-decoration: none;
             transition: all 0.2s ease;
         }
+
+        .central-hub .tagline {
+            font-size: clamp(calc(0.75rem *0.8), 0.75vw, calc(0.75rem* 1.2));
+            margin-top: 10px;
+            opacity: 0.8;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
         .central-hub .tagline:hover {
             opacity: 1;
             color: #60a5fa;
@@ -169,7 +200,7 @@
         }
         .section-title {
             color: #ffffff;
-            font-size: clamp(calc(1.3rem _0.8), 1.3vw, calc(1.3rem_ 1.2));
+            font-size: clamp(calc(1.3rem *0.8), 1.3vw, calc(1.3rem_ 1.2));
             font-weight: 600;
             text-align: center;
             margin-bottom: 25px;
@@ -233,14 +264,14 @@
             transform: translateY(-2px);
         }
         .node h3 {
-            font-size: clamp(calc(1.1rem _0.8), 1.1vw, calc(1.1rem_ 1.2));
+            font-size: clamp(calc(1.1rem *0.8), 1.1vw, calc(1.1rem_ 1.2));
             margin-bottom: 8px;
             font-weight: 600;
             color: #ffffff;
             letter-spacing: -0.2px;
         }
         .node p {
-            font-size: clamp(calc(0.9rem _0.8), 0.9vw, calc(0.9rem_ 1.2));
+            font-size: clamp(calc(0.9rem *0.8), 0.9vw, calc(0.9rem_ 1.2));
             line-height: 1.4;
             margin-bottom: 15px;
             color: rgba(255, 255, 255, 0.7);
@@ -256,7 +287,7 @@
             color: rgba(59, 130, 246, 0.9);
             padding: 8px 14px;
             border-radius: 6px;
-            font-size: clamp(calc(0.8rem _0.8), 0.8vw, calc(0.8rem_ 1.2));
+            font-size: clamp(calc(0.8rem *0.8), 0.8vw, calc(0.8rem_ 1.2));
             font-weight: 500;
             text-decoration: none;
             transition: all 0.2s ease;
@@ -277,7 +308,7 @@
     border: 1px solid rgba(59, 130, 246, 0.3);
 }
 .expertise-intro p {
-    font-size: clamp(calc(0.9rem _0.8), 0.9vw, calc(0.9rem_ 1.2));
+    font-size: clamp(calc(0.9rem *0.8), 0.9vw, calc(0.9rem_ 1.2));
     color: rgba(255, 255, 255, 0.9);
     margin: 0;
     font-weight: 500;
@@ -297,7 +328,7 @@
     background: rgba(255, 255, 255, 0.02);
     border-radius: 8px;
     padding: 12px;
-    font-size: clamp(calc(0.9rem _0.8), 0.9vw, calc(0.9rem_ 1.2));
+    font-size: clamp(calc(0.9rem *0.8), 0.9vw, calc(0.9rem_ 1.2));
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -320,14 +351,14 @@
         }
         .why-content h4 {
             color: #ffffff;
-            font-size: clamp(calc(1rem _0.8), 1vw, calc(1rem_ 1.2));
+            font-size: clamp(calc(1rem *0.8), 1vw, calc(1rem_ 1.2));
             font-weight: 600;
             margin-bottom: 15px;
             text-align: center;
             letter-spacing: -0.2px;
         }
         .why-content p {
-            font-size: clamp(calc(0.8rem _0.8), 0.8vw, calc(0.8rem_ 1.2));
+            font-size: clamp(calc(0.8rem *0.8), 0.8vw, calc(0.8rem_ 1.2));
             line-height: 1.5;
             color: rgba(255, 255, 255, 0.8);
             text-align: center;
@@ -358,7 +389,7 @@
         .line-3 {
             top: 40%;
             left: 50%;
-            width: 18%;
+            width: 3%;
             transform: translateX(-50%) rotate(90deg);
         }
         @media (max-width: 1200px) {
@@ -378,7 +409,11 @@
     <div class="wheel-container">
         <!-- Central Hub -->
         <div class="central-hub" id="centralHub">
-            <div class="title">UF Health Cancer Center Bioinformatics</div>
+              <img src="logo.png" alt="Logo" class="logo">
+
+            <div class="title">UF Health Cancer Center</div>
+                        <div class="subtitle">Bioinformatics</div>
+
             <a href="conclusion_slides.html" class="tagline">Advancing Your Cancer Research<br> through Rigorous Analyses</a>
         </div>
         <!-- Connection Lines -->
