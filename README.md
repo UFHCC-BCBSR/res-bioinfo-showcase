@@ -7,6 +7,7 @@
 -   `index.html` = Main interactive hub (edit directly for text/links)
 -   `slides.qmd` = Slide content (edit this file)
 -   `slides.html` = Auto-generated (don't edit directly)
+-   `narrative.md` = Narrative/script for presentation with timing
 
 ## Updating Slides
 
@@ -25,7 +26,8 @@ Pull before making changes: `git pull origin main`
 
 -   Edit slides: `slides.qmd`
 -   Edit main hub: `index.html`
--   Never edit: `slides.html` (auto-generated)
+-   Edit narrative: `narriativem.md`
+-   Do not edit: `slides.html` (auto-generated)
 
 Changes go live automatically when pushed to main.
 
