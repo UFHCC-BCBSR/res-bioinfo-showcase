@@ -26,7 +26,7 @@ Pull before making changes: `git pull origin main`
 
 -   Edit slides: `slides.qmd`
 -   Edit main hub: `index.html`
--   Edit narrative: `narriativem.md`
+-   Edit narrative: `narriative.md`
 -   Do not edit: `slides.html` (auto-generated)
 
 Changes go live automatically when pushed to main.
