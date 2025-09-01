@@ -2,13 +2,12 @@
 
 **Live Site:** <https://ufhcc-bcbsr.github.io/bioinfo-showcase/>
 
-## Quick Overview
+## Quick Overview (any files not listed are not for editing)
 
 The main hub of the presentation is index.html. This includes click to enlarge sections and links to slide decks and demos.
 -   `index.html` = Main interactive hub (edit directly for text/links)
 -   `narrative.md` = Narrative/script for presentation with timing. This an .md file for version control.
 -   `slides.qmd` = Slide deck for after expertise section before demos and conclusion after demos
--   `slides.html` = Auto-generated (don't edit directly)
 
 
 ## Updating Slides
@@ -23,13 +22,6 @@ The main hub of the presentation is index.html. This includes click to enlarge s
 `index.html`
 
 Pull before making changes: `git pull origin main`
-
-## Files
-
--   Edit slides: `slides.qmd`
--   Edit main hub: `index.html`
--   Edit narrative: `narriative.md`
--   Do not edit: `slides.html` (auto-generated)
 
 Changes go live automatically when pushed to main.
 
