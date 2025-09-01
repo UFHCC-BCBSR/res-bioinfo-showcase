@@ -6,11 +6,9 @@
 
 The main hub of the presentation is index.html. This includes click to enlarge sections and links to slide decks and demos.
 -   `index.html` = Main interactive hub (edit directly for text/links)
--   `narrative.md` = Narrative/script for presentation with timing
--   `slides.qmd` = Slide deck for after intro before demos
+-   `narrative.md` = Narrative/script for presentation with timing. This an .md file for version control.
+-   `slides.qmd` = Slide deck for after expertise section before demos and conclusion after demos
 -   `slides.html` = Auto-generated (don't edit directly)
--   `conclusion_slides.qmd` = Slide deck for slides after demos (edit this file)
--   `conclusion_slides.html` = Auto-generated (don't edit directly)
 
 
 ## Updating Slides
@@ -32,9 +30,6 @@ Pull before making changes: `git pull origin main`
 -   Edit main hub: `index.html`
 -   Edit narrative: `narriative.md`
 -   Do not edit: `slides.html` (auto-generated)
--   Edit `conclusion_slides.qmd`
--   Do not edit: `conclusion_slides.html` (auto-generated)
-
 
 Changes go live automatically when pushed to main.
 
