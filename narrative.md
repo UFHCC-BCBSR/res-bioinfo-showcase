@@ -1,22 +1,22 @@
 # UFHCC Bioinformatics Unit - 45 Min Presentation Script
 
-## Index.html: Intro – 2 minutes
+## Index.html: Intro – 2 minutes @jobrant
 
-### [Central Hub]
+### [Central Hub] @jobrant
 
 Thank you all for joining us today. We're excited to share what makes the Cancer Center's BCB-SR Bioinformatics unit unique - our expertise, our approach to collaboration, and the tools we've developed to advance your research.
 
 We've structured our presentation as this hub-and-spoke diagram to illustrate the the multiple, complementary ways BCB-SR Bioinformatics advances research at the UF Health Cancer Center.
 
-### [Expertise Section]
+### [Expertise Section] @jobrant
 
 We'll start by walking through our core philosophy: how we approach cancer bioinformatics to maximize reproducibility and research impact. You'll see why partnering with us from day one of your project gives your omics research the best chance of success and publication.
 
-### [Resources Section]
+### [Resources Section] @jobrant
 
 Next, we'll explore the comprehensive resources we've built - from documentation hubs to web applications - and how these resources are designed to support and accelerate research across the entire cancer center community.
 
-### [Demos Section]
+### [Demos Section] @jobrant
 
 Finally, we'll demonstrate some of our custom applications and analysis tools. This isn't just about showing you what we've built - it's about illustrating our collaborative approach and our ability to develop tailored solutions for your specific research questions.
 
@@ -24,19 +24,19 @@ Finally, we'll demonstrate some of our custom applications and analysis tools. T
 
 ## Slides.html: Expertise – 8 minutes
 
-### Slide 1: Meet Your Bioinformatics Team 
+### Slide 1: Meet Your Bioinformatics Team @jobrant
 
 ### [About Us from Hub or Webpage]
 
 We're a collaborative team of three bioinformaticians with complementary expertise spanning computational biology, statistics, and cancer genomics. Together, we bring over 20 years of combined experience in omics analysis, from method development to clinical applications. We work as an integrated unit - when you collaborate with one of us, you benefit from all of our collective knowledge and different perspectives on your research questions.
 
-### Slide 2: Our Collaboration Model 
+### Slide 2: Our Collaboration Model @jobrant
 
 ### [Project Life Cycle: Proposal -\> Funding -\> Effort -\> Publication -\> Proposal]
 
 We're not a service core - we're collaborators. We participate as key personnel on grants, helping you secure funding and ensuring bioinformatics considerations are built into your project from conception. We're funded through your grants, plus we provide walk-in consulting hours, monthly journal clubs, and comprehensive resources to the entire cancer center community. This model ensures we're curious about your research, invested in your success and available when you need us.
 
-### Slide 3: Experience You Can Trust
+### Slide 3: Experience You Can Trust @jobrant
 
 ### [Without (undocumented files, scripts) vs. With (report)]
 
@@ -46,54 +46,141 @@ Can a postdoc or ambitious graduate student analyze a perfectly designed study w
 
 Between our three-person team, we've collectively analyzed hundreds of datasets across most major omics assays. We've encountered - and solved - the quality control issues and need for complex analysis that often arise in your projects.
 
-### Slide 4: Strengthening Your Grant Applications 
+### Slide 4: Strengthening Your Grant Applications @jobrant
 
 ### [Not sure, just infographics?]
 
 NIH increasingly emphasizes robust data management and data analysis plans. Grants with dedicated bioinformatics expertise demonstrate scientific rigor and feasibility. We help you craft compelling data management and sharing plans, justify your analytical approaches, and budget appropriately for computational resources. Our involvement signals to reviewers that you've thought carefully about the analytical challenges ahead.
 
-### Slide 5: Assay Expertise Across Platforms
+### Slide 5: Assay Expertise Across Platforms @kshirlekar
 
-**[Horizontal Bar Chart Assay x Number of Datasets Analyzed]**
+### **[Horizontal Bar Chart Assay x Number of Datasets Analyzed]**
 
 We have deep experience with the full spectrum of cancer omics: RNA-seq for expression profiling, ATAC-seq and CUT&RUN for chromatin accessibility and protein-DNA interactions, single-cell approaches for tumor heterogeneity, spatial transcriptomics for tissue architecture, CRISPR screens for functional genomics, AI-driven approaches for rare disease research. This isn't just familiarity - we understand the unique analytical challenges, optimal parameters, and common pitfalls for each platform.
 
-### Slide 6: Quality Control That Prevents Disasters
+### Slide 6: Quality Control That Prevents Disasters @kshirlekar
 
 Poor quality data leads to poor conclusions - or worse, wasted months of work. We catch critical issues early: inadequate insert sizes in ATAC-seq that indicate failed library prep, high duplication rates in RNA-seq that compromise differential expression analysis, and contamination that can invalidate entire experiments. We parse the dozens of merics and plots produced by QC protocols to answer the fundamental question: "Did your experiment actually work?"
 
-### Slide 7: Experimental Design That Works
+### Slide 7: Experimental Design That Works @hkates
 
 The best analysis can't save a poorly designed experiment. We help you avoid generating unusable data by considering power calculations, batch effects, and confounding variables before you spend time and money in the lab. Equally important, we can analyze complex but well-designed studies - repeated measures, time courses, multi-factorial designs - that might overwhelm standard pipelines but yield the most biologically meaningful results.
 
-### Slide 8: Comprehensive Support Framework
+### Slide 8: Comprehensive Support Framework @hkates
 
 Everything we've discussed is documented and accessible through our Bioinformatics Hub - best practices, troubleshooting guides, and analytical workflows developed from years of real-world experience. This isn't just our expertise talking - it's a systematic approach to ensuring your omics research succeeds. Now let's dive deeper into these capabilities with some specific examples.
 
 ------------------------------------------------------------------------
 
-## Resources – 10 minutes
+## **Resources Demos – 10 minutes**
 
-**[Narrative for index.html hub - Resources section clicks]** - Unit Webpage demo - Bioinformatics Hub walkthrough\
-- Apps Landing showcase
+### **Unit Webpage Demo** @kshirlekar
+
+Our official presence within the UF Health Cancer Center showcases who we are and how we fit into the broader research ecosystem. This webpage serves as your first point of contact - it establishes our credentials, introduces our team members, and provides the professional overview that investigators and administrators need when considering collaboration. You'll find our mission statement, contact information, and links to request our services directly through the UF Health system.
+
+### **Bioinformatics Hub** @hkates
+
+Our living documentation platform that transforms institutional knowledge into accessible guidance. The Hub addresses the critical gap between having access to bioinformatics tools and knowing how to use them effectively. We continuously update this resource based on new challenges we encounter in collaborations and emerging best practices in the field.
+
+The Hub's strength lies in its responsiveness - we regularly add new sections based on researcher requests and evolving methodological standards. Each section builds from fundamental concepts to advanced applications, whether you're planning your first RNA-seq experiment or troubleshooting complex multi-omics integration. This dynamic documentation ensures that good bioinformatics practices evolve with the field and remain relevant to current research needs.
+
+### **Applications Landing Page Demo** @hkates
+
+Our applications portal represents the evolution from one-off analyses to sustainable, reproducible tools. These aren't just convenience applications - they're solutions to specific bottlenecks we've identified in omics research workflows. Each tool addresses a real problem: DECODeR handles the complexity of differential expression visualization, HeatPath bridges the gap between statistical results and biological interpretation, and our reporting tools ensure that analyses remain interpretable months or years later.
+
+What makes these applications particularly valuable is their integration with our consultation model. They're built from patterns we see repeatedly in our collaborative work, codifying best practices into user-friendly interfaces that maintain analytical rigor while being accessible to researchers with varying computational backgrounds.
 
 ------------------------------------------------------------------------
 
-## Demos – 15 minutes
+## **App Demos – 15 minutes**
 
-**[Narrative for index.html hub - Demos section clicks]** - Interactive Reports (ATAC-seq, RNA-seq) - Custom Applications (DECODeR, HeatPath, ClusterPicker, Atac-reportR)
+### **Interactive Reports Introduction** @hkates
+
+Our interactive reports transform standard bioinformatics pipeline outputs into comprehensive, explorable documents that bridge the gap between raw results and biological insight. These aren't static PDFs - they're dynamic platforms where every table can be filtered, every result links to additional context, and methods documentation ensures complete transparency about analytical choices.
+
+#### **ATAC-seq Report Demo** (3 minutes) @hkates
+
+This report showcases our integration with HiPerGator's reproducible nf-core/atacseq pipeline, delivering interactive exploration of chromatin accessibility data. The report provides filterable tables for differential accessibility results, direct links to visualize your peaks in UCSC browser through automatically generated track hubs, and comprehensive peak annotations that facilitate integration with RNA-seq and other omics data. Each section includes detailed methods documentation, eliminating confusion about analytical approaches while highlighting whether accessibility changes occur in promoter regions or other regulatory elements.
+
+### **Custom Applications Introduction** @hkates
+
+Our custom applications address specific analytical bottlenecks we encounter repeatedly in collaborative research. These tools embody our philosophy of making sophisticated analyses accessible without sacrificing rigor - guided workflows, best-practice defaults, and extensive documentation ensure that researchers can explore their data confidently.
+
+#### **DECODeR Demo** (6 minutes)
+
+**Flexible Entry Points** @hkates 
+
+DECODeR accommodates different starting points - upload pre-calculated differential expression results or begin with raw count matrices for complete analysis. For researchers with existing RNA-seq reports from our unit, the integration is seamless, jumping directly to visualization and interpretation.
+
+**Guided Workflow Modules** @kshirlekar
+
+Each module features comprehensive documentation and flexible, guided uploads. The interface presents informed choices without overwhelming options, reflecting years of best-practice refinement. The batch detection module exemplifies our quality-first approach - identifying potential batch effects before proceeding to differential expression, preventing misleading results.
+
+**Advanced Visualization Features** @jobrant
+
+The heatmap module offers extensive customization including custom gene sets, while pathway enrichment provides KEGG and GO analysis with options for combined or separate up/down-regulated gene analysis. Semantic similarity clustering reduces redundant terms, and appropriate backgrounds are automatically specified, ensuring statistically sound enrichment results.
+
+#### **HeatPath Demo** (2 minutes) @hkates
+
+HeatPath fills a unique niche in expression data exploration - it's not about pathway enrichment of differential expression results, but curiosity-driven exploration of known pathways in your dataset. This hypothesis-generating tool requires no specific experimental design, group structure, or replicate numbers. Simply search for cancer-related pathways like "p53 signaling" or "cell cycle" and instantly visualize how those genes behave across your samples, facilitating discovery-driven research.
+
+#### **ClusterPicker Demo** (2 minutes) @kshirlekar
+
+When examining heatmaps, researchers often notice gene clusters with shared expression patterns that may not correspond to known pathways. ClusterPicker makes this exploration systematic - select a k-value to define cluster number, preview the resulting clusters, and iteratively adjust until you achieve the desired granularity. Extract specific numbered clusters for downstream analysis, transforming visual pattern recognition into concrete gene lists for further investigation.
+
+#### **Atac-reportR Demo** (2 minutes) @hkates
+
+This specialized tool demonstrates our commitment to reproducible, streamlined analysis workflows. Atac-reportR generates comprehensive reports directly from nf-core/atacseq pipeline outputs with a single click. While access requires UF network connectivity and /blue storage permissions (available through collaboration with our unit), it exemplifies our approach to transforming complex pipeline outputs into immediately interpretable results - PCA plots, differential accessibility visualizations, and genome browser tracks ready for biological interpretation within minutes.
 
 ------------------------------------------------------------------------
 
-## Conclusion – 5 minutes
+## **Conclusion – 5 minutes**
 
-**[Content for conclusion_slides.qmd - to be created]** - Summary of value proposition - Contact information - Q&A transition
+### **Slide 9: Wrap-up + Works in Progress** @jobrant
 
+**Transforming Omics Research Through Partnership**
+
+We've shown you how the UF Health Cancer Center Bioinformatics Unit addresses the complete research lifecycle - from experimental design that prevents costly mistakes, through rigorous analysis that handles complex designs, to sustainable tools and documentation that ensure reproducible results. This isn't just about having access to bioinformatics expertise; it's about embedding best practices into every stage of your research.
+
+**Expanding Our Impact**
+
+Our work continues to evolve. We're developing additional interactive reports for proteomics and metabolomics data, expanding our application suite based on researcher feedback, and continuously updating our documentation hub with emerging methodologies. The RNA-seq and single-cell RNA-seq reports launching soon will bring the same level of interactive exploration we've demonstrated with ATAC-seq to these critical data types.
+
+### **Slide 10: Contact and Work With Us** @jobrant
+
+**Ready to Elevate Your Research?**
+
+**Getting Started:**
+- Visit our unit webpage through the UF Health Cancer Center
+- Explore our Bioinformatics Hub for immediate access to best practices
+- Request consultation through our established UF Health channels
+
+**Collaboration Models:**
+- Project-based partnerships for specific analyses
+- Ongoing consultation for complex, multi-stage studies  
+- Training and capacity building for your research team
+- Custom application development for specialized needs
+
+**Contact Information:**
+[Include relevant contact details and web links from the presentation hub]
+
+### **Slide 11: Discussion and Questions** @jobrant
+
+**Let's Discuss Your Research Challenges**
+
+We've covered our systematic approach to omics research support, but every project brings unique challenges and opportunities. 
+
+**Questions we're eager to explore with you:**
+- What analytical bottlenecks are limiting your research progress?
+- How could interactive tools and documentation accelerate your discoveries?
+- What collaborations might amplify the impact of your work?
+
+**Your turn:** What questions do you have about integrating rigorous bioinformatics into your research program?
 ------------------------------------------------------------------------
 
 ## Notes
 
 -   Total presentation time: 45 minutes
 -   Current sections completed: Intro (2 min) + Expertise (8 min) = 10 minutes
--   Remaining time: 35 minutes for Resources + Demos + Q&A
+-   Remaining time: 35 minutes for Resources + Demos + Conclusion + 15 minutes Q&A
 -   Link to presentation hub: <https://ufhcc-bcbsr.github.io/bioinfo-showcase/>
