@@ -201,3 +201,86 @@ Custom applications and interactive tools built for cancer research.
 ::: {.fragment}
 ### [← Return to Main Presentation](index.html) {style="background: #3b82f6; color: white; padding: 15px 25px; border-radius: 10px; text-decoration: none; font-weight: bold;"}
 :::
+
+## You Need UFHCC Bioinformatics {.center}
+
+::: {.fragment}
+**From conception to publication, we're your research partners**
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+🎯 **Project Design**  
+📊 **Quality Control**  
+💻 **Infrastructure**
+:::
+
+::: {.column width="50%"}
+📈 **Analysis**  
+📝 **Communication**  
+🤝 **Collaboration**
+:::
+:::
+
+::: {.fragment}
+*Over 20 years of combined expertise • Hundreds of datasets analyzed • Grant success partnership*
+:::
+
+---
+
+## Ready to Partner With Us? {.center}
+
+### Let's discuss your research today
+
+::: {.columns}
+::: {.column width="50%"}
+**Walk-in Hours**  
+*Tuesdays 2-4 PM*
+
+**Monthly Journal Club**  
+*Cancer genomics focus*
+
+**Grant Consultation**  
+*Project design to publication*
+:::
+
+::: {.column width="50%"}
+**Contact Information**  
+📧 [your-email@ufl.edu]  
+📞 [phone number]  
+🌐 [Bioinformatics Hub link]
+
+**Emergency Consultations**  
+*Available by appointment*
+:::
+:::
+
+---
+
+## Questions & Discussion {.center}
+
+### How can we help advance your cancer research?
+
+::: {.fragment}
+**Topics we love to discuss:**
+- Experimental design challenges
+- Grant application strategies  
+- Quality control concerns
+- Complex analysis needs
+- Custom tool development
+:::
+
+::: {.fragment}
+*No question is too basic or too complex*
+:::
+
+---
+
+## Thank You {.center}
+
+### UFHCC Bioinformatics Unit
+*Essential partners from conception to publication*
+
+::: {.fragment}
+### [← Return to Presentation Hub](index.html) {style="background: #3b82f6; color: white; padding: 20px 30px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.2em;"}
+:::
