@@ -3,20 +3,30 @@
 ## Outline:
 
 ### Presentation Hub
+
 Intro - @jobrant
 
 ### Slides
+
 Title + About Us + Collaboration Model + Strengthening Grant + Experience @jobrant
+
 Project Life Cycle + Experience across Assays + Quality Control @kshirlekar
+
 Experimental Design + Track Record of Success + Resources @hkates
 
 ### Demos
+
 Resources + Reporting (atacreporter and html report) @hkates
+
 cluster-picker + heat path + DECODeR overview + upload + DE @kshirlekar
+
 DECODeR visualiations + pathway analysis @jobrant
 
 ### Slides
+
 Wrap-up + Contact + Discisson @jason
+
+------------------------------------------------------------------------
 
 ### [Central Hub] @jobrant
 
@@ -116,7 +126,6 @@ Our interactive reports transform standard bioinformatics pipeline outputs into 
 
 This report showcases our integration with HiPerGator's reproducible nf-core/atacseq pipeline, delivering interactive exploration of chromatin accessibility data. The report provides filterable tables for differential accessibility results, direct links to visualize your peaks in UCSC browser through automatically generated track hubs, and comprehensive peak annotations that facilitate integration with RNA-seq and other omics data. Each section includes detailed methods documentation, eliminating confusion about analytical approaches while highlighting whether accessibility changes occur in promoter regions or other regulatory elements.
 
-
 #### **Atac-reportR Demo** (2 minutes) @hkates
 
 This specialized tool demonstrates our commitment to reproducible, streamlined analysis workflows. Atac-reportR generates comprehensive reports directly from nf-core/atacseq pipeline outputs with a single click. While access requires UF network connectivity and /blue storage permissions (available through collaboration with our unit), it exemplifies our approach to transforming complex pipeline outputs into immediately interpretable results - PCA plots, differential accessibility visualizations, and genome browser tracks ready for biological interpretation within minutes.
@@ -165,33 +174,22 @@ Our work continues to evolve. We're developing additional interactive reports fo
 
 **Ready to Elevate Your Research?**
 
-**Getting Started:**
-- Visit our unit webpage through the UF Health Cancer Center
-- Explore our Bioinformatics Hub for immediate access to best practices
-- Request consultation through our established UF Health channels
+**Getting Started:** - Visit our unit webpage through the UF Health Cancer Center - Explore our Bioinformatics Hub for immediate access to best practices - Request consultation through our established UF Health channels
 
-**Collaboration Models:**
-- Project-based partnerships for specific analyses
-- Ongoing consultation for complex, multi-stage studies  
-- Training and capacity building for your research team
-- Custom application development for specialized needs
+**Collaboration Models:** - Project-based partnerships for specific analyses - Ongoing consultation for complex, multi-stage studies\
+- Training and capacity building for your research team - Custom application development for specialized needs
 
-**Contact Information:**
-[Include relevant contact details and web links from the presentation hub]
+**Contact Information:** [Include relevant contact details and web links from the presentation hub]
 
 ### **Slide 11: Discussion and Questions** @jobrant
 
 **Let's Discuss Your Research Challenges**
 
-We've covered our systematic approach to omics research support, but every project brings unique challenges and opportunities. 
+We've covered our systematic approach to omics research support, but every project brings unique challenges and opportunities.
 
-**Questions we're eager to explore with you:**
-- What analytical bottlenecks are limiting your research progress?
-- How could interactive tools and documentation accelerate your discoveries?
-- What collaborations might amplify the impact of your work?
+**Questions we're eager to explore with you:** - What analytical bottlenecks are limiting your research progress? - How could interactive tools and documentation accelerate your discoveries? - What collaborations might amplify the impact of your work?
 
-**Your turn:** What questions do you have about integrating rigorous bioinformatics into your research program?
-------------------------------------------------------------------------
+## **Your turn:** What questions do you have about integrating rigorous bioinformatics into your research program?
 
 ## Notes
 
