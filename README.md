@@ -13,8 +13,8 @@ The main hub of the presentation is index.html. This includes click to enlarge s
 ## Updating Slides
 
 1.  Edit `slides.qmd`
-2.  Run: `quarto render slides.qmd`
-3.  Commit and push both files
+2.  Run: `quarto render slides.qmd` to preview the html; **slides.html should be in your .gitignore. slides.html should not be pushed**
+3.  Commit and push your changes. Github Actions will automatically render the .qmd to a hidden .html.
 
 ## Collaboration
 
