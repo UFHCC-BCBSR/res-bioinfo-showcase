@@ -1,6 +1,22 @@
 # UFHCC Bioinformatics Unit - 45 Min Presentation Script
 
-## Index.html: Intro – 2 minutes @jobrant
+## Outline:
+
+### Presentation Hub
+Intro - @jobrant
+
+### Slides
+Title + About Us + Collaboration Model + Strengthening Grant + Experience @jobrant
+Project Life Cycle + Experience across Assays + Quality Control @kshirlekar
+Experimental Design + Track Record of Success + Resources @hkates
+
+### Demos
+Resources + Reporting (atacreporter and html report) @hkates
+cluster-picker + heat path + DECODeR overview + upload + DE @kshirlekar
+DECODeR visualiations + pathway analysis @jobrant
+
+### Slides
+Wrap-up + Contact + Discisson @jason
 
 ### [Central Hub] @jobrant
 
@@ -26,19 +42,17 @@ Finally, we'll demonstrate some of our custom applications and analysis tools. T
 
 ### Slide 1: Meet Your Bioinformatics Team @jobrant
 
-### [About Us from Hub or Webpage]
-
 We're a collaborative team of three bioinformaticians with complementary expertise spanning computational biology, statistics, and cancer genomics. Together, we bring over 20 years of combined experience in omics analysis, from method development to clinical applications. We work as an integrated unit - when you collaborate with one of us, you benefit from all of our collective knowledge and different perspectives on your research questions.
 
 ### Slide 2: Our Collaboration Model @jobrant
 
-### [Project Life Cycle: Proposal -\> Funding -\> Effort -\> Publication -\> Proposal]
-
 We're not a service core - we're collaborators. We participate as key personnel on grants, helping you secure funding and ensuring bioinformatics considerations are built into your project from conception. We're funded through your grants, plus we provide walk-in consulting hours, monthly journal clubs, and comprehensive resources to the entire cancer center community. This model ensures we're curious about your research, invested in your success and available when you need us.
 
-### Slide 3: Experience You Can Trust @jobrant
+### Slide 3: Strengthening Your Grant Applications @jobrant
 
-### [Without (undocumented files, scripts) vs. With (report)]
+NIH increasingly emphasizes robust data management and data analysis plans. Grants with dedicated bioinformatics expertise demonstrate scientific rigor and feasibility. We help you craft compelling data management and sharing plans, justify your analytical approaches, and budget appropriately for computational resources. Our involvement signals to reviewers that you've thought carefully about the analytical challenges ahead.
+
+### Slide 4: Experience You Can Trust @jobrant
 
 Can a postdoc or ambitious graduate student analyze a perfectly designed study with a simple design and high quality data? Probably.
 
@@ -46,31 +60,27 @@ Can a postdoc or ambitious graduate student analyze a perfectly designed study w
 
 Between our three-person team, we've collectively analyzed hundreds of datasets across most major omics assays. We've encountered - and solved - the quality control issues and need for complex analysis that often arise in your projects.
 
-### Slide 4: Strengthening Your Grant Applications @jobrant
+### Slide 5: Project Lifecycle @kshirlekar
 
-### [Not sure, just infographics?]
+[Add Text]
 
-NIH increasingly emphasizes robust data management and data analysis plans. Grants with dedicated bioinformatics expertise demonstrate scientific rigor and feasibility. We help you craft compelling data management and sharing plans, justify your analytical approaches, and budget appropriately for computational resources. Our involvement signals to reviewers that you've thought carefully about the analytical challenges ahead.
-
-### Slide 5: Assay Expertise Across Platforms @kshirlekar
-
-### **[Horizontal Bar Chart Assay x Number of Datasets Analyzed]**
+### Slide 6: Assay Expertise Across Assays @kshirlekar
 
 We have deep experience with the full spectrum of cancer omics: RNA-seq for expression profiling, EM-Seq, MAPit and ATAC-seq for DNA methylation and chromatin accessibility, CUT&RUN for protein-DNA interactions, single-cell approaches for tumor heterogeneity, spatial transcriptomics for tissue architecture, CRISPR screens for functional genomics, AI-driven approaches for rare disease research. This isn't just familiarity - we understand the unique analytical challenges, optimal parameters, and common pitfalls for each platform.
 
-### Slide 6: Quality Control That Prevents Disasters @kshirlekar
+### Slide 7: Quality Control That Prevents Disasters @kshirlekar
 
 Poor quality data leads to poor conclusions - or worse, wasted months of work. We catch critical issues early: inadequate insert sizes in ATAC-seq that indicate failed library prep, high duplication rates in RNA-seq that compromise differential expression analysis, and contamination that can invalidate entire experiments. We parse the dozens of merics and plots produced by QC protocols to answer the fundamental question: "Did your experiment actually work?"
 
-### Slide 7: Experimental Design That Works @hkates
+### Slide 8: Experimental Design That Works @hkates
 
 The best analysis can't save a poorly designed experiment. We help you avoid generating unusable data by considering power calculations, batch effects, and confounding variables before you spend time and money in the lab. Equally important, we can analyze complex but well-designed studies - repeated measures, time courses, multi-factorial designs - that might overwhelm standard pipelines but yield the most biologically meaningful results.
 
-### Slide 8: Proven Track Record @hkates
+### Slide 9: Proven Track Record @hkates
 
 Our collaborative model delivers results: successful grant applications, high-impact publications, and research that stands up to peer review. We've helped secure millions in funding, contributed to dozens of publications, and prevented countless analytical disasters before they happen. When you work with us, you're not just getting analysis - you're getting a partnership that maximizes your research impact.
 
-### Slide 9: Beyond Collaboration: Resources for All @hkates
+### Slide 10: Beyond Collaboration: Resources for All @hkates
 
 Our expertise doesn't just benefit direct collaborators - we've built comprehensive resources that support the entire cancer center community. Our Bioinformatics Hub provides dynamic documentation that evolves with the field, addressing the critical gap between having access to tools and knowing how to use them effectively. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents where every table can be filtered and every result links to additional context. Our custom applications like DECODeR for differential expression visualization, HeatPath for pathway exploration, and ClusterPicker for pattern discovery address specific bottlenecks we see repeatedly in omics research. These aren't just convenience tools - they're solutions built from our collaborative experience, making sophisticated analyses accessible while maintaining analytical rigor. This ecosystem of resources ensures that good bioinformatics practices scale beyond individual collaborations to benefit researchers across the cancer center.
 
@@ -78,7 +88,7 @@ Our expertise doesn't just benefit direct collaborators - we've built comprehens
 
 ## **Resources Demos – 10 minutes**
 
-### **Unit Webpage Demo** @kshirlekar
+### **Unit Webpage Demo** @hkates
 
 Our official presence within the UF Health Cancer Center showcases who we are and how we fit into the broader research ecosystem. This webpage serves as your first point of contact - it introduces our team members, and provides the overview that investigators need when considering collaboration. You'll find our mission statement, contact information, and links to request our services directly through the UF Health system.
 
@@ -106,13 +116,26 @@ Our interactive reports transform standard bioinformatics pipeline outputs into 
 
 This report showcases our integration with HiPerGator's reproducible nf-core/atacseq pipeline, delivering interactive exploration of chromatin accessibility data. The report provides filterable tables for differential accessibility results, direct links to visualize your peaks in UCSC browser through automatically generated track hubs, and comprehensive peak annotations that facilitate integration with RNA-seq and other omics data. Each section includes detailed methods documentation, eliminating confusion about analytical approaches while highlighting whether accessibility changes occur in promoter regions or other regulatory elements.
 
-### **Custom Applications Introduction** @hkates
+
+#### **Atac-reportR Demo** (2 minutes) @hkates
+
+This specialized tool demonstrates our commitment to reproducible, streamlined analysis workflows. Atac-reportR generates comprehensive reports directly from nf-core/atacseq pipeline outputs with a single click. While access requires UF network connectivity and /blue storage permissions (available through collaboration with our unit), it exemplifies our approach to transforming complex pipeline outputs into immediately interpretable results - PCA plots, differential accessibility visualizations, and genome browser tracks ready for biological interpretation within minutes.
+
+### **Custom Applications Introduction** @kshirlekar
 
 Our custom applications address specific analytical bottlenecks we encounter repeatedly in collaborative research. These tools embody our philosophy of making sophisticated analyses accessible without sacrificing rigor - guided workflows, best-practice defaults, and extensive documentation ensure that researchers can explore their data confidently.
 
+#### **HeatPath Demo** (2 minutes) @kshirlekar
+
+HeatPath fills a unique niche in expression data exploration - it's not about pathway enrichment of differential expression results, but curiosity-driven exploration of known pathways in your dataset. This hypothesis-generating tool requires no specific experimental design, group structure, or replicate numbers. Simply search for cancer-related pathways like "p53 signaling" or "cell cycle" and instantly visualize how those genes behave across your samples, facilitating discovery-driven research.
+
+#### **ClusterPicker Demo** (2 minutes) @kshirlekar
+
+When examining heatmaps, researchers often notice gene clusters with shared expression patterns that may not correspond to known pathways. ClusterPicker makes this exploration systematic - select a k-value to define cluster number, preview the resulting clusters, and iteratively adjust until you achieve the desired granularity. Extract specific numbered clusters for downstream analysis, transforming visual pattern recognition into concrete gene lists for further investigation.
+
 #### **DECODeR Demo** (6 minutes)
 
-**Flexible Entry Points** @hkates 
+**Flexible Entry Points** @kshirlekar
 
 DECODeR accommodates different starting points - upload pre-calculated differential expression results or begin with raw count matrices for complete analysis. For researchers with existing RNA-seq reports from our unit, the integration is seamless, jumping directly to visualization and interpretation.
 
@@ -123,18 +146,6 @@ Each module features comprehensive documentation and flexible, guided uploads. T
 **Advanced Visualization Features** @jobrant
 
 The heatmap module offers extensive customization including custom gene sets, while pathway enrichment provides KEGG and GO analysis with options for combined or separate up/down-regulated gene analysis. Semantic similarity clustering reduces redundant terms, and appropriate backgrounds are automatically specified, ensuring statistically sound enrichment results.
-
-#### **HeatPath Demo** (2 minutes) @hkates
-
-HeatPath fills a unique niche in expression data exploration - it's not about pathway enrichment of differential expression results, but curiosity-driven exploration of known pathways in your dataset. This hypothesis-generating tool requires no specific experimental design, group structure, or replicate numbers. Simply search for cancer-related pathways like "p53 signaling" or "cell cycle" and instantly visualize how those genes behave across your samples, facilitating discovery-driven research.
-
-#### **ClusterPicker Demo** (2 minutes) @kshirlekar
-
-When examining heatmaps, researchers often notice gene clusters with shared expression patterns that may not correspond to known pathways. ClusterPicker makes this exploration systematic - select a k-value to define cluster number, preview the resulting clusters, and iteratively adjust until you achieve the desired granularity. Extract specific numbered clusters for downstream analysis, transforming visual pattern recognition into concrete gene lists for further investigation.
-
-#### **Atac-reportR Demo** (2 minutes) @hkates
-
-This specialized tool demonstrates our commitment to reproducible, streamlined analysis workflows. Atac-reportR generates comprehensive reports directly from nf-core/atacseq pipeline outputs with a single click. While access requires UF network connectivity and /blue storage permissions (available through collaboration with our unit), it exemplifies our approach to transforming complex pipeline outputs into immediately interpretable results - PCA plots, differential accessibility visualizations, and genome browser tracks ready for biological interpretation within minutes.
 
 ------------------------------------------------------------------------
 
