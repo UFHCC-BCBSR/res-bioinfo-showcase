@@ -7,7 +7,7 @@
 The main hub of the presentation is index.html. This includes click to enlarge sections and links to slide decks and demos.
 -   `index.html` = Main interactive hub (edit directly for text/links)
 -   `narrative.md` = Narrative/script for presentation with timing. This an .md file for version control.
--   `slides.qmd` = Slide deck for after expertise section before demos and conclusion after demos
+-   `slides.qmd` = Slide deck for after expertise section before demos and conclusion after demos. This must be rendered to html in Rstudio.
 
 
 ## Updating Slides
