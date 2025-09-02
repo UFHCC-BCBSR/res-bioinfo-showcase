@@ -35,7 +35,7 @@ title-slide-attributes:
 
 ## <span style="display: block; text-align: center;">Our Collaboration Model</span>
 
-<img src="slide_figures/collaboration-model.png" alt="collaboration model" style="width: 90%; height: auto;">
+<img src="slide_figures/collaboration-model-rect.png" alt="collaboration model" style="width: 60%; height: auto;">
 
 ::: {.notes}
 **Not a service core we're partners** • Key personnel on grants • Funded through your research • Invested in your success
@@ -102,24 +102,35 @@ title-slide-attributes:
 
 ---
 
-## <span style="display: block; text-align: center;">Bioinformatics Project Lifecycle</span>
+## Bioinformatics Project Lifecycle
 
-<div style="text-align: center;">
-  ![](slide_figures/project-lifecycle.png){width=48%}
-</div>
+::: columns
+::: {.column width="55%"}
+![](slide_figures/project-lifecycle.png){width=100%}
+:::
 
-<div class="slide-caption">
-  We are invested and curious from start to finish.
-</div>
+::: {.column width="45%"}
+
+::: {.r-stack style="position: relative; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center;"}
+<div class="fragment fade-in-then-out" data-fragment-index="1">Grant Proposal</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">Data Delivery</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">Data Pre-Processing</div>
+<div class="fragment fade-in-then-out" data-fragment-index="4">Analysis Report</div>
+<div class="fragment fade-in-then-out" data-fragment-index="5">Products Delivery</div>
+:::
+
+:::
+:::
 
 ---
 
+
+
+
 ### <span style="display: block; text-align: center;">Deep experience across cancer omics assays</span>
 
-![](slide_figures/assays-analyzed.png){.r-stretch}
-
-<div class="slide-caption">
-  Expression, epigenome, chromatin • Single-cell & spatial • CRISPR screens
+<div style="text-align: center;">
+![](slide_figures/assays-bubbles.png){width=100%}
 </div>
 
 ::: {.notes}
@@ -142,7 +153,7 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 ![](slide_figures/insert-size-good.png){width=100%}
 :::
 ::: {.column width="50%"}
-![](slide_figures/insert-size-bad.png){width=100%}
+![](slide_figures/batch-effect.png){width=80%}
 :::
 ::::
 
@@ -173,22 +184,30 @@ Complex but meaningful studies
 
 ---
 
-## <span style="display: block; text-align: center;">Proven Track Record of Success</span>
+## Proven Track Record of Success
 
-<!--<img src="slide_figures/impact-metrics-dashboard.png" alt="Dashboard showing publication count, grant funding secured, collaboration success rate, and researcher satisfaction metrics">-->
+::: columns
 
-**Our collaborative model delivers results**
+::: {.column width="55%"}
 
-**Publications:** High-impact, peer-reviewed research
-**Grant success:** Millions in funding secured
-**Quality assurance:** Analytical disasters prevented
-**Partnership impact:** Research that stands the test of time
+![Research outcomes supported by BCB-SR Bioinformatics](slide_figures/track-record.png){fig-align="center"}
 
-::: {.notes}
-Our collaborative model delivers results: successful grant applications, high-impact publications, and research that stands up to peer review. We've helped secure millions in funding, contributed to dozens of publications, and prevented countless analytical disasters before they happen. When you work with us, you're not just getting analysis you're getting a partnership that maximizes your research impact.
+:::
+
+::: {.column width="45%"}
+
+- **Project completion:** Most funded projects progress to manuscripts or other outputs.  
+- **Sustained collaboration:** Ongoing partnerships with investigators across disciplines.  
+
+:::
+
 :::
 
 ---
+
+
+
+
 
 ### <span style="display: block; text-align: center;">Sharing Our Experience through Resources</span>
 
