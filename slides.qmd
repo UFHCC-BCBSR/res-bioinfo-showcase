@@ -111,6 +111,8 @@ NIH increasingly emphasizes robust data management and data analysis plans.
 ::: {.fragment}
 We have deep experience with the **full spectrum of cancer omics:**
 - RNA-seq, ATAC-seq, CUT&RUN
+- Methyl-Seq (EM-Seq, RRBS, WGBS) 
+- MAPit/NOMe-Seq 
 - Single-cell approaches, spatial transcriptomics  
 - CRISPR screens, AI-driven rare disease research
 :::
