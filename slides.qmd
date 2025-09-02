@@ -6,27 +6,6 @@ format:
   revealjs:
     theme: dark
     transition: slide
-    include-after-body: |
-      <style>
-      .back-to-hub {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-        background: #3b82f6;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 600;
-      }
-      .back-to-hub:hover {
-        background: #2563eb;
-        color: white;
-      }
-      </style>
-      <a href="index.html" class="back-to-hub">← Back to Hub</a>
 ---
 
 ## Meet Your Bioinformatics Team {.center}
@@ -284,5 +263,5 @@ Custom applications and interactive tools built for cancer research.
 *Essential partners from conception to publication*
 
 ::: {.fragment}
-### [← Return to Presentation Hub](index.html) {style="background: #3b82f6; color: white; padding: 20px 30px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.2em;"}
+### [← Return to Presentation Hub](index.html) {style="background: #3b82f6; color: white; padding: 20px 30px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 0.3em;"}
 :::
