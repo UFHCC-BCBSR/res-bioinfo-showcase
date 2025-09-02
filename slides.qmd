@@ -211,19 +211,18 @@ Last slide before Demos: Our expertise doesn't just benefit direct collaborators
 
 ---
 
-## <span style="display: block; text-align: center;">Advancing Cancer Center Research with Experienced Bioinformatics</span>
-
-<!--<img src="slide_figures/research-lifecycle-transformation.png" alt="Research lifecycle diagram showing our involvement from design through publication with impact metrics">-->
+## <span style="display:block; text-align:center;">Advancing Cancer Center Research with Experienced Bioinformatics</span> {data-background-image="background.jpeg" data-background-size="cover" data-background-position="center" data-background-opacity="0.25"}
 
 **Complete research lifecycle support**
 
-Experimental design → Publication
-Sustainable tools & documentation
+Experimental design → Publication  
+Sustainable tools & documentation  
 Emerging methodologies integration
 
 **Works in progress:** RNA-seq & single-cell reports
 
 [← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link}
+
 
 ---
 
