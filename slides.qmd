@@ -102,13 +102,30 @@ title-slide-attributes:
 
 ---
 
-## <span style="display: block; text-align: center;">Bioinformatics Project Lifecycle</span>
+## Bioinformatics Project Lifecycle
 
-<div style="text-align: center;">
-  ![](slide_figures/project-lifecycle.png){width=48%}
-</div>
+::: columns
+::: {.column width="55%"}
+![](slide_figures/project-lifecycle.png){width=100%}
+:::
+
+::: {.column width="45%"}
+
+::: {.r-stack style="position: relative; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center;"}
+<div class="fragment fade-in-then-out" data-fragment-index="1">Grant Proposal</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">Data Delivery</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">Data Pre-Processing</div>
+<div class="fragment fade-in-then-out" data-fragment-index="4">Analysis Report</div>
+<div class="fragment fade-in-then-out" data-fragment-index="5">Products Delivery</div>
+:::
+
+:::
+:::
 
 ---
+
+
+
 
 ### <span style="display: block; text-align: center;">Deep experience across cancer omics assays</span>
 
