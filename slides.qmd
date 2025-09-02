@@ -1,5 +1,5 @@
 ---
-title: "Core Expertise: Beyond Tools & Applications"
+title: "Core Expertise: Beyond Tools & Applications" 
 subtitle: "UFHCC Bioinformatics Unit"
 author: "UFHCC BCB-SR Bioinformatics Team"
 format:
