@@ -68,8 +68,9 @@
   font-size: 0.85em;
 }
 
-/* Background image only for the title slide, full screen */
-.reveal .slides section:first-of-type::before {
+/* Background image for title + any slide with .with-bg */
+.reveal .slides section.title-slide::before,
+.reveal .slides section.with-bg::before {
   content: '';
   position: absolute;
   top: 0;
@@ -77,10 +78,11 @@
   width: 100%;
   height: 100%;
   background-image: url("background.jpeg");
-  background-size: cover;     /* fill the entire screen */
+  background-size: cover;       /* fill the entire screen */
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.25;              /* tweak visibility so text stays readable */
+  opacity: 0.25;                /* tweak visibility so text stays readable */
   z-index: -1;
 }
+
 
