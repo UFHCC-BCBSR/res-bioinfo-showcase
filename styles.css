@@ -1,0 +1,35 @@
+.v-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.reveal .slides section {
+  overflow-y: auto !important;
+  max-height: 100vh !important;
+  padding-bottom: 60px !important;
+}
+
+.reveal .slides {
+  overflow: visible !important;
+}
+
+.hub-link {
+  position: absolute !important;
+  bottom: 10px !important;
+  left: 10px !important;
+  font-size: 0.5em !important;
+  z-index: 1000 !important;
+  background: rgba(0,0,0,0.8) !important;
+  padding: 5px 10px !important;
+  border-radius: 5px !important;
+  color: white !important;
+}
+
+.reveal .slides section h2 {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+}
+
