@@ -43,38 +43,6 @@ title-slide-attributes:
 
 ---
 
-## <span style="display: block; text-align: center;">Bioinformatics Project Lifecycle</span>
-
-<div style="text-align: center;">
-  ![](slide_figures/project-lifecycle.png){width=48%}
-</div>
-
-<div class="slide-caption">
-  We are invested and curious from start to finish.
-</div>
-
----
-
-### <span style="display: block; text-align: center;">Experience = Robust, Reproducible Analyses</span>
-
-:::: {.columns style="display: flex; align-items: center;"}
-
-::: {.column width="65%"}
-![](slide_figures/experience.png){width=100%}
-:::
-
-::: {.column width="35%"}
-<div style="font-size: 0.8em; line-height: 1.4;">
-- **Hundreds** of datasets analyzed  
-- **Every** major omics assay  
-- **Problems solved** before they derail your project  
-</div>
-:::
-
-::::
-
----
-
 ### <span style="display: block; text-align: center;">Strengthening Your Grant Applications</span>
 
 :::: {.columns .v-center-container}
@@ -111,6 +79,38 @@ title-slide-attributes:
 :::
 
 ::::
+
+---
+
+### <span style="display: block; text-align: center;">Experience = Robust, Reproducible Analyses</span>
+
+:::: {.columns style="display: flex; align-items: center;"}
+
+::: {.column width="65%"}
+![](slide_figures/experience.png){width=100%}
+:::
+
+::: {.column width="35%"}
+<div style="font-size: 0.8em; line-height: 1.4;">
+- **Hundreds** of datasets analyzed  
+- **Every** major omics assay  
+- **Problems solved** before they derail your project  
+</div>
+:::
+
+::::
+
+---
+
+## <span style="display: block; text-align: center;">Bioinformatics Project Lifecycle</span>
+
+<div style="text-align: center;">
+  ![](slide_figures/project-lifecycle.png){width=48%}
+</div>
+
+<div class="slide-caption">
+  We are invested and curious from start to finish.
+</div>
 
 ---
 
