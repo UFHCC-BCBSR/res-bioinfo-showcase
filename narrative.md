@@ -6,7 +6,7 @@
 
 Thank you all for joining us today. We're excited to share what makes the Cancer Center's BCB-SR Bioinformatics unit unique - our expertise, our approach to collaboration, and the tools we've developed to advance your research.
 
-We've structured our presentation as this hub-and-spoke diagram to illustrate the the multiple, complementary ways BCB-SR Bioinformatics advances research at the UF Health Cancer Center.
+We've structured our presentation as this hub-and-spoke diagram to illustrate the multiple, complementary ways BCB-SR Bioinformatics advances research at the UF Health Cancer Center.
 
 ### [Expertise Section] @jobrant
 
@@ -56,7 +56,7 @@ NIH increasingly emphasizes robust data management and data analysis plans. Gran
 
 ### **[Horizontal Bar Chart Assay x Number of Datasets Analyzed]**
 
-We have deep experience with the full spectrum of cancer omics: RNA-seq for expression profiling, ATAC-seq and CUT&RUN for chromatin accessibility and protein-DNA interactions, single-cell approaches for tumor heterogeneity, spatial transcriptomics for tissue architecture, CRISPR screens for functional genomics, AI-driven approaches for rare disease research. This isn't just familiarity - we understand the unique analytical challenges, optimal parameters, and common pitfalls for each platform.
+We have deep experience with the full spectrum of cancer omics: RNA-seq for expression profiling, EM-Seq, MAPit and ATAC-seq for DNA methylation and chromatin accessibility, CUT&RUN for protein-DNA interactions, single-cell approaches for tumor heterogeneity, spatial transcriptomics for tissue architecture, CRISPR screens for functional genomics, AI-driven approaches for rare disease research. This isn't just familiarity - we understand the unique analytical challenges, optimal parameters, and common pitfalls for each platform.
 
 ### Slide 6: Quality Control That Prevents Disasters @kshirlekar
 
