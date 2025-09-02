@@ -35,7 +35,7 @@ title-slide-attributes:
 
 ## <span style="display: block; text-align: center;">Our Collaboration Model</span>
 
-<img src="slide_figures/collaboration-model.png" alt="collaboration model" style="width: 90%; height: auto;">
+<img src="slide_figures/collaboration-model-rect.png" alt="collaboration model" style="width: 60%; height: auto;">
 
 ::: {.notes}
 **Not a service core we're partners** • Key personnel on grants • Funded through your research • Invested in your success
