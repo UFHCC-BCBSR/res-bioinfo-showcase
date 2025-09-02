@@ -269,6 +269,7 @@ Emerging methodologies integration
 <!-- <a href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/" style="display: inline-block; padding: 8px 16px; background-color: #0066cc; color: white; text-decoration: none; border-radius: 4px;">← Back to Presentation Hub</a> -->
 <br>
 <small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/)</small>
+
 ---
 
 ## <span style="display: block; text-align: center;">Discussion and Questions </span>
