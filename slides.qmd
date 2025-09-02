@@ -216,9 +216,12 @@ Last slide before Demos: Our expertise doesn't just benefit direct collaborators
 **Complete research lifecycle support**
 
 Experimental design → Publication  
-Sustainable tools & documentation  
-Emerging methodologies integration
 
+Sustainable tools & documentation 
+
+Emerging methodologies integration
+<br>
+<br>
 **Works in progress:** RNA-seq & single-cell reports
 
 [← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link}
@@ -231,16 +234,22 @@ Emerging methodologies integration
 <!--<img src="slide_figures/collaboration-pathways.png" alt="Flowchart showing different entry points: unit webpage, bioinformatics hub, UF Health channels leading to collaboration types">-->
 
 **Ready to elevate your research?**
+<br>
+[Bioinforamtics Unit webpage](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/) → UF Health Cancer Center  
 
-**Unit webpage** → UF Health Cancer Center
-**Bioinformatics Hub** → immediate resources  
-**UF Health channels** → request consultation
-**Collaboration models** → partnerships to training
+[Bioinformatics Hub](https://ufhcc-bcbsr.github.io/hub/) → immediate resources  
 
-[Contact information and web links]
+[UF Health channels](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/biostatistics-shared-resource-support-request-form/) → request consultation  
 
-[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link}
 
+*email us: *  
+[UFHCC BCB-SR](mailto:UFHCC-BCB-SR@ad.ufl.edu) &nbsp;&nbsp;&nbsp;&nbsp; [Jason Orr Brant](mailto:jobrant@ufl.edu)  
+[Heather Kates](mailto:hkates@ufl.edu) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Kalyanee Shirlekar](mailto:kshirlekar@ufl.edu)
+
+<!-- [← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link} -->
+<!-- <a href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/" style="display: inline-block; padding: 8px 16px; background-color: #0066cc; color: white; text-decoration: none; border-radius: 4px;">← Back to Presentation Hub</a> -->
+<br>
+<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/)</small>
 ---
 
 ## <span style="display: block; text-align: center;">Discussion and Questions </span>
@@ -249,10 +258,15 @@ Emerging methodologies integration
 
 **Let's discuss your research challenges**
   
-  Analytical bottlenecks limiting progress?
-  How could interactive tools accelerate discoveries?
+  Analytical bottlenecks limiting progress?  
+  
+  How could interactive tools accelerate discoveries?  
+  
   What collaborations might amplify impact?
+  
+  <br>
   
   **Your turn:** Questions about integrating rigorous bioinformatics?
   
-  [← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link}
+ <br>
+<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/)</small>
