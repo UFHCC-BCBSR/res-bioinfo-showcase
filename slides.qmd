@@ -4,10 +4,16 @@ subtitle: "UFHCC BCB-SR Bioinformatics Team"
 format:
   revealjs:
     theme: dark
-    transition: slide
-    scrollable: true
+    margin: 0
     css: styles.css
+title-slide-attributes:
+  data-background-image: "background.jpeg"
+  data-background-size: "cover"
+  data-background-position: "center"
+  data-background-opacity: "0.25"   # must be a string
 ---
+
+
 
 ## <span style="display: block; text-align: center;">Meet Your Bioinformatics Team</span>
 
@@ -18,9 +24,9 @@ format:
 :::
 
 ::: {.column width="40%"}
-**3 bioinformaticians** with complementary skills
-**20+ years** combined experience
-**Integrated approach** collaborate with one, benefit from all
+- **3 bioinformaticians** with complementary skills
+- **30+ years** combined experience
+- **Integrated approach** collaborate with one, benefit from all
 :::
 
 :::
@@ -29,7 +35,7 @@ format:
 
 ## <span style="display: block; text-align: center;">Our Collaboration Model</span>
 
-<img src="slide_figures/collaboration-model.png" alt="collaboration model" style="width: 100%; height: auto;">
+<img src="slide_figures/collaboration-model.png" alt="collaboration model" style="width: 90%; height: auto;">
 
 ::: {.notes}
 **Not a service core we're partners** • Key personnel on grants • Funded through your research • Invested in your success
@@ -43,7 +49,7 @@ format:
   ![](slide_figures/project-lifecycle.png){width=48%}
 </div>
 
-<div style="text-align: center; margin-top: 1em; font-style: italic; font-size: 0.8em;">
+<div class="slide-caption">
   We are invested and curious from start to finish.
 </div>
 
@@ -59,9 +65,9 @@ format:
 
 ::: {.column width="35%"}
 <div style="font-size: 0.8em; line-height: 1.4;">
-**Hundreds** of datasets analyzed  
-**Every** major omics assay  
-**Problems solved** before they derail your project  
+- **Hundreds** of datasets analyzed  
+- **Every** major omics assay  
+- **Problems solved** before they derail your project  
 </div>
 :::
 
@@ -108,16 +114,13 @@ format:
 
 ---
 
-## <span style="display: block; text-align: center;">Assay Expertise Across Platforms</span>
+### <span style="display: block; text-align: center;">Deep experience across cancer omics assays</span>
 
-<img src="slide_figures/assays-analyzed.png" alt="assays analyzed">
+![](slide_figures/assays-analyzed.png){.r-stretch}
 
-**Deep experience across cancer omics**
-
-Expression, epigenome, chromatin
-Single-cell & spatial approaches
-Functional genomics screens (CRISPR)
-AI-driven rare disease analysis
+<div class="slide-caption">
+  Expression, epigenome, chromatin • Single-cell & spatial • CRISPR screens
+</div>
 
 ::: {.notes}
 Full list of assays we have experience with:
@@ -132,16 +135,28 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 
 ---
 
-### <span style="display: block; text-align: center;">Quality Control Saves Time and Improves Results</span>
+#### <span style="display: block; text-align: center;">Quality Control Saves Time and Improves Results</span>
 
-<!--<img src="slide_figures/qc-disaster-prevention.png" alt="Before/after comparison showing failed vs successful QC metrics with red flags and green checkmarks">-->
+:::: {.columns .v-center-container}
+::: {.column width="50%"}
+![](slide_figures/insert-size-good.png){width=100%}
+:::
+::: {.column width="50%"}
+![](slide_figures/insert-size-bad.png){width=100%}
+:::
+::::
 
-**Catch critical issues early**
+<div style="margin-top:0.4em; font-size:0.8em; line-height:1.3;">
 
-Failed library prep detection
-Contamination identification
-Compromised data recognition
-**"Did your experiment work?"**
+**Catch critical issues early:**
+
+<ul>
+  <li>Failed library prep detection</li>
+  <li>Contamination identification</li>
+  <li>Sequencing quality issues</li>
+</ul>
+
+</div>
 
 ---
 
@@ -175,7 +190,7 @@ Our collaborative model delivers results: successful grant applications, high-im
 
 ---
 
-## <span style="display: block; text-align: center;">Sharing Our Experience through Resources</span>
+### <span style="display: block; text-align: center;">Sharing Our Experience through Resources</span>
 
 <!--<img src="slide_figures/resources-ecosystem.png" alt="Hub diagram showing expertise at center radiating out to documentation, web applications, interactive reports, and community resources">-->
 
@@ -187,7 +202,7 @@ Our collaborative model delivers results: successful grant applications, high-im
 **Community Resources:** Monthly journal clubs, walk-in hours, training materials
 
 ::: {.notes}
-Our expertise doesn't just benefit direct collaborators we've built comprehensive resources that support the entire cancer center community. Our Bioinformatics Hub provides dynamic documentation that evolves with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR for differential expression visualization, HeatPath for pathway exploration, and ClusterPicker for pattern discovery address specific bottlenecks we see repeatedly. These aren't just convenience tools they're solutions built from our collaborative experience, making sophisticated analyses accessible while maintaining analytical rigor.
+Last slide before Demos: Our expertise doesn't just benefit direct collaborators we've built comprehensive resources that support the entire cancer center community. Our Bioinformatics Hub provides dynamic documentation that evolves with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR for differential expression visualization, HeatPath for pathway exploration, and ClusterPicker for pattern discovery address specific bottlenecks we see repeatedly. These aren't just convenience tools they're solutions built from our collaborative experience, making sophisticated analyses accessible while maintaining analytical rigor.
 :::
 
 <br><br>
