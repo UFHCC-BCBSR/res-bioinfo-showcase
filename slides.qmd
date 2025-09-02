@@ -18,9 +18,9 @@ format:
 :::
 
 ::: {.column width="40%"}
-- **3 bioinformaticians** with complementary skills
-- **20+ years** combined experience
-- **Integrated approach** - collaborate with one, benefit from all
+**3 bioinformaticians** with complementary skills
+**20+ years** combined experience
+**Integrated approach** collaborate with one, benefit from all
 :::
 
 :::
@@ -32,12 +32,12 @@ format:
 <img src="slide_figures/collaboration-model.png" alt="collaboration model" style="width: 100%; height: auto;">
 
 ::: {.notes}
-**Not a service core - we're partners** • Key personnel on grants • Funded through your research • Invested in your success
+**Not a service core we're partners** • Key personnel on grants • Funded through your research • Invested in your success
 :::
 
 ---
 
-## <span style="display: block; text-align: center;">Project Lifecycle</span>
+## <span style="display: block; text-align: center;">Bioinformatics Project Lifecycle</span>
 
 <div style="text-align: center;">
   ![](slide_figures/project-lifecycle.png){width=48%}
@@ -59,9 +59,9 @@ format:
 
 ::: {.column width="35%"}
 <div style="font-size: 0.8em; line-height: 1.4;">
-- **Hundreds** of datasets analyzed  
-- **Every** major omics assay  
-- **Problems solved** before they derail your project  
+**Hundreds** of datasets analyzed  
+**Every** major omics assay  
+**Problems solved** before they derail your project  
 </div>
 :::
 
@@ -71,37 +71,63 @@ format:
 
 ### <span style="display: block; text-align: center;">Strengthening Your Grant Applications</span>
 
-<!--<img src="slide_figures/grant-strength-infographic.png" alt="Infographic showing data management plan, analysis plan, and budget justification elements">-->
+:::: {.columns .v-center-container}
 
-**NIH demands robust bioinformatics plans**
+::: {.column width="42%"}
+![](slide_figures/DMSP-plan.png){width=92%}
 
-- Data management & sharing
-- Justified analytical approaches  
-- Appropriate resource budgeting
-- Reviewer confidence in feasibility
+<div style="margin-top:0.6em; font-size:0.9em; line-height:1.3;">
+<strong>NIH expects plans for:</strong><br>
+• Code & software<br>
+• Data management & sharing<br>
+• Computational resources
+</div>
+:::
+
+::: {.column width="58%"}
+<div style="font-size:0.9em; line-height:1.4;">
+
+**If your project includes high-dimensional data, an expert bioinformatician makes the proposal stronger.**
+
+</div>
+
+<div style="margin-top:0.6em; font-size:0.75em; line-height:1.4;">
+  <ul class="checklist">
+    <li>Assays chosen with clear rationale</li>
+    <li>Experimental design avoids QC pitfalls</li>
+    <li>Named personnel to analyze data</li>
+    <li>Code &amp; software packages specified</li>
+    <li>Compute &amp; storage resources identified</li>
+    <li>Results visualization approach defined</li>
+  </ul>
+</div>
+
+:::
+
+::::
 
 ---
 
 ## <span style="display: block; text-align: center;">Assay Expertise Across Platforms</span>
 
-<!--<img src="slide_figures/assay-experience-bar-chart.png" alt="Horizontal bar chart showing number of datasets analyzed for RNA-seq, ATAC-seq, CUT&RUN, EM-Seq, single-cell, spatial, CRISPR screens">-->
+<img src="slide_figures/assays-analyzed.png" alt="assays analyzed">
 
 **Deep experience across cancer omics**
 
-- Expression, epigenome, chromatin
-- Single-cell & spatial approaches
-- Functional genomics screens (CRISPR)
-- AI-driven rare disease analysis
+Expression, epigenome, chromatin
+Single-cell & spatial approaches
+Functional genomics screens (CRISPR)
+AI-driven rare disease analysis
 
 ::: {.notes}
 Full list of assays we have experience with:
-- RNA-seq, ATAC-seq, CUT&RUN
-- Methyl-Seq (EM-Seq, RRBS, WGBS)  
-- MAPit/NOMe-Seq
-- Single-cell approaches, spatial transcriptomics
-- CRISPR screens, AI-driven rare disease research
+RNA-seq, ATAC-seq, CUT&RUN
+Methyl-Seq (EM-Seq, RRBS, WGBS)  
+MAPit/NOMe-Seq
+Single-cell approaches, spatial transcriptomics
+CRISPR screens, AI-driven rare disease research
 
-This isn't just familiarity - we understand the unique analytical challenges, optimal parameters, and common pitfalls for each platform.
+This isn't just familiarity we understand the unique analytical challenges, optimal parameters, and common pitfalls for each platform.
 :::
 
 ---
@@ -112,10 +138,10 @@ This isn't just familiarity - we understand the unique analytical challenges, op
 
 **Catch critical issues early**
 
-- Failed library prep detection
-- Contamination identification
-- Compromised data recognition
-- **"Did your experiment work?"**
+Failed library prep detection
+Contamination identification
+Compromised data recognition
+**"Did your experiment work?"**
 
 ---
 
@@ -125,10 +151,10 @@ This isn't just familiarity - we understand the unique analytical challenges, op
 
 **Prevention + sophisticated analysis**
 
-- Power calculations & batch effects
-- Multi-factorial designs
-- Time courses & repeated measures
-- Complex but meaningful studies
+Power calculations & batch effects
+Multi-factorial designs
+Time courses & repeated measures
+Complex but meaningful studies
 
 ---
 
@@ -138,13 +164,13 @@ This isn't just familiarity - we understand the unique analytical challenges, op
 
 **Our collaborative model delivers results**
 
-- **Publications:** High-impact, peer-reviewed research
-- **Grant success:** Millions in funding secured
-- **Quality assurance:** Analytical disasters prevented
-- **Partnership impact:** Research that stands the test of time
+**Publications:** High-impact, peer-reviewed research
+**Grant success:** Millions in funding secured
+**Quality assurance:** Analytical disasters prevented
+**Partnership impact:** Research that stands the test of time
 
 ::: {.notes}
-Our collaborative model delivers results: successful grant applications, high-impact publications, and research that stands up to peer review. We've helped secure millions in funding, contributed to dozens of publications, and prevented countless analytical disasters before they happen. When you work with us, you're not just getting analysis - you're getting a partnership that maximizes your research impact.
+Our collaborative model delivers results: successful grant applications, high-impact publications, and research that stands up to peer review. We've helped secure millions in funding, contributed to dozens of publications, and prevented countless analytical disasters before they happen. When you work with us, you're not just getting analysis you're getting a partnership that maximizes your research impact.
 :::
 
 ---
@@ -155,13 +181,13 @@ Our collaborative model delivers results: successful grant applications, high-im
 
 **Expertise that scales across the cancer center**
 
-- **Documentation Hub:** Best practices & troubleshooting accessible to all
-- **Interactive Reports:** Transform pipeline outputs into explorable insights  
-- **Custom Applications:** DECODeR, HeatPath, ClusterPicker for data exploration
-- **Community Resources:** Monthly journal clubs, walk-in hours, training materials
+**Documentation Hub:** Best practices & troubleshooting accessible to all
+**Interactive Reports:** Transform pipeline outputs into explorable insights  
+**Custom Applications:** DECODeR, HeatPath, ClusterPicker for data exploration
+**Community Resources:** Monthly journal clubs, walk-in hours, training materials
 
 ::: {.notes}
-Our expertise doesn't just benefit direct collaborators - we've built comprehensive resources that support the entire cancer center community. Our Bioinformatics Hub provides dynamic documentation that evolves with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR for differential expression visualization, HeatPath for pathway exploration, and ClusterPicker for pattern discovery address specific bottlenecks we see repeatedly. These aren't just convenience tools - they're solutions built from our collaborative experience, making sophisticated analyses accessible while maintaining analytical rigor.
+Our expertise doesn't just benefit direct collaborators we've built comprehensive resources that support the entire cancer center community. Our Bioinformatics Hub provides dynamic documentation that evolves with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR for differential expression visualization, HeatPath for pathway exploration, and ClusterPicker for pattern discovery address specific bottlenecks we see repeatedly. These aren't just convenience tools they're solutions built from our collaborative experience, making sophisticated analyses accessible while maintaining analytical rigor.
 :::
 
 <br><br>
@@ -176,9 +202,9 @@ Our expertise doesn't just benefit direct collaborators - we've built comprehens
 
 **Complete research lifecycle support**
 
-- Experimental design → Publication
-- Sustainable tools & documentation
-- Emerging methodologies integration
+Experimental design → Publication
+Sustainable tools & documentation
+Emerging methodologies integration
 
 **Works in progress:** RNA-seq & single-cell reports
 
@@ -192,10 +218,10 @@ Our expertise doesn't just benefit direct collaborators - we've built comprehens
 
 **Ready to elevate your research?**
 
-- **Unit webpage** → UF Health Cancer Center
-- **Bioinformatics Hub** → immediate resources  
-- **UF Health channels** → request consultation
-- **Collaboration models** → partnerships to training
+**Unit webpage** → UF Health Cancer Center
+**Bioinformatics Hub** → immediate resources  
+**UF Health channels** → request consultation
+**Collaboration models** → partnerships to training
 
 [Contact information and web links]
 
@@ -209,9 +235,9 @@ Our expertise doesn't just benefit direct collaborators - we've built comprehens
 
 **Let's discuss your research challenges**
   
-  - Analytical bottlenecks limiting progress?
-  - How could interactive tools accelerate discoveries?
-  - What collaborations might amplify impact?
+  Analytical bottlenecks limiting progress?
+  How could interactive tools accelerate discoveries?
+  What collaborations might amplify impact?
   
   **Your turn:** Questions about integrating rigorous bioinformatics?
   
