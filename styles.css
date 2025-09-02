@@ -33,3 +33,28 @@
   width: 100% !important;
 }
 
+/* Static checklist bullets (no emoji / no icon packs) */
+.reveal ul.checklist,
+.reveal .checklist ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.reveal ul.checklist li,
+.reveal .checklist ul li {
+  position: relative;
+  padding-left: 1.6em;
+  margin: .35em 0;
+}
+
+.reveal ul.checklist li::before,
+.reveal .checklist ul li::before {
+  content: "✔";            /* text glyph, consistent everywhere */
+  position: absolute;
+  left: 0;
+  top: .15em;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #28c76f;
+}
