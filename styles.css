@@ -85,4 +85,11 @@
   z-index: -1;
 }
 
+.reveal .slides .column div.fragment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 
