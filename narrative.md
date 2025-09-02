@@ -66,9 +66,13 @@ Poor quality data leads to poor conclusions - or worse, wasted months of work. W
 
 The best analysis can't save a poorly designed experiment. We help you avoid generating unusable data by considering power calculations, batch effects, and confounding variables before you spend time and money in the lab. Equally important, we can analyze complex but well-designed studies - repeated measures, time courses, multi-factorial designs - that might overwhelm standard pipelines but yield the most biologically meaningful results.
 
-### Slide 8: Comprehensive Support Framework @hkates
+### Slide 8: Proven Track Record @hkates
 
-Everything we've discussed is documented and accessible through our Bioinformatics Hub - best practices, troubleshooting guides, and analytical workflows developed from years of real-world experience. This isn't just our expertise talking - it's a systematic approach to ensuring your omics research succeeds. Now let's dive deeper into these capabilities with some specific examples.
+Our collaborative model delivers results: successful grant applications, high-impact publications, and research that stands up to peer review. We've helped secure millions in funding, contributed to dozens of publications, and prevented countless analytical disasters before they happen. When you work with us, you're not just getting analysis - you're getting a partnership that maximizes your research impact.
+
+### Slide 9: Beyond Collaboration: Resources for All @hkates
+
+Our expertise doesn't just benefit direct collaborators - we've built comprehensive resources that support the entire cancer center community. Our Bioinformatics Hub provides dynamic documentation that evolves with the field, addressing the critical gap between having access to tools and knowing how to use them effectively. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents where every table can be filtered and every result links to additional context. Our custom applications like DECODeR for differential expression visualization, HeatPath for pathway exploration, and ClusterPicker for pattern discovery address specific bottlenecks we see repeatedly in omics research. These aren't just convenience tools - they're solutions built from our collaborative experience, making sophisticated analyses accessible while maintaining analytical rigor. This ecosystem of resources ensures that good bioinformatics practices scale beyond individual collaborations to benefit researchers across the cancer center.
 
 ------------------------------------------------------------------------
 
@@ -76,17 +80,17 @@ Everything we've discussed is documented and accessible through our Bioinformati
 
 ### **Unit Webpage Demo** @kshirlekar
 
-Our official presence within the UF Health Cancer Center showcases who we are and how we fit into the broader research ecosystem. This webpage serves as your first point of contact - it establishes our credentials, introduces our team members, and provides the professional overview that investigators and administrators need when considering collaboration. You'll find our mission statement, contact information, and links to request our services directly through the UF Health system.
+Our official presence within the UF Health Cancer Center showcases who we are and how we fit into the broader research ecosystem. This webpage serves as your first point of contact - it introduces our team members, and provides the overview that investigators need when considering collaboration. You'll find our mission statement, contact information, and links to request our services directly through the UF Health system.
 
 ### **Bioinformatics Hub** @hkates
 
-Our living documentation platform that transforms institutional knowledge into accessible guidance. The Hub addresses the critical gap between having access to bioinformatics tools and knowing how to use them effectively. We continuously update this resource based on new challenges we encounter in collaborations and emerging best practices in the field.
+Our dynamic documentation platform that transforms institutional knowledge into accessible guidance. The Hub addresses the critical gap between having access to bioinformatics tools and knowing how to use them effectively. We continuously update this resource based on new challenges we encounter in collaborations and emerging best practices in the field.
 
 The Hub's strength lies in its responsiveness - we regularly add new sections based on researcher requests and evolving methodological standards. Each section builds from fundamental concepts to advanced applications, whether you're planning your first RNA-seq experiment or troubleshooting complex multi-omics integration. This dynamic documentation ensures that good bioinformatics practices evolve with the field and remain relevant to current research needs.
 
 ### **Applications Landing Page Demo** @hkates
 
-Our applications portal represents the evolution from one-off analyses to sustainable, reproducible tools. These aren't just convenience applications - they're solutions to specific bottlenecks we've identified in omics research workflows. Each tool addresses a real problem: DECODeR handles the complexity of differential expression visualization, HeatPath bridges the gap between statistical results and biological interpretation, and our reporting tools ensure that analyses remain interpretable months or years later.
+Our applications portal represents the evolution from one-off analyses to sustainable, reproducible tools. These aren't just convenience applications - they're solutions to specific bottlenecks we've identified in omics research workflows. Each tool addresses a real problem: DECODeR handles the complexity of differential expression visualization, HeatPath invites curiosity about biological patterns in data separate from statistical analysis, and our reporting tools ensure that analyses remain interpretable and reproducible months or years later.
 
 What makes these applications particularly valuable is their integration with our consultation model. They're built from patterns we see repeatedly in our collaborative work, codifying best practices into user-friendly interfaces that maintain analytical rigor while being accessible to researchers with varying computational backgrounds.
 
