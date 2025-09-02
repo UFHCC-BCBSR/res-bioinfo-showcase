@@ -1,267 +1,218 @@
 ---
-title: "Bioinformatics Expertise Invested in your Research" 
-subtitle: "UFHCC Bioinformatics Unit"
-author: "UFHCC BCB-SR Bioinformatics Team"
+title: "Bioinformatics Expertise Invested in your Research"
+subtitle: "UFHCC BCB-SR Bioinformatics Team"
 format:
   revealjs:
     theme: dark
     transition: slide
+    scrollable: true
+    css: styles.css
 ---
 
-## Meet Your Bioinformatics Team {.center}
-
-We're a collaborative team of three bioinformaticians with complementary expertise spanning computational biology, statistics, and cancer genomics.
-
-::: {.fragment}
-Together, we bring **over 20 years of combined experience** in omics analysis, from method development to clinical applications.
-:::
-
-::: {.fragment}
-We work as an **integrated unit** - when you collaborate with one of us, you benefit from all of our collective knowledge and different perspectives on your research questions.
-:::
-
----
-
-## Our Collaboration Model {.center}
-
-::: {.fragment}
-We're **not a service core** - we're collaborators.
-:::
-
-::: {.incremental}
-- Participate as **key personnel** on grants
-- Help you secure funding with bioinformatics considerations built in
-- Funded through your grants + provide additional resources
-- Walk-in consulting hours & monthly journal clubs
-- Comprehensive resources to the entire cancer center
-:::
-
-::: {.fragment}
-*This model ensures we're invested in your success and available when you need us.*
-:::
-
----
-
-## Experience You Can Trust {.center}
-
-Can a postdoc or graduate student analyze a perfectly designed study with simple design and high quality data? **Probably.**
-
-::: {.fragment}
-But when renovating your kitchen, would you rather watch YouTube tutorials and hope for the best, or hire someone who's done hundreds of kitchens and knows exactly what problems to expect?
-:::
-
-::: {.fragment}
-**Between our team:** We've collectively analyzed **hundreds of datasets** across most major omics assays. We've encountered - and solved - the QC issues that will arise in your projects.
-:::
-
----
-
-## Strengthening Your Grant Applications {.center .smaller}
-
-::: {style="font-size: 0.85em;"}
-NIH increasingly emphasizes robust data management and data analysis plans.
+## <span style="display: block; text-align: center;">Meet Your Bioinformatics Team</span>
 
 ::: {.columns}
-::: {.column width="50%"}
-🛡️ **Scientific Rigor**  
-✅ **Feasibility**  
-📋 **Analysis Plan**
+
+::: {.column width="60%"}
+<img src="slide_figures/about-us.png" alt="Team Bios">
 :::
 
-::: {.column width="50%"}
-💰 **Justified Budget**  
-🎯 **Reviewer Confidence**
-:::
+::: {.column width="40%"}
+- **3 bioinformaticians** with complementary skills
+- **20+ years** combined experience
+- **Integrated approach** - collaborate with one, benefit from all
 :::
 
-::: {.fragment}
-**We help you craft:** Data management plans • Analytical approaches • Resource budgets
-
-*Our involvement signals you've thought carefully about analytical challenges ahead.*
-:::
 :::
 
 ---
 
-## Assay Expertise Across Platforms {.center}
+## <span style="display: block; text-align: center;">Our Collaboration Model</span>
 
-**[Insert: Horizontal Bar Chart - Assay × Number of Datasets Analyzed]**
+<img src="slide_figures/collaboration-model.png" alt="collaboration model" style="width: 100%; height: auto;">
 
-::: {.fragment}
-We have deep experience with the **full spectrum of cancer omics:**
-- RNA-seq, ATAC-seq, CUT&RUN  
-- Methyl-Seq (EM-Seq, RRBS, WGBS)   
-- MAPit/NOMe-Seq  
-- Single-cell approaches, spatial transcriptomics  
+::: {.notes}
+**Not a service core - we're partners** • Key personnel on grants • Funded through your research • Invested in your success
+:::
+
+---
+
+## <span style="display: block; text-align: center;">Project Lifecycle</span>
+
+<div style="text-align: center;">
+  ![](slide_figures/project-lifecycle.png){width=48%}
+</div>
+
+<div style="text-align: center; margin-top: 1em; font-style: italic; font-size: 0.8em;">
+  We are invested and curious from start to finish.
+</div>
+
+---
+
+### <span style="display: block; text-align: center;">Experience = Robust, Reproducible Analyses</span>
+
+:::: {.columns style="display: flex; align-items: center;"}
+
+::: {.column width="65%"}
+![](slide_figures/experience.png){width=100%}
+:::
+
+::: {.column width="35%"}
+<div style="font-size: 0.8em; line-height: 1.4;">
+- **Hundreds** of datasets analyzed  
+- **Every** major omics assay  
+- **Problems solved** before they derail your project  
+</div>
+:::
+
+::::
+
+---
+
+### <span style="display: block; text-align: center;">Strengthening Your Grant Applications</span>
+
+<!--<img src="slide_figures/grant-strength-infographic.png" alt="Infographic showing data management plan, analysis plan, and budget justification elements">-->
+
+**NIH demands robust bioinformatics plans**
+
+- Data management & sharing
+- Justified analytical approaches  
+- Appropriate resource budgeting
+- Reviewer confidence in feasibility
+
+---
+
+## <span style="display: block; text-align: center;">Assay Expertise Across Platforms</span>
+
+<!--<img src="slide_figures/assay-experience-bar-chart.png" alt="Horizontal bar chart showing number of datasets analyzed for RNA-seq, ATAC-seq, CUT&RUN, EM-Seq, single-cell, spatial, CRISPR screens">-->
+
+**Deep experience across cancer omics**
+
+- Expression, epigenome, chromatin
+- Single-cell & spatial approaches
+- Functional genomics screens (CRISPR)
+- AI-driven rare disease analysis
+
+::: {.notes}
+Full list of assays we have experience with:
+- RNA-seq, ATAC-seq, CUT&RUN
+- Methyl-Seq (EM-Seq, RRBS, WGBS)  
+- MAPit/NOMe-Seq
+- Single-cell approaches, spatial transcriptomics
 - CRISPR screens, AI-driven rare disease research
-:::
 
-::: {.fragment}
-This isn't just familiarity - we understand the **unique analytical challenges, optimal parameters, and common pitfalls** for each platform.
-:::
-
----
-
-## Quality Control That Prevents Disasters {.center}
-
-::: {.fragment}
-**Poor quality data leads to poor conclusions** - or worse, wasted months of work.
-:::
-
-::: {.incremental}
-We catch critical issues early:
-- Inadequate insert sizes in ATAC-seq → failed library prep
-- High duplication rates in RNA-seq → compromised differential expression  
-- Contamination → invalidated experiments
-:::
-
-::: {.fragment}
-We parse dozens of metrics and plots to answer: **"Did your experiment actually work?"**
+This isn't just familiarity - we understand the unique analytical challenges, optimal parameters, and common pitfalls for each platform.
 :::
 
 ---
 
-## Experimental Design That Works {.center}
+### <span style="display: block; text-align: center;">Quality Control Saves Time and Improves Results</span>
 
-::: {.fragment}
-**The best analysis can't save a poorly designed experiment.**
-:::
+<!--<img src="slide_figures/qc-disaster-prevention.png" alt="Before/after comparison showing failed vs successful QC metrics with red flags and green checkmarks">-->
 
-::: {.columns}
-::: {.column width="50%"}
-**Prevention:**
-- Power calculations
-- Batch effect considerations  
-- Confounding variable control
-:::
+**Catch critical issues early**
 
-::: {.column width="50%"}
-**Complex Analysis:**
-- Repeated measures
-- Time courses
+- Failed library prep detection
+- Contamination identification
+- Compromised data recognition
+- **"Did your experiment work?"**
+
+---
+
+### <span style="display: block; text-align: center;">Experimental Design That Leads to the Insight You Want</span>
+
+<!--<img src="slide_figures/design-complexity-matrix.png" alt="2x2 matrix showing simple vs complex design crossed with good vs poor execution, highlighting the complex+good quadrant">-->
+
+**Prevention + sophisticated analysis**
+
+- Power calculations & batch effects
 - Multi-factorial designs
-:::
-:::
+- Time courses & repeated measures
+- Complex but meaningful studies
 
-::: {.fragment}
-*We help you avoid unusable data AND analyze complex but meaningful study designs.*
+---
+
+## <span style="display: block; text-align: center;">Proven Track Record of Success</span>
+
+<!--<img src="slide_figures/impact-metrics-dashboard.png" alt="Dashboard showing publication count, grant funding secured, collaboration success rate, and researcher satisfaction metrics">-->
+
+**Our collaborative model delivers results**
+
+- **Publications:** High-impact, peer-reviewed research
+- **Grant success:** Millions in funding secured
+- **Quality assurance:** Analytical disasters prevented
+- **Partnership impact:** Research that stands the test of time
+
+::: {.notes}
+Our collaborative model delivers results: successful grant applications, high-impact publications, and research that stands up to peer review. We've helped secure millions in funding, contributed to dozens of publications, and prevented countless analytical disasters before they happen. When you work with us, you're not just getting analysis - you're getting a partnership that maximizes your research impact.
 :::
 
 ---
 
-## Comprehensive Support Framework {.center}
+## <span style="display: block; text-align: center;">Sharing Our Experience through Resources</span>
 
-Everything we've discussed is **documented and accessible** through our Bioinformatics Hub.
+<!--<img src="slide_figures/resources-ecosystem.png" alt="Hub diagram showing expertise at center radiating out to documentation, web applications, interactive reports, and community resources">-->
 
-::: {.fragment}
-- Best practices & troubleshooting guides
-- Analytical workflows from real-world experience
-- Systematic approach to omics research success
+**Expertise that scales across the cancer center**
+
+- **Documentation Hub:** Best practices & troubleshooting accessible to all
+- **Interactive Reports:** Transform pipeline outputs into explorable insights  
+- **Custom Applications:** DECODeR, HeatPath, ClusterPicker for data exploration
+- **Community Resources:** Monthly journal clubs, walk-in hours, training materials
+
+::: {.notes}
+Our expertise doesn't just benefit direct collaborators - we've built comprehensive resources that support the entire cancer center community. Our Bioinformatics Hub provides dynamic documentation that evolves with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR for differential expression visualization, HeatPath for pathway exploration, and ClusterPicker for pattern discovery address specific bottlenecks we see repeatedly. These aren't just convenience tools - they're solutions built from our collaborative experience, making sophisticated analyses accessible while maintaining analytical rigor.
 :::
 
-::: {.fragment}
-**Ready to see our resources in action?**
-:::
+<br><br>
+
+<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/)</small>
 
 ---
 
-## Our Resources {.center}
+## <span style="display: block; text-align: center;">Advancing Cancer Center Research with Experienced Bioinformatics</span>
 
-Comprehensive tools and documentation to accelerate your research.
+<!--<img src="slide_figures/research-lifecycle-transformation.png" alt="Research lifecycle diagram showing our involvement from design through publication with impact metrics">-->
 
-::: {.fragment}
-### [← Return to Main Presentation](index.html) {style="background: #3b82f6; color: white; padding: 15px 25px; border-radius: 10px; text-decoration: none; font-weight: bold;"}
-:::
+**Complete research lifecycle support**
 
----
+- Experimental design → Publication
+- Sustainable tools & documentation
+- Emerging methodologies integration
 
-## Live Demonstrations {.center}
+**Works in progress:** RNA-seq & single-cell reports
 
-Custom applications and interactive tools built for cancer research.
-
-::: {.fragment}
-### [← Return to Main Presentation](index.html) {style="background: #3b82f6; color: white; padding: 15px 25px; border-radius: 10px; text-decoration: none; font-weight: bold;"}
-:::
-
-## You Need UFHCC Bioinformatics {.center}
-
-::: {.fragment}
-**From conception to publication, we're your research partners**
-:::
-
-::: {.columns}
-::: {.column width="50%"}
-🎯 **Project Design**  
-📊 **Quality Control**  
-💻 **Infrastructure**
-:::
-
-::: {.column width="50%"}
-📈 **Analysis**  
-📝 **Communication**  
-🤝 **Collaboration**
-:::
-:::
-
-::: {.fragment}
-*Over 20 years of combined expertise • Hundreds of datasets analyzed • Grant success partnership*
-:::
+[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link}
 
 ---
 
-## Ready to Partner With Us? {.center}
+## <span style="display: block; text-align: center;">Contact and Work With Us </span>
 
-### Let's discuss your research today
+<!--<img src="slide_figures/collaboration-pathways.png" alt="Flowchart showing different entry points: unit webpage, bioinformatics hub, UF Health channels leading to collaboration types">-->
 
-::: {.columns}
-::: {.column width="50%"}
-**Walk-in Hours**  
-*Tuesdays 2-4 PM*
+**Ready to elevate your research?**
 
-**Monthly Journal Club**  
-*Cancer genomics focus*
+- **Unit webpage** → UF Health Cancer Center
+- **Bioinformatics Hub** → immediate resources  
+- **UF Health channels** → request consultation
+- **Collaboration models** → partnerships to training
 
-**Grant Consultation**  
-*Project design to publication*
-:::
+[Contact information and web links]
 
-::: {.column width="50%"}
-**Contact Information**  
-📧 [your-email@ufl.edu]  
-📞 [phone number]  
-🌐 [Bioinformatics Hub link]
-
-**Emergency Consultations**  
-*Available by appointment*
-:::
-:::
+[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link}
 
 ---
 
-## Questions & Discussion {.center}
+## <span style="display: block; text-align: center;">Discussion and Questions </span>
 
-### How can we help advance your cancer research?
+<!--<img src="slide_figures/discussion-topics.png" alt="Word cloud or icon grid showing research challenges, analytical bottlenecks, collaboration opportunities">-->
 
-::: {.fragment}
-**Topics we love to discuss:**
-- Experimental design challenges
-- Grant application strategies  
-- Quality control concerns
-- Complex analysis needs
-- Custom tool development
-:::
-
-::: {.fragment}
-*No question is too basic or too complex*
-:::
-
----
-
-## Thank You {.center}
-
-### UFHCC Bioinformatics Unit
-*Essential partners from conception to publication*
-
-::: {.fragment}
-### [← Return to Presentation Hub](index.html) {style="background: #3b82f6; color: white; padding: 20px 30px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 0.3em;"}
-:::
+**Let's discuss your research challenges**
+  
+  - Analytical bottlenecks limiting progress?
+  - How could interactive tools accelerate discoveries?
+  - What collaborations might amplify impact?
+  
+  **Your turn:** Questions about integrating rigorous bioinformatics?
+  
+  [← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link}
