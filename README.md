@@ -9,7 +9,6 @@ The main hub of the presentation is index.html. This includes click to enlarge s
 -   `narrative.md` = Narrative/script for presentation with timing. This an .md file for version control.
 -   `slides.qmd` = Slide deck for after expertise section before demos and conclusion after demos. This must be rendered to html in Rstudio.
 
-
 ## Updating Slides
 
 1.  Edit `slides.qmd`
@@ -59,7 +58,7 @@ Changes go live automatically when pushed to main.
 ### 4. Timeline & Checklist
 
 -   [ ] Finalize slide content
--   [ ] Prepare demo/screenshots
+-   [ ] Prepare demos
 -   [ ] Practice presentation timing
 -   [ ] Test all links and demos
 -   [ ] Finalize slide detail
