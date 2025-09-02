@@ -116,10 +116,8 @@ title-slide-attributes:
 
 ### <span style="display: block; text-align: center;">Deep experience across cancer omics assays</span>
 
-![](slide_figures/assays-analyzed.png){.r-stretch}
-
-<div class="slide-caption">
-  Expression, epigenome, chromatin • Single-cell & spatial • CRISPR screens
+<div style="text-align: center;">
+![](slide_figures/assays-bubbles.png){width=100%}
 </div>
 
 ::: {.notes}
@@ -142,7 +140,7 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 ![](slide_figures/insert-size-good.png){width=100%}
 :::
 ::: {.column width="50%"}
-![](slide_figures/insert-size-bad.png){width=100%}
+![](slide_figures/batch-effect.png){width=80%}
 :::
 ::::
 
@@ -173,22 +171,31 @@ Complex but meaningful studies
 
 ---
 
-## <span style="display: block; text-align: center;">Proven Track Record of Success</span>
+## Proven Track Record of Success
 
-<!--<img src="slide_figures/impact-metrics-dashboard.png" alt="Dashboard showing publication count, grant funding secured, collaboration success rate, and researcher satisfaction metrics">-->
+::: columns
+::: {.column width="45%"}
+<img src="slide_figures/track-record.png" alt="Track record diagram" style="max-width: 100%;"/>
 
-**Our collaborative model delivers results**
+<br>
 
-**Publications:** High-impact, peer-reviewed research
-**Grant success:** Millions in funding secured
-**Quality assurance:** Analytical disasters prevented
-**Partnership impact:** Research that stands the test of time
+### Research outcomes supported by BCB-SR Bioinformatics
+:::
+
+::: {.column width="55%"}
+
+- **Project completion**: Most funded projects progress to manuscripts or other outputs.  
+- **Sustained collaboration**: Ongoing partnerships with investigators across disciplines.  
+
+:::
+:::
 
 ::: {.notes}
-Our collaborative model delivers results: successful grant applications, high-impact publications, and research that stands up to peer review. We've helped secure millions in funding, contributed to dozens of publications, and prevented countless analytical disasters before they happen. When you work with us, you're not just getting analysis you're getting a partnership that maximizes your research impact.
+The figure shows outcomes of projects supported by our group. Most funded projects lead to manuscripts or publications, while others remain in progress. Our team contributes to grant success, ensures rigorous quality control, and maintains long-term collaborations.
 :::
 
 ---
+
 
 ### <span style="display: block; text-align: center;">Sharing Our Experience through Resources</span>
 
