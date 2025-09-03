@@ -52,29 +52,29 @@
       display:grid;
     }
 
-    /* ===== Three columns; center stacks hub + expertise ===== */
+    /* ===== Three columns; bottom-aligned to the shortest column ===== */
     .top{
       display:grid;
       height: 100%;
       gap: var(--gap-xl);
       grid-template-columns: 1fr minmax(440px, 580px) 1fr; /* L | CENTER | R */
       grid-template-areas: "left center right";
-      align-items: stretch;  /* equal column heights */
+      align-items: stretch;            /* <- bottom align columns */
     }
 
-    .left-wrap, .center-wrap, .right-wrap{ height:100%; display:flex; }
+    /* wrappers use their intrinsic height (no forced stretch) */
+    .left-wrap, .center-wrap, .right-wrap{ display:block; height:auto }
     .left-wrap  { grid-area:left }
     .center-wrap{ grid-area:center }
     .right-wrap { grid-area:right }
 
-    /* Left & right are single cards that stretch to fill column */
-    .left, .right{ flex:1 1 auto; display:flex; }
+    /* Left & right simple blocks (no flex stretch) */
+    .left, .right{ display:block }
 
-    /* Center occupies full column height; rows split as Hub (taller) + Expertise */
+    /* Center: stack Hub + Expertise; content-aware rows (no forced fill) */
     .center{
-      flex:1 1 auto;
       display:grid;
-      grid-template-rows: minmax(230px, 0.42fr) 1fr; /* adjust 0.42 up/down to change hub height share */
+      grid-template-rows: minmax(300px, auto) minmax(320px, auto);
       gap: var(--gap-lg);
       min-height:0;
     }
@@ -90,14 +90,16 @@
       display:flex;
       flex-direction:column;
       gap: var(--gap-md);
-      min-height: 0; /* allow stretching without overflow issues */
+      min-height: 0;
+      position: relative;
+      /* default focus scale for cards (overridden on hub) */
+      --card-focus-scale: 1.1;
+      transition: transform .24s ease, box-shadow .24s ease,
+                  opacity .24s ease, filter .24s ease;
+      transform-origin: center center;
+      cursor: pointer;
+      height:auto; /* <- ensure cards size to content */
     }
-
-    /* Stretch structural cards */
-    .left > .card,
-    .right > .card,
-    .hub.card,
-    .band.card{ height:100%; }
 
     .section-title{
       font-size: var(--fs-xl);
@@ -110,19 +112,29 @@
     .section-title a{ color:inherit; text-decoration:none }
     .section-title a:hover{ color:#60a5fa }
 
-    /* ===== Hub banner (top-aligned, tighter spacing) ===== */
-    .hub.card{ padding: clamp(14px, 2vw, 22px); justify-content:flex-start; align-items:center; }
+    /* ===== Hub banner ===== */
+    .hub.card{
+      padding: clamp(14px, 2vw, 22px);
+      justify-content:center;
+      align-items:center;
+      --card-focus-scale: 1.3; /* bigger zoom on focus */
+    }
+    .hub-fit{
+      position:relative;
+      width:100%;
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
     .hub-hero{
       display:flex; flex-direction:column; align-items:center; text-align:center;
-      gap: clamp(10px, 1.0vw, 22px);           /* tighter stack */
-      transform: translateY(20px);           /* nudge everything upward */
+      gap: clamp(10px, 1.0vw, 22px);
+      transform-origin: top center;  /* auto-fit scales this */
+      will-change: transform;
     }
-    .logo{
-      width: clamp(200px, 15vw, 318px);
-      height: clamp(200px, 15vw, 318px);
-      object-fit:cover; border-radius:50%;
-      margin-bottom: 0;                        /* remove extra space */
-    }
+    .logo{ display:none; } /* logo lives in Resources footer */
     .title-line{ font-size: var(--fs-lg); font-weight: 700; line-height:1.05 }
     .subtitle-line{ font-size: calc(var(--fs-xl) * 1.7); font-weight: 900; line-height:1.05 }
     .tagline{
@@ -159,7 +171,7 @@
     }
     .link:hover{ background: rgba(59,130,246,.18); color:#60a5fa }
 
-    /* ===== Expertise (full original text; wraps; fills remaining height) ===== */
+    /* ===== Expertise ===== */
     .band.card{ padding: clamp(12px, 1.8vw, 20px) }
     .band-title{
       font-size: var(--fs-xl);
@@ -182,8 +194,8 @@
       font-size: var(--fs-md);
       color: #eaf2ff;
       max-width: 560px;
-      text-decoration:none;  /* anchor styling */
-      display:block;         /* anchors are inline by default */
+      text-decoration:none;
+      display:block;
     }
     .pill:hover{ color:#eaf2ff; }
 
@@ -212,7 +224,6 @@
         --fs-md:  clamp(.98rem, 1.05vw, 1.08rem);
         --fs-btn: clamp(.96rem, 1vw, 1.02rem);
       }
-      .center{ grid-template-rows: minmax(210px, 0.40fr) 1fr; }
     }
     @media (max-height: 720px){
       :root{
@@ -222,7 +233,6 @@
         --fs-md:  clamp(.94rem, 1vw, 1rem);
         --fs-btn: clamp(.92rem, .95vw, .98rem);
       }
-      .center{ grid-template-rows: minmax(190px, 0.38fr) 1fr; }
     }
 
     /* ===== Responsive widths ===== */
@@ -233,7 +243,6 @@
           "left right"
           "center center";
       }
-      .center-wrap{ height:auto }
       .center{ grid-template-rows: auto auto }
     }
     @media (max-width: 780px){
@@ -241,28 +250,43 @@
       .expertise-grid{ grid-template-columns: 1fr }
       .pill{ max-width:none }
     }
-    /* Footer logo anchored to the bottom of the Resources card */
-.card.left { display:flex; flex-direction:column; } /* already true via .card, but safe */
-.card.left .panel-logo{
-  margin-top: auto;                      /* pushes logo to the bottom */
-  display: flex;
-  justify-content: center;
-  padding-top: clamp(8px, 1vw, 14px);
-}
-.card.left .panel-logo img{
-  width: clamp(150px, 22%, 210px);        /* scales with panel width */
-  opacity: 0.95;                         /* tweak to taste */
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,.35));
-}
-.hub-hero .logo{ display:none; }
 
+    /* ===== Resources footer logo ===== */
+    .card.left { display:flex; flex-direction:column; }
+    .card.left .panel-logo{
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      padding-top: clamp(8px, 1vw, 14px);
+    }
+    .card.left .panel-logo img{
+      width: clamp(100px, 22%, 140px);
+      opacity: 0.95;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.35));
+    }
+
+    /* ===== Focus/Dim interaction ===== */
+    .card.is-focused{
+      transform: scale(var(--card-focus-scale));
+      box-shadow: 0 28px 80px rgba(0,0,0,.55);
+      z-index: 9;
+    }
+    .focus-mode .card.is-dim{
+      opacity: .28;
+      filter: saturate(.7) brightness(.95);
+    }
+    .card .link, .card a, .card button{ cursor: auto; }
+
+    @media (prefers-reduced-motion: reduce){
+      .card{ transition: none; }
+    }
   </style>
 </head>
 <body>
   <div class="shell">
     <div class="top">
 
-      <!-- LEFT COLUMN (stretches full height) -->
+      <!-- LEFT COLUMN (intrinsic height; bottom-aligned with center) -->
       <div class="left-wrap">
         <section class="card left">
           <h2 class="section-title">Our Resources</h2>
@@ -282,7 +306,6 @@
               </div>
             </div>
 
-            <!-- Training box to balance column height -->
             <div class="node" style="grid-column:1/-1">
               <h3>Training</h3>
               <p>Walk-in Support • Hands-on workshops</p>
@@ -296,10 +319,10 @@
               </div>
             </div>
           </div>
-          <div class="panel-logo">
-  <img src="logo.png" alt="UF Health Cancer Center logo">
-</div>
 
+          <div class="panel-logo">
+            <img src="logo.png" alt="UF Health Cancer Center logo">
+          </div>
         </section>
       </div>
 
@@ -307,19 +330,20 @@
       <div class="center-wrap">
         <div class="center">
 
-          <!-- HUB (compact, top-aligned) -->
+          <!-- HUB (auto-fit) -->
           <section class="hub card">
-            <div class="hub-hero">
-              <img src="logo.png" alt="UF Health Cancer Center BCB-SR" class="logo" />
-              <div class="title-line">UF Health Cancer Center BCB-SR</div>
-              <div class="subtitle-line">Bioinformatics Showcase</div>
-              <a class="tagline" href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/slides.html#/advancing-cancer-center-research-with-experienced-bioinformatics">
-                Advancing Your Cancer Research through Rigorous Analyses
-              </a>
+            <div class="hub-fit">
+              <div class="hub-hero" id="hubHero">
+                <div class="title-line">UF Health Cancer Center BCB-SR</div>
+                <div class="subtitle-line">Bioinformatics Showcase</div>
+                <a class="tagline" href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/slides.html#/advancing-cancer-center-research-with-experienced-bioinformatics">
+                  Advancing Your Cancer Research through Rigorous Analyses
+                </a>
+              </div>
             </div>
           </section>
 
-          <!-- EXPERTISE (linked title + linked pill; full list) -->
+          <!-- EXPERTISE (shorter: removed Infrastructure & Training) -->
           <section class="band card">
             <h2 class="band-title">
               <a href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/slides.html#/title-slide">
@@ -334,18 +358,16 @@
 
             <div class="expertise-grid">
               <div class="expertise-item"><b>Project Design</b><br/>Grant writing • Experimental design</div>
-              <div class="expertise-item"><b>Analysis</b><br/>Statistical modeling • Visualization</div>
+              <div class="expertise-item"><b>Analysis</b><br/>Processing • HiPerGator and CLI expertise • Visualization</div>
               <div class="expertise-item"><b>Quality Control</b><br/>Comprehensive QC • Troubleshooting</div>
               <div class="expertise-item"><b>Communication</b><br/>Reports • Publications • Presentations</div>
-              <div class="expertise-item"><b>Infrastructure</b><br/>HiPerGator • CLI proficiency</div>
-              <div class="expertise-item"><b>Training</b><br/>Walk-in Support • Hands-on workshops</div>
             </div>
           </section>
 
         </div>
       </div>
 
-      <!-- RIGHT COLUMN (stretches full height) -->
+      <!-- RIGHT COLUMN (intrinsic height; bottom-aligned with center) -->
       <div class="right-wrap">
         <section class="card right">
           <h2 class="section-title">Live Demonstrations</h2>
@@ -376,5 +398,79 @@
 
     </div><!-- /top -->
   </div><!-- /shell -->
+
+  <!-- Focus/Dim + Hub Fit scripts -->
+  <script>
+    // --- Focus/Dim interaction ---
+    (function(){
+      const cards = Array.from(document.querySelectorAll('.card'));
+      let focused = null;
+
+      const ignoreClick = (e) => !!e.target.closest('a, .link, button');
+
+      function focusCard(card){
+        document.body.classList.add('focus-mode');
+        cards.forEach(c => {
+          c.classList.toggle('is-focused', c === card);
+          c.classList.toggle('is-dim',     c !== card);
+        });
+        focused = card;
+        setTimeout(fitHub, 260);
+      }
+
+      function clearFocus(){
+        document.body.classList.remove('focus-mode');
+        cards.forEach(c => c.classList.remove('is-focused','is-dim'));
+        focused = null;
+        setTimeout(fitHub, 260);
+      }
+
+      cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (ignoreClick(e)) return;
+          if (focused === card) clearFocus();
+          else focusCard(card);
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.card')) clearFocus();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') clearFocus();
+      });
+    })();
+
+    // --- Hub content auto-fit (scale down only) ---
+    function fitHub(){
+      const hero = document.getElementById('hubHero');
+      if (!hero) return;
+      const card = hero.closest('.hub');
+      const pad = 16; // safety padding
+
+      const availW = card.clientWidth  - pad * 2;
+      const availH = card.clientHeight - pad * 2;
+
+      hero.style.transform = 'scale(1)'; // reset
+      const needW = hero.scrollWidth;
+      const needH = hero.scrollHeight;
+
+      const scale = Math.min(availW / needW, availH / needH, 1); // never upscale
+      hero.style.transform = `scale(${scale})`;
+    }
+
+    window.addEventListener('load', fitHub);
+    window.addEventListener('resize', fitHub);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fitHub);
+    }
+    const hubCard = document.querySelector('.hub.card');
+    const hubHero = document.getElementById('hubHero');
+    if (hubCard && 'ResizeObserver' in window){
+      const ro = new ResizeObserver(fitHub);
+      ro.observe(hubCard);
+      ro.observe(hubHero);
+    }
+  </script>
 </body>
 </html>
