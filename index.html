@@ -12,17 +12,6 @@
             box-sizing: border-box;
         }
         
-        /* Base scaling for projectors */
-        html {
-            font-size: 18px; /* Increased base size */
-        }
-        
-        /* Presentation mode - add this class to body for projector use */
-        .presentation-mode {
-            transform: scale(1.4);
-            transform-origin: center center;
-        }
-        
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: #0a0a0a;
@@ -52,12 +41,45 @@
             z-index: -1;
         }
         
+        /* Automatic scaling based on screen size and DPI */
         .wheel-container {
             position: relative;
             width: 95vw;
             height: 90vh;
             max-width: none;
             max-height: none;
+            /* Scale automatically for larger screens */
+            transform: scale(1);
+        }
+        
+        /* Scale up for larger screens */
+        @media (min-width: 1400px) and (min-height: 900px) {
+            .wheel-container { transform: scale(1.1); }
+        }
+        
+        @media (min-width: 1600px) and (min-height: 1000px) {
+            .wheel-container { transform: scale(1.2); }
+        }
+        
+        @media (min-width: 1920px) and (min-height: 1080px) {
+            .wheel-container { transform: scale(1.3); }
+        }
+        
+        @media (min-width: 2400px) and (min-height: 1200px) {
+            .wheel-container { transform: scale(1.5); }
+        }
+        
+        /* Scale up significantly for low DPI displays (projectors) */
+        @media (max-resolution: 120dpi) {
+            .wheel-container { transform: scale(1.4); }
+        }
+        
+        @media (max-resolution: 96dpi) {
+            .wheel-container { transform: scale(1.6); }
+        }
+        
+        @media (max-resolution: 72dpi) {
+            .wheel-container { transform: scale(1.8); }
         }
         
         .central-hub {
@@ -65,8 +87,8 @@
             top: 15%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 450px;        /* Increased from 400px */
-            height: 450px;       /* Increased from 400px */
+            width: 400px;        /* Back to your original sizes */
+            height: 400px;       
             background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
             color: white;
             border-radius: 50%;
@@ -85,31 +107,31 @@
         }
         
         .central-hub .title {
-            font-size: clamp(1.8rem, 2.2vw, 2.8rem); /* Much larger */
+            font-size: clamp(calc(1.3rem * 0.8), 1.5vw, calc(2rem * 1.2));
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             line-height: 1.2;
         }
         
         .central-hub .logo {
-            width: 120px;           /* Increased from 100px */
-            height: 120px;          
-            margin-bottom: 8px;   
-            margin-top: -100px;      
+            width: 100px;           
+            height: 100px;          
+            margin-bottom: 5px;   
+            margin-top: -90px;      
             border-radius: 50%;    
             object-fit: cover;     
         }
         
         .central-hub .subtitle {
-            font-size: clamp(2.2rem, 2.8vw, 3.2rem); /* Much larger */
+            font-size: clamp(calc(2rem * 0.8), 2vw, calc(2rem * 1.2));
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             line-height: 1.2;
         }
         
         .central-hub .tagline {
-            font-size: clamp(1.1rem, 1.4vw, 1.6rem); /* Much larger */
-            margin-top: 12px;
+            font-size: clamp(calc(0.75rem * 0.8), 0.75vw, calc(0.75rem * 1.2));
+            margin-top: 10px;
             opacity: 0.8;
             font-weight: 400;
             letter-spacing: 0.5px;
@@ -143,31 +165,13 @@
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(10px);
             border-radius: 16px;
-            padding: 40px; /* Increased from 30px */
+            padding: 30px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.4s ease;
             cursor: pointer;
         }
         
-        /* Positioning - bigger sections */
-        .resources-section {
-            top: 8%;
-            left: 4%;
-            width: 420px; /* Increased from 380px */
-        }
-        .demos-section {
-            top: 8%;
-            right: 4%;
-            width: 420px; /* Increased from 380px */
-        }
-        .expertise-section {
-            bottom: -5%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px; /* Increased from 550px */
-        }
-        
-        /* Keep all existing focus/hover states but update font sizes */
+        /* Focused state - enlarged */
         .spoke-section.focused {
             transform: scale(1.3) translateY(-10px);
             z-index: 30;
@@ -180,6 +184,7 @@
             transform: translateX(-50%) scale(1.3) translateY(-10px);
         }
         
+        /* Dimmed state - smaller and faded */
         .spoke-section.dimmed {
             opacity: 0.3;
             transform: scale(0.95);
@@ -190,6 +195,7 @@
             transform: translateX(-50%) scale(0.95);
         }
         
+        /* Hub expanded state */
         .spoke-section.hub-expanded {
             opacity: 0.2;
             transform: scale(0.8);
@@ -200,6 +206,7 @@
             transform: translateX(-50%) scale(0.8);
         }
         
+        /* Simple hover - only when normal state */
         .spoke-section:hover:not(.focused):not(.dimmed):not(.hub-expanded) {
             background: rgba(255, 255, 255, 0.04);
             border-color: rgba(59, 130, 246, 0.2);
@@ -207,11 +214,11 @@
         
         .section-title {
             color: #ffffff;
-            font-size: clamp(1.6rem, 2.0vw, 2.4rem); /* Much larger */
+            font-size: clamp(calc(1.3rem * 0.8), 1.3vw, calc(1.3rem * 1.2));
             font-weight: 600;
             text-align: center;
-            margin-bottom: 30px; /* Increased spacing */
-            padding-bottom: 20px; /* Increased spacing */
+            margin-bottom: 25px;
+            padding-bottom: 15px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             letter-spacing: -0.3px;
         }
@@ -227,9 +234,29 @@
             color: #3b82f6;
         }
         
+        /* Positioning - back to your original sizes */
+        .resources-section {
+            top: 8%;
+            left: 4%;
+            width: 380px;
+        }
+        
+        .demos-section {
+            top: 8%;
+            right: 4%;
+            width: 380px;
+        }
+        
+        .expertise-section {
+            bottom: -5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 550px;
+        }
+        
         .node-grid {
             display: grid;
-            gap: 20px; /* Increased from 15px */
+            gap: 15px;
         }
         
         .resources-grid {
@@ -249,7 +276,7 @@
         .node {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
-            padding: 25px; /* Increased from 20px */
+            padding: 20px;
             text-align: left;
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.3s ease;
@@ -263,17 +290,17 @@
         }
         
         .node h3 {
-            font-size: clamp(1.4rem, 1.8vw, 2.0rem); /* Much larger */
-            margin-bottom: 12px; /* Increased spacing */
+            font-size: clamp(calc(1.1rem * 0.8), 1.1vw, calc(1.1rem * 1.2));
+            margin-bottom: 8px;
             font-weight: 600;
             color: #ffffff;
             letter-spacing: -0.2px;
         }
         
         .node p {
-            font-size: clamp(1.1rem, 1.4vw, 1.6rem); /* Much larger */
+            font-size: clamp(calc(0.9rem * 0.8), 0.9vw, calc(0.9rem * 1.2));
             line-height: 1.4;
-            margin-bottom: 20px; /* Increased spacing */
+            margin-bottom: 15px;
             color: rgba(255, 255, 255, 0.7);
             font-weight: 400;
         }
@@ -281,15 +308,15 @@
         .links {
             display: flex;
             flex-direction: column;
-            gap: 12px; /* Increased spacing */
+            gap: 8px;
         }
         
         .link-placeholder {
             background: rgba(59, 130, 246, 0.1);
             color: rgba(59, 130, 246, 0.9);
-            padding: 12px 18px; /* Increased padding */
+            padding: 8px 14px;
             border-radius: 6px;
-            font-size: clamp(1.0rem, 1.2vw, 1.4rem); /* Much larger */
+            font-size: clamp(calc(0.8rem * 0.8), 0.8vw, calc(0.8rem * 1.2));
             font-weight: 500;
             text-decoration: none;
             transition: all 0.2s ease;
@@ -306,14 +333,14 @@
         .expertise-intro {
             background: rgba(59, 130, 246, 0.1);
             border-radius: 10px;
-            padding: 20px; /* Increased padding */
-            margin-bottom: 25px; /* Increased spacing */
+            padding: 15px;
+            margin-bottom: 20px;
             text-align: center;
             border: 1px solid rgba(59, 130, 246, 0.3);
         }
         
         .expertise-intro p {
-            font-size: clamp(1.1rem, 1.4vw, 1.6rem); /* Much larger */
+            font-size: clamp(calc(0.9rem * 0.8), 0.9vw, calc(0.9rem * 1.2));
             color: rgba(255, 255, 255, 0.9);
             margin: 0;
             font-weight: 500;
@@ -322,26 +349,26 @@
         .expertise-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 25px; /* Increased spacing */
+            gap: 20px;
             margin-top: 0;
         }
         
         .expertise-list {
             display: flex;
             flex-direction: column;
-            gap: 12px; /* Increased spacing */
+            gap: 8px;
         }
         
         .expertise-item {
             background: rgba(255, 255, 255, 0.02);
             border-radius: 8px;
-            padding: 16px; /* Increased padding */
-            font-size: clamp(1.0rem, 1.3vw, 1.5rem); /* Much larger */
+            padding: 12px;
+            font-size: clamp(calc(0.9rem * 0.8), 0.9vw, calc(0.9rem * 1.2));
             line-height: 1.4;
             color: rgba(255, 255, 255, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.06);
             transition: all 0.2s ease;
-            margin-bottom: 10px; /* Increased spacing */
+            margin-bottom: 8px;
         }
         
         .expertise-item:hover {
@@ -354,31 +381,7 @@
             font-weight: 600;
         }
         
-        .why-content {
-            background: rgba(59, 130, 246, 0.05);
-            border-radius: 12px;
-            padding: 30px; /* Increased padding */
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-        
-        .why-content h4 {
-            color: #ffffff;
-            font-size: clamp(1.2rem, 1.5vw, 1.8rem); /* Much larger */
-            font-weight: 600;
-            margin-bottom: 18px; /* Increased spacing */
-            text-align: center;
-            letter-spacing: -0.2px;
-        }
-        
-        .why-content p {
-            font-size: clamp(1.0rem, 1.2vw, 1.4rem); /* Much larger */
-            line-height: 1.5;
-            color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            font-weight: 400;
-        }
-        
-        /* Connection lines */
+        /* Enhanced connection lines */
         .connection-line {
             position: absolute;
             background: linear-gradient(45deg, rgba(59, 130, 246, 0.8), rgba(59, 130, 246, 0.4));
@@ -409,49 +412,11 @@
             width: 3%;
             transform: translateX(-50%) rotate(90deg);
         }
-        
-        /* Media queries for different screen sizes */
-        @media (max-width: 1200px) {
-            .wheel-container {
-                transform: scale(1.2);
-            }
-            .resources-section, .demos-section {
-                width: 400px;
-            }
-            .expertise-section {
-                width: 580px;
-            }
-        }
-        
-        /* Presentation mode toggle button */
-        .presentation-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(59, 130, 246, 0.8);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            z-index: 100;
-            transition: all 0.2s ease;
-        }
-        
-        .presentation-toggle:hover {
-            background: rgba(59, 130, 246, 1);
-        }
     </style>
 </head>
 <body>
-    <!-- Add presentation mode toggle button -->
-    <button class="presentation-toggle" onclick="togglePresentationMode()">
-        Toggle Projection Mode
-    </button>
-    
     <div class="wheel-container">
-        <!-- Rest of your HTML remains the same -->
+        <!-- Central Hub -->
         <div class="central-hub" id="centralHub">
             <img src="logo.png" alt="Logo" class="logo">
             <div class="title">UF Health Cancer Center</div>
@@ -557,75 +522,57 @@
     <script>
         let currentFocused = null;
         let hubExpanded = false;
-        let presentationMode = false;
-        
-        // Toggle presentation mode for projectors
-        function togglePresentationMode() {
-            presentationMode = !presentationMode;
-            document.body.classList.toggle('presentation-mode', presentationMode);
-            
-            const button = document.querySelector('.presentation-toggle');
-            button.textContent = presentationMode ? 'Exit Projection Mode' : 'Toggle Projection Mode';
-        }
         
         document.addEventListener('DOMContentLoaded', function() {
-    const spokeSections = document.querySelectorAll('.spoke-section');
-    const centralHub = document.getElementById('centralHub');
-    
-    // Simple click handler for sections
-    spokeSections.forEach(section => {
-        section.addEventListener('click', function(e) {
-            // Don't interfere with link clicks
-            if (e.target.tagName === 'A') return;
-            console.log('Clicked section:', section.className); // Debug
-            if (currentFocused === section) {
-                // Unfocus if clicking same section
-                resetAll();
-            } else {
-                // Focus this section
-                resetAll();
-                section.classList.add('focused');
-                spokeSections.forEach(other => {
-                    if (other !== section) {
-                        other.classList.add('dimmed');
+            const spokeSections = document.querySelectorAll('.spoke-section');
+            const centralHub = document.getElementById('centralHub');
+            
+            spokeSections.forEach(section => {
+                section.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'A') return;
+                    if (currentFocused === section) {
+                        resetAll();
+                    } else {
+                        resetAll();
+                        section.classList.add('focused');
+                        spokeSections.forEach(other => {
+                            if (other !== section) {
+                                other.classList.add('dimmed');
+                            }
+                        });
+                        currentFocused = section;
                     }
                 });
-                currentFocused = section;
+            });
+            
+            centralHub.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') return;
+                if (hubExpanded) {
+                    centralHub.classList.remove('expanded');
+                    spokeSections.forEach(s => s.classList.remove('hub-expanded'));
+                    hubExpanded = false;
+                } else {
+                    resetAll();
+                    centralHub.classList.add('expanded');
+                    spokeSections.forEach(s => s.classList.add('hub-expanded'));
+                    hubExpanded = true;
+                }
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.spoke-section') && !e.target.closest('.central-hub')) {
+                    resetAll();
+                }
+            });
+            
+            function resetAll() {
+                spokeSections.forEach(section => {
+                    section.classList.remove('focused', 'dimmed', 'hub-expanded');
+                });
+                centralHub.classList.remove('expanded');
+                currentFocused = null;
+                hubExpanded = false;
             }
         });
-    });
-    
-    // Hub click handler
-    centralHub.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A') return;
-        if (hubExpanded) {
-            centralHub.classList.remove('expanded');
-            spokeSections.forEach(s => s.classList.remove('hub-expanded'));
-            hubExpanded = false;
-        } else {
-            resetAll();
-            centralHub.classList.add('expanded');
-            spokeSections.forEach(s => s.classList.add('hub-expanded'));
-            hubExpanded = true;
-        }
-    });
-    
-    // Reset when clicking elsewhere
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.spoke-section') && !e.target.closest('.central-hub')) {
-            resetAll();
-        }
-    });
-    
-    function resetAll() {
-        spokeSections.forEach(section => {
-            section.classList.remove('focused', 'dimmed', 'hub-expanded');
-        });
-        centralHub.classList.remove('expanded');
-        currentFocused = null;
-        hubExpanded = false;
-    }
-});
-</script>
-</body>
-</html>
+    </script>
+</body
