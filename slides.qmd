@@ -121,21 +121,79 @@ newbie chaos vs. our organized expertise.
 ## Bioinformatics Project Lifecycle
 
 ::: columns
-::: {.column width="60%"}
-![](slide_figures/project_lifecycle_transparent.png){width=100%}
-:::
-
 ::: {.column width="40%"}
 
-::: {.r-stack style="position: relative; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center;"}
-<div class="fragment fade-in-then-out" data-fragment-index="1">Grant Proposal</div>
-<div class="fragment fade-in-then-out" data-fragment-index="2">Data Delivery</div>
-<div class="fragment fade-in-then-out" data-fragment-index="3">Data Pre-Processing</div>
-<div class="fragment fade-in-then-out" data-fragment-index="4">Analysis Report</div>
-<div class="fragment fade-in-then-out" data-fragment-index="5">Products Delivery</div>
+::: {.r-stack style="position: relative; min-height: 250px; display: flex; align-items: center; justify-content: center; text-align: left;"}
+
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+Proposal & Funding 
+<ul style="font-size:70%">
+  <li>Assist in grant writing</li>
+  <li>Experimental design planning and choosing the protocol</li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+Data Generation & Delivery  
+<ul style="font-size:70%">
+  <li>Coordination with the sequencing core</li>
+  <li>Data storage on HiPerGator</li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+Data Pre-Processing  
+<ul style="font-size:70%">
+  <li>Rigorous quality control </li>
+  <li>Troubleshooting at multiple levels </li>
+  <li>MultiQC reports </li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+Primary and Secondary Analysis  
+<ul style="font-size:70%">
+  <li>Use of scalable best-practice pipelines</li>
+  <li>Downstream analysis: differential analysis, pathway analysis, tool building etc. </li>
+  <li>Access to in-house tools </li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="5">
+Reports Delivery  
+<ul style="font-size:70%">
+  <li>Automated project tracking</li>
+  <li>Traceable and extensive reports</li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="6">
+Publication & Data Management  
+<ul style="font-size:70%">
+  <li>Transfer of analysis files </li>
+  <li>Generation of publication quality images</li>
+  <li>Uploading files to SRA</li>
+</ul>
+</div>
+
 :::
 
 :::
+:::
+
+::: notes
+- People familiar with software development know about the **Software Development Life Cycle (SDLC)**.  
+  Similarly, for a bioinformatics project, this is how a typical lifecycle looks with us.  
+
+- **Project Proposal**: We often get involved early, helping collaborators with grant writing (e.g., NIH) and advising on study design, feasibility, and data requirements.  
+
+- **Data Generation & Delivery**: We coordinate with sequencing cores to ensure smooth and well-documented data transfer. Raw FASTQ files are stored on HiPerGator, and we also help set up dedicated PI resources or temporary BCBSR resources.  
+
+- **QC & Pre-processing**: Once data are in hand, we perform QC, processing, and analysis using best-practice pipelines (often ENCODE-based). QC reports summarize results, but a “perfect” QC is rare — troubleshooting may involve revisiting tapestation results, over-digestion, high PCR cycles, or small insert sizes.  
+
+- **Analysis & Interpretation**: We then carry out primary and secondary analyses, working closely with collaborators to ensure findings are biologically meaningful and aligned with their goals.  
+
+- **Reporting & Outputs**: Throughout, collaborators expect transparent communication, reproducible workflows, and clear reports/visualizations. We often assist in manuscript preparation and grant support to help translate analyses into impactful scientific outputs.  
 :::
 
 ---
@@ -185,6 +243,14 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 
 </div>
 
+::: notes
+- QC is the foundation of any bioinformatics project — it helps us spot technical problems before they impact results.
+- Example 1: The Picard insert size plot showed a very narrow distribution with a shift toward small fragments.  
+  This flagged **over-digestion or library prep issues**, which would have biased downstream mapping and peak calling
+- Example 2: A PCA revealed strong **batch effects** — samples clustering by sequencing batch rather than biological condition.  
+  Without QC, this artifact could easily be mistaken for a biological signal.  
+- These checks save time, prevent misinterpretation, and ensure our analyses reflect true biology rather than technical noise.  
+:::
 ---
 
 ### Analysis That Answers Your Questions
