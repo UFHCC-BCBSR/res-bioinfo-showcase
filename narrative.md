@@ -2,29 +2,29 @@
 
 ## Outline:
 
-### Presentation Hub
+### Presentation Hub ~ 2 minutes
 
-Intro - @jobrant
+Intro - @jobrant 2 minutes
 
-### Slides
+### Slides ~ 10 minutes
 
-Title + About Us + Collaboration Model + Strengthening Grant + Experience @jobrant
+Title + About Us + Collaboration Model + Strengthening Grant + Experience @jobrant 3 minutes
 
-Project Life Cycle + Experience across Assays + Quality Control @kshirlekar
+Project Life Cycle + Experience across Assays + Quality Control @kshirlekar 3 minutes
 
-Experimental Design + Track Record of Success + Resources @hkates
+Experimental Design + Track Record of Success + Resources @hkates 3 minutes
 
-### Demos
+### Demos ~25 minutes
 
-Resources + Reporting (atacreporter and html report) @hkates
+Resources + Reporting (atacreporter and html report) @hkates 8 minutes
 
-cluster-picker + heat path + DECODeR overview + upload + DE @kshirlekar
+heat path + cluster-picker + DECODeR overview + upload @kshirlekar 8 minutes
 
-DECODeR visualiations + pathway analysis @jobrant
+DECODeR visualiations + pathway analysis + DE @jobrant 8 minutes
 
-### Slides
+### Slides ~5 minutes
 
-Wrap-up + Contact + Discisson @jason
+Wrap-up + Contact + Open the Discussion @jason 5 minutes
 
 ------------------------------------------------------------------------
 
