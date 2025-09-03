@@ -10,7 +10,7 @@ title-slide-attributes:
   data-background-image: "background.jpeg"
   data-background-size: "cover"
   data-background-position: "center"
-  data-background-opacity: "0.25"   # must be a string
+  data-background-opacity: "0.05"   # must be a string
 ---
 
 
@@ -90,11 +90,11 @@ NIH increasingly emphasizes robust data management and data analysis plans •�
 
 :::: {.columns style="display: flex; align-items: center;"}
 
-::: {.column width="65%"}
-![](slide_figures/experience.png){width=100%}
+::: {.column width="75%"}
+![](slide_figures/experience2.png){width=100%}
 :::
 
-::: {.column width="35%"}
+::: {.column width="25%"}
 <div style="font-size: 0.8em; line-height: 1.4;">
 - **Hundreds** of datasets analyzed  
 - **Every** major omics assay  
@@ -229,32 +229,39 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 
 ---
 
+### Scaling expertise across the cancer center
 
+::: {.columns}
 
-
-
-### <span style="display: block; text-align: center;">Sharing Our Experience through Resources</span>
-
-<!--<img src="slide_figures/resources-ecosystem.png" alt="Hub diagram showing expertise at center radiating out to documentation, web applications, interactive reports, and community resources">-->
-
-**Expertise that scales across the cancer center**
-
-**Documentation Hub:** Best practices & troubleshooting accessible to all
-**Interactive Reports:** Transform pipeline outputs into explorable insights  
-**Custom Applications:** DECODeR, HeatPath, ClusterPicker for data exploration
-**Community Resources:** Monthly journal clubs, walk-in hours, training materials
-
-::: {.notes}
-Last slide before Demos: Our expertise doesn't just benefit direct collaborators we've built comprehensive resources that support the entire cancer center community. Our Bioinformatics Hub provides dynamic documentation that evolves with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR for differential expression visualization, HeatPath for pathway exploration, and ClusterPicker for pattern discovery address specific bottlenecks we see repeatedly. These aren't just convenience tools they're solutions built from our collaborative experience, making sophisticated analyses accessible while maintaining analytical rigor.
+::: {.column width="60%"}
+![](slide_figures/resources-ecosystem.png){fig-align="center" width="80%"}
 :::
 
-<br><br>
+::: {.column width="40%"}
+<div style="padding-left: 1.5rem; padding-top: 1rem;">
 
-<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/)</small>
+Our collaborative insights become accessible tools: 
+
+Comprehensive documentation
+
+Specialized applications
+
+Hands-on Training
+
+[Explore Our Resources](https://ufhcc-bcbsr.github.io/bioinfo-showcase/)
+
+</div>
+:::
+
+:::
+
+::: {.notes}
+Last slide before Demos: Our expertise doesn't just benefit direct collaborators—we've built comprehensive resources that support the entire cancer center community. Our Documentation Hub provides dynamic best practices that evolve with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR, HeatPath, and ClusterPicker address specific bottlenecks we see repeatedly. These tools democratize sophisticated analysis while maintaining analytical rigor.
+:::
 
 ---
 
-## <span style="display:block; text-align:center;">Advancing Cancer Center Research with Experienced Bioinformatics</span> {data-background-image="background.jpeg" data-background-size="cover" data-background-position="center" data-background-opacity="0.25"}
+## <span style="display:block; text-align:center;">Advancing Cancer Center Research with Experienced Bioinformatics</span> {data-background-image="background.jpeg" data-background-size="cover" data-background-position="center" data-background-opacity="0.05"}
 
 **Complete research lifecycle support**
 

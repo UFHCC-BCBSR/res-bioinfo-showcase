@@ -86,7 +86,7 @@ body::-webkit-scrollbar,
   background-size: cover;       /* fill the entire screen */
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.25;                /* tweak visibility so text stays readable */
+  opacity: 0.85;                /* tweak visibility so text stays readable */
   z-index: -1;
 }
 
