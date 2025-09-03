@@ -130,7 +130,7 @@ title-slide-attributes:
 ### <span style="display: block; text-align: center;">Deep experience across cancer omics assays</span>
 
 <div style="text-align: center;">
-![](slide_figures/assays-bubbles.png){width=100%}
+![](slide_figures/assays-bubbles.svg){width=100%}
 </div>
 
 ::: {.notes}
