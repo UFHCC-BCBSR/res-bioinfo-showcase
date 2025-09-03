@@ -39,11 +39,12 @@ vertices <- circleLayoutVertices(lay, npoints = 80) |>
   )
 
 # ---- Cool Tech Colors ----
+# ---- Cool Tech Colors ----
 pal <- c(
   "Transcriptomics"         = "#3B82F6",  # Neural Blue (medium blue)
   "Chromatin Interactions"  = "#0F172A",  # Neural Dark (very dark navy)
   "Epigenetics"             = "#9CA3AF",  # Neural Gray (light gray)
-  "Other"                   = "#1E293B"   # Darker neural tone
+  "Other"                   = "blue"   # Light blue (distinct from both other blues)
 )
 
 txt_white <- "#FFFFFF"
@@ -81,14 +82,18 @@ p_bubbles <-
     fill = guide_legend(               # categories first, vertical
       title = NULL,
       direction = "vertical",
-      override.aes = list(shape = 21, colour = NA, alpha = 1),
-      order = 1
+      override.aes = list(shape = 21, colour = "white", alpha = 1),  # Added white border
+      order = 1,
+      keyheight = unit(1.2, "cm"),     # Taller keys for categories
+      byrow = TRUE
     ),
     size = guide_legend(               # dataset count below, vertical bubbles
       direction = "vertical",
-      override.aes = list(fill = "grey80", colour = "grey80", alpha = 1),
+      override.aes = list(fill = "grey80", colour = "white", alpha = 1),  # Added white border
       title.position = "top",
-      order = 2
+      order = 2,
+      keyheight = unit(1.2, "cm"),     # Taller keys for sizes
+      byrow = TRUE
     )
   ) +
   coord_equal() +
@@ -104,9 +109,10 @@ p_bubbles <-
     legend.box      = "vertical",
     legend.justification = "center",
     legend.title = element_text(color = txt_lt, size = 18),
-    legend.text  = element_text(color = txt_lt, size = 18),
+    legend.text  = element_text(color = txt_lt, size = 18, margin = margin(t = 8, b = 8)),  # More text spacing
     legend.key   = element_rect(fill = NA, color = NA),
     legend.key.size = unit(0.45, "cm"),
+    legend.spacing.y = unit(0.8, "cm"),          # Much more vertical spacing between legend items
     plot.background  = element_rect(fill = NA, color = NA),
     panel.background = element_rect(fill = NA, color = NA),
     plot.margin = margin(10, 16, 10, 16)
@@ -115,4 +121,4 @@ p_bubbles <-
 # ---- Save (transparent) ----
 ggsave("slide_figures/assays-bubbles.HRK.png", p_bubbles,
        width = 12, height = 7, dpi = 300, bg = "transparent")
-p_bubbles
+p_bubbles 
