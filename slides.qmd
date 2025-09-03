@@ -31,6 +31,11 @@ title-slide-attributes:
 
 :::
 
+::: {.notes}
+Emphasize team’s diverse skills: computational biology, stats, cancer genomics.  
+- Stress 20+ years of collective omics experience.  
+- Highlight collaboration: “Work with one, get all of us.”  
+:::
 ---
 
 ## <span style="display: block; text-align: center;">Our Collaboration Model</span>
