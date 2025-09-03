@@ -171,16 +171,32 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 
 ---
 
-### <span style="display: block; text-align: center;">Experimental Design That Leads to the Insight You Want</span>
+### Analysis That Provides the Insight You Want
 
-<!--<img src="slide_figures/design-complexity-matrix.png" alt="2x2 matrix showing simple vs complex design crossed with good vs poor execution, highlighting the complex+good quadrant">-->
+:::: {.columns .v-center-container}
 
-**Prevention + sophisticated analysis**
+::: {.column width="50%"}
+![](slide_figures/exp-design-mouse.png){width=100%}
 
-Power calculations & batch effects
-Multi-factorial designs
-Time courses & repeated measures
-Complex but meaningful studies
+:::
+
+::: {.column width="50%"}
+![](slide_figures/exp-design-models.png){width=60%}
+
+:::
+
+
+::::
+
+<div style="margin-top:0.4em; font-size:0.8em; line-height:1.3;">
+
+<ul>
+  <li>Common tools provide simple analysis  </li>
+  <li>Standard approaches may **throw away information** or lead to false positives  </li>
+  <li>We can fit mixed models that match the design and interpret the results </li>
+</ul>
+
+</div>
 
 ---
 
