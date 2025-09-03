@@ -152,9 +152,11 @@ DECODeR accommodates different starting points - upload pre-calculated different
 
 Each module features comprehensive documentation and flexible, guided uploads. The interface presents informed choices without overwhelming options, reflecting years of best-practice refinement. The batch detection module exemplifies our quality-first approach - identifying potential batch effects before proceeding to differential expression, preventing misleading results.
 
+The heatmap modules offers extensive customization including custom gene sets. 
+
 **Advanced Visualization Features** @jobrant
 
-The heatmap module offers extensive customization including custom gene sets, while pathway enrichment provides KEGG and GO analysis with options for combined or separate up/down-regulated gene analysis. Semantic similarity clustering reduces redundant terms, and appropriate backgrounds are automatically specified, ensuring statistically sound enrichment results.
+Pathway enrichment provides KEGG and GO analysis with options for combined or separate up/down-regulated gene analysis. Semantic similarity clustering reduces redundant terms, and appropriate backgrounds are automatically specified, ensuring statistically sound enrichment results.
 
 ------------------------------------------------------------------------
 
