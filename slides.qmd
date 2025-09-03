@@ -91,7 +91,7 @@ NIH increasingly emphasizes robust data management and data analysis plans •�
 :::: {.columns style="display: flex; align-items: center;"}
 
 ::: {.column width="75%"}
-![](slide_figures/experience2.png){width=100%}
+![](slide_figures/experience.png){width=100%}
 :::
 
 ::: {.column width="25%"}
@@ -138,7 +138,7 @@ typical struggle of a newcomer—scattered project backups, outdated data, and a
 ### <span style="display: block; text-align: center;">Deep experience across cancer omics assays</span>
 
 <div style="text-align: center;">
-![](slide_figures/assays-bubbles.svg){width=100%}
+![](slide_figures/assays-bubbles.HRK.png){width=100%}
 </div>
 
 ::: {.notes}

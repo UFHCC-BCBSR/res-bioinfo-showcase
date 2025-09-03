@@ -38,13 +38,14 @@ vertices <- circleLayoutVertices(lay, npoints = 80) |>
     counts   = assays_plot$counts[id]
   )
 
-# ---- Colors / fonts (match the figure) ----
+# ---- Cool Tech Colors ----
 pal <- c(
-  "Transcriptomics"         = "#21B37B",  # teal/green
-  "Chromatin Interactions"  = "#7D7FC9",  # lavender-purple
-  "Epigenetics"             = "#EC4C9A",  # magenta-pink
-  "Other"                   = "#6F6F6F"   # medium gray
+  "Transcriptomics"         = "#3B82F6",  # Neural Blue (medium blue)
+  "Chromatin Interactions"  = "#0F172A",  # Neural Dark (very dark navy)
+  "Epigenetics"             = "#9CA3AF",  # Neural Gray (light gray)
+  "Other"                   = "#1E293B"   # Darker neural tone
 )
+
 txt_white <- "#FFFFFF"
 txt_lt    <- "#E6E6E6"
 font_base <- ifelse(Sys.info()[["sysname"]] == "Darwin", "Helvetica", "sans")
@@ -112,7 +113,6 @@ p_bubbles <-
   )
 
 # ---- Save (transparent) ----
-ggsave("slide_figures/assays-bubbles.png", p_bubbles,
+ggsave("slide_figures/assays-bubbles.HRK.png", p_bubbles,
        width = 12, height = 7, dpi = 300, bg = "transparent")
-
 p_bubbles
