@@ -5,15 +5,20 @@
   height: 90%;
 }
 
-.reveal .slides section {
-  overflow-y: auto !important;
-  max-height: 100vh !important;
-  padding-bottom: 60px !important;
+/* Works in most modern browsers */
+html, body, .reveal .slides section {
+  overflow: auto;             /* allow scrolling if needed */
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE/Edge */
 }
 
-.reveal .slides {
-  overflow: visible !important;
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.reveal .slides section::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Opera */
 }
+
+
 
 .hub-link {
   position: absolute !important;
