@@ -106,7 +106,7 @@ title-slide-attributes:
 
 ::: columns
 ::: {.column width="55%"}
-![](slide_figures/project-lifecycle.png){width=100%}
+![](slide_figures/project_lifecycle.png){width=100%}
 :::
 
 ::: {.column width="45%"}
