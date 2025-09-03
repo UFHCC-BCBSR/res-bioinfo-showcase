@@ -92,4 +92,10 @@
   width: 100%;
 }
 
+/* make column contents vertically centered */
+.reveal .columns .column.v-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
