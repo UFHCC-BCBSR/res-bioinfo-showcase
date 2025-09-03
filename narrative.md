@@ -64,9 +64,9 @@ NIH increasingly emphasizes robust data management and data analysis plans. Gran
 
 ### Slide 4: Experience You Can Trust @jobrant
 
-Can a postdoc or ambitious graduate student analyze a perfectly designed study with a simple design and high quality data? Probably.
+On the left, you see the typical struggle of a newcomer—scattered project backups, outdated data, and a mess of scripts with no version control or clear organization. Multiple ‘final’ versions and non-reproducible code can derail even the best intentions, leaving you lost in meeting notes and random outputs.
 
-[But here's the question: when renovating your kitchen, would you rather watch YouTube tutorials and do your best, learning a lot through trial and error along the way, and in the end hoping it doesn't fall apart, or hire someone who's done hundreds of kitchens and knows exactly what problems to expect and how to solve them?]
+Now, contrast that with the right side—our experienced bioinformatics team. We bring hundreds of datasets analyzed, expertise across every major omics assay, and a track record of solving problems before they derail your project. With interactive reports, quality control results, and comprehensive methods documented in GitHub repositories like README.md, we ensure transparency and reproducibility. Our organized file structure, complete documentation, and controlled, reproducible workflows set you up for success. Partnering with us means leveraging our expertise to turn your data into actionable insights, saving you time and frustration.
 
 Between our three-person team, we've collectively analyzed hundreds of datasets across most major omics assays. We've encountered - and solved - the quality control issues and need for complex analysis that often arise in your projects.
 
