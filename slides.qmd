@@ -121,6 +121,9 @@ newbie chaos vs. our organized expertise.
 ## Bioinformatics Project Lifecycle
 
 ::: columns
+::: {.column width="60%"}
+![](slide_figures/project_lifecycle_transparent.png){width=100%}
+:::
 ::: {.column width="40%"}
 
 ::: {.r-stack style="position: relative; min-height: 250px; display: flex; align-items: center; justify-content: center; text-align: left;"}
