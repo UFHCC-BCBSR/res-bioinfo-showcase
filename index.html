@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UFHCC Bioinformatics - Presentation Hub</title>
+  <title>UFHCC Bioinformatics – Presentation Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root{
-      /* Page width scales, but we cap for ultra-wide projectors */
       --page-max: 1600px;
+
+      /* Spacing & radii */
       --gap-xl: 28px;
-      --gap-lg: 22px;
+      --gap-lg: 20px;
+      --gap-md: 14px;
+      --gap-sm: 10px;
       --radius-lg: 18px;
       --radius-md: 12px;
 
-      /* Projector-friendly font sizes (big minimums) */
-      --fs-xxl: clamp(2rem, 3vw, 3.2rem);
-      --fs-xl:  clamp(1.6rem, 2.2vw, 2.4rem);
-      --fs-lg:  clamp(1.2rem, 1.6vw, 1.6rem);
-      --fs-md:  clamp(1.05rem, 1.2vw, 1.25rem);
-      --fs-sm:  clamp(0.95rem, 1vw, 1.05rem);
-      --fs-btn: clamp(1.0rem, 1.1vw, 1.15rem);
+      /* Projector-friendly type scales */
+      --fs-xxl: clamp(2rem, 3vw, 3.1rem);
+      --fs-xl:  clamp(1.6rem, 2.2vw, 2.2rem);
+      --fs-lg:  clamp(1.2rem, 1.6vw, 1.55rem);
+      --fs-md:  clamp(1rem, 1.2vw, 1.15rem);
+      --fs-btn: clamp(1rem, 1.1vw, 1.1rem);
     }
 
     *{box-sizing:border-box}
@@ -30,7 +32,7 @@
       color:#fff;
       background:#0a0a0a;
       line-height:1.35;
-      overflow-x:hidden;
+      overflow:hidden; /* one screen, no scroll */
     }
 
     /* Background */
@@ -41,122 +43,98 @@
       opacity:.16; z-index:-1;
     }
 
-    /* ---------- Layout Shell ---------- */
+    /* ===== Shell: one row that fills the viewport ===== */
     .shell{
       width: min(100%, var(--page-max));
+      height: 100dvh;
       margin: 0 auto;
-      padding: clamp(14px, 2vw, 28px);
+      padding: clamp(12px, 2vw, 24px);
       display:grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
+    }
+
+    /* ===== Three columns; center stacks hub + expertise ===== */
+    .top{
+      display:grid;
+      height: 100%;
       gap: var(--gap-xl);
+      grid-template-columns: 1fr minmax(440px, 580px) 1fr; /* L | CENTER | R */
+      grid-template-areas: "left center right";
+      align-items: stretch;  /* equal column heights */
     }
 
-    /* Wide screens: three columns with hub centered */
-    @media (min-width: 1100px){
-      .shell{
-        grid-template-columns: 1fr minmax(520px, 640px) 1fr;
-        grid-template-areas:
-          "left  hub   right"
-          "bottom bottom bottom";
-      }
-      .left  { grid-area:left; }
-      .hub   { grid-area:hub; }
-      .right { grid-area:right; }
-      .bottom{ grid-area:bottom; }
+    .left-wrap, .center-wrap, .right-wrap{ height:100%; display:flex; }
+    .left-wrap  { grid-area:left }
+    .center-wrap{ grid-area:center }
+    .right-wrap { grid-area:right }
+
+    /* Left & right are single cards that stretch to fill column */
+    .left, .right{ flex:1 1 auto; display:flex; }
+
+    /* Center occupies full column height; rows split as Hub (taller) + Expertise */
+    .center{
+      flex:1 1 auto;
+      display:grid;
+      grid-template-rows: minmax(230px, 0.42fr) 1fr; /* adjust 0.42 up/down to change hub height share */
+      gap: var(--gap-lg);
+      min-height:0;
     }
 
-    /* Narrower: hub on top, then columns side-by-side, then bottom */
-    @media (max-width: 1099.98px) and (min-width: 820px){
-      .shell{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-          "hub   hub"
-          "left  right"
-          "bottom bottom";
-      }
-      .left{grid-area:left}
-      .right{grid-area:right}
-      .hub{grid-area:hub}
-      .bottom{grid-area:bottom}
-    }
-
-    /* Phone / small: clean vertical stack */
-    @media (max-width: 819.98px){
-      .shell{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "hub"
-          "left"
-          "right"
-          "bottom";
-      }
-    }
-
-    /* ---------- Reusable Card / Glass ---------- */
+    /* ===== Glass card ===== */
     .card{
       background: rgba(255,255,255,.04);
       border:1px solid rgba(255,255,255,.12);
       border-radius: var(--radius-lg);
-      padding: clamp(16px, 2vw, 24px);
+      padding: clamp(12px, 1.8vw, 18px);
       backdrop-filter: blur(10px);
       box-shadow: 0 18px 48px rgba(0,0,0,.35);
+      display:flex;
+      flex-direction:column;
+      gap: var(--gap-md);
+      min-height: 0; /* allow stretching without overflow issues */
     }
+
+    /* Stretch structural cards */
+    .left > .card,
+    .right > .card,
+    .hub.card,
+    .band.card{ height:100%; }
 
     .section-title{
       font-size: var(--fs-xl);
       font-weight: 800;
       text-align:center;
-      margin-bottom: clamp(12px, 1.5vw, 18px);
-      padding-bottom: clamp(10px, 1.2vw, 14px);
+      margin: 0;
+      padding-bottom: 10px;
       border-bottom: 1px solid rgba(255,255,255,.16);
-      letter-spacing:-.2px;
     }
     .section-title a{ color:inherit; text-decoration:none }
     .section-title a:hover{ color:#60a5fa }
 
-    /* ---------- Central Hub ---------- */
-    .hub.card{
-      display:flex; align-items:center; justify-content:center; text-align:center;
-      padding: clamp(24px, 3vw, 40px);
-      position:relative;
-      overflow:hidden;
-    }
-    .hub-inner{
-      max-width: 620px;
-      margin-inline:auto;
+    /* ===== Hub banner (top-aligned, tighter spacing) ===== */
+    .hub.card{ padding: clamp(14px, 2vw, 22px); justify-content:flex-start; align-items:center; }
+    .hub-hero{
+      display:flex; flex-direction:column; align-items:center; text-align:center;
+      gap: clamp(10px, 1.0vw, 22px);           /* tighter stack */
+      transform: translateY(20px);           /* nudge everything upward */
     }
     .logo{
-      width: clamp(86px, 10vw, 120px);
-      height: clamp(86px, 10vw, 120px);
+      width: clamp(200px, 15vw, 318px);
+      height: clamp(200px, 15vw, 318px);
       object-fit:cover; border-radius:50%;
-      margin: 0 auto clamp(8px, 1vw, 12px);
-      display:block;
+      margin-bottom: 0;                        /* remove extra space */
     }
-    .hub-title{
-      font-size: var(--fs-xl);
-      font-weight: 800;
-      margin-bottom: clamp(6px, 0.8vw, 10px);
-    }
-    .hub-subtitle{
-      font-size: var(--fs-xxl);
-      font-weight: 800;
-      margin-bottom: clamp(6px, 0.8vw, 10px);
-      letter-spacing:-.3px;
-    }
-    .hub-tagline{
-      font-size: var(--fs-md);
+    .title-line{ font-size: var(--fs-lg); font-weight: 700; line-height:1.05 }
+    .subtitle-line{ font-size: calc(var(--fs-xl) * 1.7); font-weight: 900; line-height:1.05 }
+    .tagline{
+      font-size: calc(var(--fs-md)* 1.5);
       opacity:.95;
       text-decoration:none;
       color:#fff;
     }
-    .hub-tagline:hover{ color:#60a5fa }
+    .tagline:hover{ color:#60a5fa }
 
-    /* ---------- Side Panels ---------- */
-    .grid{
-      display:grid;
-      gap: var(--gap-lg);
-    }
+    /* ===== Left/Right panels ===== */
+    .grid{ display:grid; gap: var(--gap-md) }
     .grid.cols-2{ grid-template-columns: 1fr 1fr }
     .grid.cols-1{ grid-template-columns: 1fr }
 
@@ -164,197 +142,239 @@
       background: rgba(255,255,255,.035);
       border:1px solid rgba(255,255,255,.10);
       border-radius: var(--radius-md);
-      padding: clamp(14px, 1.6vw, 18px);
+      padding: clamp(12px, 1.4vw, 16px);
     }
-    .node h3{
-      font-size: var(--fs-lg);
-      font-weight: 800;
-      margin: 0 0 clamp(6px, .8vw, 10px);
-      letter-spacing:-.2px;
-    }
-    .node p{
-      font-size: var(--fs-md);
-      color: rgba(255,255,255,.90);
-      margin: 0 0 clamp(10px, 1.2vw, 12px);
-    }
-    .links{ display:flex; flex-direction:column; gap: clamp(8px, 1vw, 10px) }
+    .node h3{ font-size: var(--fs-lg); margin:0 0 6px; font-weight:700 }
+    .node p{ font-size: var(--fs-md); margin:0 0 10px; color:rgba(255,255,255,.9) }
+    .links{ display:flex; flex-direction:column; gap: 8px }
     .link{
-      display:block; text-align:center; text-decoration:none;
+      display:block; text-align:center;
       font-weight:700; font-size: var(--fs-btn);
-      padding: clamp(10px, 1.2vw, 12px) clamp(12px, 1.4vw, 16px);
+      padding: 9px 12px;
       border-radius: 10px;
-      color: rgba(96,165,250,1);        /* blue-400 */
+      color: rgba(96,165,250,1);
       background: rgba(59,130,246,.12);
       border:1px solid rgba(59,130,246,.30);
+      text-decoration:none;
     }
-    .link:hover{ background: rgba(59,130,246,.18); color:#60a5fa; border-color: rgba(59,130,246,.45) }
+    .link:hover{ background: rgba(59,130,246,.18); color:#60a5fa }
 
-    /* ---------- Bottom Panel (Expertise) ---------- */
+    /* ===== Expertise (full original text; wraps; fills remaining height) ===== */
+    .band.card{ padding: clamp(12px, 1.8vw, 20px) }
+    .band-title{
+      font-size: var(--fs-xl);
+      font-weight: 900;
+      text-align:center;
+      margin: 0;
+    }
+    .band-title a{ color:inherit; text-decoration:none }
+    .band-title a:hover{ color:#60a5fa }
+
     .pill{
+      margin: 0 auto;
+      width: 100%;
       background: rgba(59,130,246,.14);
       border:1px solid rgba(59,130,246,.35);
       border-radius: 999px;
-      padding: clamp(10px, 1.2vw, 14px) clamp(14px, 1.6vw, 18px);
+      padding: 10px 16px;
       text-align:center;
       font-weight:700;
       font-size: var(--fs-md);
       color: #eaf2ff;
+      max-width: 560px;
+      text-decoration:none;  /* anchor styling */
+      display:block;         /* anchors are inline by default */
     }
+    .pill:hover{ color:#eaf2ff; }
+
     .expertise-grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: var(--gap-lg);
-      margin-top: clamp(10px, 1.2vw, 12px);
-    }
-    @media (max-width: 680px){
-      .expertise-grid{ grid-template-columns: 1fr }
+      gap: 12px 14px;
     }
     .expertise-item{
-      border:1px solid rgba(255,255,255,.10);
       background: rgba(255,255,255,.03);
-      border-radius: var(--radius-md);
-      padding: clamp(12px, 1.2vw, 14px);
-      font-size: var(--fs-md);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: clamp(1rem, 1.05vw, 1.1rem);
+      line-height: 1.35;
+      white-space: normal;
     }
-    .expertise-item strong{ font-weight:800; color:#fff }
+    .expertise-item b{ font-weight:800; color:#fff }
 
-    /* ---------- Interaction States (click focus/dim) ---------- */
-    .click-focus { transition: transform .25s ease, box-shadow .25s ease, background .25s ease, opacity .25s ease }
-    .click-focus.focused{
-      transform: translateY(-4px);
-      box-shadow: 0 22px 60px rgba(0,0,0,.45);
-      background: rgba(255,255,255,.06);
-      border-color: rgba(59,130,246,.40);
+    /* ===== Height-aware tightening ===== */
+    @media (max-height: 840px){
+      :root{
+        --gap-xl: 22px; --gap-lg: 16px; --gap-md: 12px; --gap-sm: 8px;
+        --fs-xl:  clamp(1.45rem, 2vw, 2rem);
+        --fs-lg:  clamp(1.08rem, 1.35vw, 1.35rem);
+        --fs-md:  clamp(.98rem, 1.05vw, 1.08rem);
+        --fs-btn: clamp(.96rem, 1vw, 1.02rem);
+      }
+      .center{ grid-template-rows: minmax(210px, 0.40fr) 1fr; }
     }
-    .click-focus.dimmed{ opacity:.32 }
-    .hub-expanded .click-focus{ opacity:.2 }
+    @media (max-height: 720px){
+      :root{
+        --gap-xl: 18px; --gap-lg: 14px; --gap-md: 10px; --gap-sm: 6px;
+        --fs-xl:  clamp(1.28rem, 1.8vw, 1.8rem);
+        --fs-lg:  clamp(1.0rem, 1.2vw, 1.2rem);
+        --fs-md:  clamp(.94rem, 1vw, 1rem);
+        --fs-btn: clamp(.92rem, .95vw, .98rem);
+      }
+      .center{ grid-template-rows: minmax(190px, 0.38fr) 1fr; }
+    }
+
+    /* ===== Responsive widths ===== */
+    @media (max-width: 1100px){
+      .top{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "left right"
+          "center center";
+      }
+      .center-wrap{ height:auto }
+      .center{ grid-template-rows: auto auto }
+    }
+    @media (max-width: 780px){
+      .top{ grid-template-columns: 1fr; grid-template-areas:"left" "right" "center" }
+      .expertise-grid{ grid-template-columns: 1fr }
+      .pill{ max-width:none }
+    }
+    /* Footer logo anchored to the bottom of the Resources card */
+.card.left { display:flex; flex-direction:column; } /* already true via .card, but safe */
+.card.left .panel-logo{
+  margin-top: auto;                      /* pushes logo to the bottom */
+  display: flex;
+  justify-content: center;
+  padding-top: clamp(8px, 1vw, 14px);
+}
+.card.left .panel-logo img{
+  width: clamp(150px, 22%, 210px);        /* scales with panel width */
+  opacity: 0.95;                         /* tweak to taste */
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.35));
+}
+.hub-hero .logo{ display:none; }
 
   </style>
 </head>
 <body>
   <div class="shell">
+    <div class="top">
 
-    <!-- LEFT PANEL -->
-    <section class="left card click-focus">
-      <h2 class="section-title">Our Resources</h2>
-      <div class="grid cols-2">
-        <div class="node">
-          <h3>Unit Webpage</h3>
-          <p>UF branded introduction and team overview</p>
-          <div class="links">
-            <a class="link" href="https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/">View Site</a>
+      <!-- LEFT COLUMN (stretches full height) -->
+      <div class="left-wrap">
+        <section class="card left">
+          <h2 class="section-title">Our Resources</h2>
+          <div class="grid cols-2">
+            <div class="node">
+              <h3>Unit Webpage</h3>
+              <p>UF branded introduction and team overview</p>
+              <div class="links">
+                <a class="link" href="https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/">View Site</a>
+              </div>
+            </div>
+            <div class="node">
+              <h3>Bioinformatics Hub</h3>
+              <p>Comprehensive documentation and best practices</p>
+              <div class="links">
+                <a class="link" href="https://ufhcc-bcbsr.github.io/hub/">View Hub</a>
+              </div>
+            </div>
+
+            <!-- Training box to balance column height -->
+            <div class="node" style="grid-column:1/-1">
+              <h3>Training</h3>
+              <p>Walk-in Support • Hands-on workshops</p>
+            </div>
+
+            <div class="node" style="grid-column:1/-1">
+              <h3>Applications Portal</h3>
+              <p>Showcase of our developed tools and applications</p>
+              <div class="links">
+                <a class="link" href="https://devbcb-sr.rc.ufl.edu/">View Applications</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="node">
-          <h3>Bioinformatics Hub</h3>
-          <p>Comprehensive documentation and best practices</p>
-          <div class="links">
-            <a class="link" href="https://ufhcc-bcbsr.github.io/hub/">View Hub</a>
-          </div>
-        </div>
-        <div class="node" style="grid-column: 1 / -1;">
-          <h3>Applications Portal</h3>
-          <p>Showcase of our developed tools and applications</p>
-          <div class="links">
-            <a class="link" href="https://devbcb-sr.rc.ufl.edu/">View Applications</a>
-          </div>
+          <div class="panel-logo">
+  <img src="logo.png" alt="UF Health Cancer Center logo">
+</div>
+
+        </section>
+      </div>
+
+      <!-- CENTER COLUMN (Hub + Expertise stacked) -->
+      <div class="center-wrap">
+        <div class="center">
+
+          <!-- HUB (compact, top-aligned) -->
+          <section class="hub card">
+            <div class="hub-hero">
+              <img src="logo.png" alt="UF Health Cancer Center BCB-SR" class="logo" />
+              <div class="title-line">UF Health Cancer Center BCB-SR</div>
+              <div class="subtitle-line">Bioinformatics Showcase</div>
+              <a class="tagline" href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/slides.html#/advancing-cancer-center-research-with-experienced-bioinformatics">
+                Advancing Your Cancer Research through Rigorous Analyses
+              </a>
+            </div>
+          </section>
+
+          <!-- EXPERTISE (linked title + linked pill; full list) -->
+          <section class="band card">
+            <h2 class="band-title">
+              <a href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/slides.html#/title-slide">
+                Our Expertise: Invested In Your Research
+              </a>
+            </h2>
+
+            <a class="pill" href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/slides.html#/title-slide">
+              Essential partners from conception to publication. We bring 20+ years of combined
+              expertise to maximize your research impact.
+            </a>
+
+            <div class="expertise-grid">
+              <div class="expertise-item"><b>Project Design</b><br/>Grant writing • Experimental design</div>
+              <div class="expertise-item"><b>Analysis</b><br/>Statistical modeling • Visualization</div>
+              <div class="expertise-item"><b>Quality Control</b><br/>Comprehensive QC • Troubleshooting</div>
+              <div class="expertise-item"><b>Communication</b><br/>Reports • Publications • Presentations</div>
+              <div class="expertise-item"><b>Infrastructure</b><br/>HiPerGator • CLI proficiency</div>
+              <div class="expertise-item"><b>Training</b><br/>Walk-in Support • Hands-on workshops</div>
+            </div>
+          </section>
+
         </div>
       </div>
-    </section>
 
-    <!-- CENTRAL HUB -->
-    <section class="hub card" id="centralHub">
-      <div class="hub-inner">
-        <img src="logo.png" alt="UF Health Cancer Center" class="logo" />
-        <div class="hub-title">UF Health Cancer Center</div>
-        <div class="hub-subtitle">Bioinformatics</div>
-        <a class="hub-tagline" href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/slides.html#/advancing-cancer-center-research-with-experienced-bioinformatics">
-          Advancing Your Cancer Research<br/>through Rigorous Analyses
-        </a>
-      </div>
-    </section>
-
-    <!-- RIGHT PANEL -->
-    <section class="right card click-focus">
-      <h2 class="section-title">Live Demonstrations</h2>
-      <div class="grid cols-1">
-        <div class="node">
-          <h3>Interactive Reports</h3>
-          <p>Standard assay outputs and analysis reports</p>
-          <div class="links">
-            <a class="link" href="#rna-seq-report">RNA-seq Report</a>
-            <a class="link" href="https://ufhcc-bcbsr.github.io/atac-reportR/">ATAC-seq Report</a>
-            <a class="link" href="#scrna-seq-report">scRNA-seq Report</a>
-            <a class="link" href="#crispr-screen-report">CRISPR screen Report</a>
+      <!-- RIGHT COLUMN (stretches full height) -->
+      <div class="right-wrap">
+        <section class="card right">
+          <h2 class="section-title">Live Demonstrations</h2>
+          <div class="grid cols-1">
+            <div class="node">
+              <h3>Interactive Reports</h3>
+              <p>Standard assay outputs and analysis reports</p>
+              <div class="links">
+                <a class="link" href="#rna-seq-report">RNA-seq Report</a>
+                <a class="link" href="https://ufhcc-bcbsr.github.io/atac-reportR/">ATAC-seq Report</a>
+                <a class="link" href="#scrna-seq-report">scRNA-seq Report</a>
+                <a class="link" href="#crispr-screen-report">CRISPR screen Report</a>
+              </div>
+            </div>
+            <div class="node">
+              <h3>Custom Applications</h3>
+              <p>Specialized tools for specific research needs</p>
+              <div class="links">
+                <a class="link" href="https://devbcb-sr.rc.ufl.edu/decoder/">DECODeR</a>
+                <a class="link" href="https://devbcb-sr.rc.ufl.edu/heatpathapp/">HeatPath</a>
+                <a class="link" href="https://devbcb-sr.rc.ufl.edu/clusterpicker/">ClusterPicker</a>
+                <a class="link" href="https://devufbcb-sr.rc.ufl.edu/atacreportr/">Atac-reportR</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="node">
-          <h3>Custom Applications</h3>
-          <p>Specialized tools for specific research needs</p>
-          <div class="links">
-            <a class="link" href="https://devbcb-sr.rc.ufl.edu/decoder/">DECODeR</a>
-            <a class="link" href="https://devbcb-sr.rc.ufl.edu/heatpathapp/">HeatPath</a>
-            <a class="link" href="https://devbcb-sr.rc.ufl.edu/clusterpicker/">ClusterPicker</a>
-            <a class="link" href="https://devufbcb-sr.rc.ufl.edu/atacreportr/">Atac-reportR</a>
-          </div>
-        </div>
+        </section>
       </div>
-    </section>
 
-    <!-- BOTTOM PANEL -->
-    <section class="bottom card click-focus">
-      <h2 class="section-title"><a href="slides.html">Our Expertise: Invested In Your Research</a></h2>
-      <div class="pill">
-        Essential partners from conception to publication. We bring 20+ years of combined
-        expertise to maximize your research impact.
-      </div>
-      <div class="expertise-grid" style="margin-top: var(--gap-lg);">
-        <div class="expertise-item"><strong>Project Design</strong><br/>Grant writing • Experimental design</div>
-        <div class="expertise-item"><strong>Analysis</strong><br/>Statistical modeling • Visualization</div>
-        <div class="expertise-item"><strong>Quality Control</strong><br/>Comprehensive QC • Troubleshooting</div>
-        <div class="expertise-item"><strong>Communication</strong><br/>Reports • Publications • Presentations</div>
-        <div class="expertise-item"><strong>Infrastructure</strong><br/>HiPerGator • CLI proficiency</div>
-        <div class="expertise-item"><strong>Training</strong><br/>Walk-in Support • Hands-on workshops</div>
-      </div>
-    </section>
-
+    </div><!-- /top -->
   </div><!-- /shell -->
-
-  <script>
-    // Click-to-focus / dim effect (optional, preserved from your version)
-    (function(){
-      const focusables = document.querySelectorAll('.click-focus');
-      const hub = document.getElementById('centralHub');
-      let current = null, hubExpanded = false;
-
-      function reset(){
-        focusables.forEach(el=>el.classList.remove('focused','dimmed'));
-        document.body.classList.remove('hub-expanded');
-        hubExpanded = false; current = null;
-      }
-
-      focusables.forEach(el=>{
-        el.addEventListener('click', (e)=>{
-          if(e.target.closest('a')) return;
-          if(current === el){ reset(); return; }
-          focusables.forEach(x=>{ x.classList.toggle('dimmed', x!==el); });
-          el.classList.add('focused');
-          current = el;
-        });
-      });
-
-      hub.addEventListener('click', (e)=>{
-        if(e.target.closest('a')) return;
-        if(hubExpanded){ reset(); return; }
-        focusables.forEach(x=>x.classList.add('dimmed'));
-        document.body.classList.add('hub-expanded');
-        hubExpanded = true;
-      });
-
-      document.addEventListener('click', (e)=>{
-        if(!e.target.closest('.click-focus') && !e.target.closest('#centralHub')) reset();
-      });
-    })();
-  </script>
 </body>
 </html>
