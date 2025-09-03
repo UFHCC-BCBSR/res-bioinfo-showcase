@@ -35,7 +35,7 @@ title-slide-attributes:
 
 ## <span style="display: block; text-align: center;">Our Collaboration Model</span>
 
-<img src="slide_figures/collaboration-model-rect.png" alt="collaboration model" style="width: 60%; height: auto;">
+<img src="slide_figures/collaboration-model-rect.png" alt="collaboration model" style="width: 100%; height: auto;">
 
 ::: {.notes}
 **Not a service core we're partners** • Key personnel on grants • Funded through your research • Invested in your success
@@ -135,7 +135,7 @@ typical struggle of a newcomer—scattered project backups, outdated data, and a
 
 
 
-### <span style="display: block; text-align: center;">Deep experience across cancer omics assays</span>
+### <span style="display: block; text-align: center;">Our Deep Experience Across Cancer Omics</span>
 
 <div style="text-align: center;">
 ![](slide_figures/assays-bubbles.HRK.png){width=100%}
@@ -154,7 +154,7 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 
 ---
 
-#### <span style="display: block; text-align: center;">Quality Control Saves Time and Improves Results</span>
+#### <span style="display: block; text-align: center;">Experienced Quality Control Saves Time + Improves Results</span>
 
 :::: {.columns .v-center-container}
 ::: {.column width="50%"}
@@ -179,7 +179,7 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 
 ---
 
-### Analysis That Provides the Insight You Want
+### Analysis That Answers Your Questions
 
 :::: {.columns .v-center-container}
 
@@ -189,7 +189,7 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 :::
 
 ::: {.column width="50%"}
-![](slide_figures/exp-design-models.png){width=60%}
+![](slide_figures/simple-vs-complex-models.png){width=100%}
 
 :::
 
