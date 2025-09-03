@@ -80,6 +80,10 @@ title-slide-attributes:
 
 ::::
 
+::: {.notes}
+NIH increasingly emphasizes robust data management and data analysis plans •• We help you craft compelling data management and sharing plans, justify your analytical approaches, and budget appropriately for computational resources
+:::
+
 ---
 
 ### <span style="display: block; text-align: center;">Experience = Robust, Reproducible Analyses</span>
