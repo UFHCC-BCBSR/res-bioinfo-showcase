@@ -1,601 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UFHCC Bioinformatics - Presentation Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-        :root {
-            /* Chosen design canvas (px) */
-            --design-w: 1440;
-            --design-h: 900;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UFHCC Bioinformatics - Presentation Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      /* Page width scales, but we cap for ultra-wide projectors */
+      --page-max: 1600px;
+      --gap-xl: 28px;
+      --gap-lg: 22px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /* Projector-friendly font sizes (big minimums) */
+      --fs-xxl: clamp(2rem, 3vw, 3.2rem);
+      --fs-xl:  clamp(1.6rem, 2.2vw, 2.4rem);
+      --fs-lg:  clamp(1.2rem, 1.6vw, 1.6rem);
+      --fs-md:  clamp(1.05rem, 1.2vw, 1.25rem);
+      --fs-sm:  clamp(0.95rem, 1vw, 1.05rem);
+      --fs-btn: clamp(1.0rem, 1.1vw, 1.15rem);
+    }
 
-        html, body {
-            height: 100%;
-        }
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0}
+    body{
+      font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color:#fff;
+      background:#0a0a0a;
+      line-height:1.35;
+      overflow-x:hidden;
+    }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            overflow: hidden;               /* prevent scrollbars on small displays */
-            position: relative;
-        }
+    /* Background */
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      background:url('background.jpeg') center/cover no-repeat;
+      opacity:.16; z-index:-1;
+    }
 
-        /* Background image setup */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: url('background.jpeg');
-            background-size: cover;         /* cover to avoid letterboxing */
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.15;
-            z-index: -1;
-        }
+    /* ---------- Layout Shell ---------- */
+    .shell{
+      width: min(100%, var(--page-max));
+      margin: 0 auto;
+      padding: clamp(14px, 2vw, 28px);
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: var(--gap-xl);
+    }
 
-        /* Stage centers and scales the designed canvas */
-        .stage {
-            position: fixed;
-            inset: 0;
-            display: grid;
-            place-items: center;            /* centers the scaled canvas */
-            overflow: hidden;
-        }
+    /* Wide screens: three columns with hub centered */
+    @media (min-width: 1100px){
+      .shell{
+        grid-template-columns: 1fr minmax(520px, 640px) 1fr;
+        grid-template-areas:
+          "left  hub   right"
+          "bottom bottom bottom";
+      }
+      .left  { grid-area:left; }
+      .hub   { grid-area:hub; }
+      .right { grid-area:right; }
+      .bottom{ grid-area:bottom; }
+    }
 
-        .stage-inner {
-            width: calc(var(--design-w) * 1px);
-            height: calc(var(--design-h) * 1px);
-            transform-origin: top left;     /* simplifies scale math */
-            will-change: transform;         /* smoother on projectors */
-        }
+    /* Narrower: hub on top, then columns side-by-side, then bottom */
+    @media (max-width: 1099.98px) and (min-width: 820px){
+      .shell{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "hub   hub"
+          "left  right"
+          "bottom bottom";
+      }
+      .left{grid-area:left}
+      .right{grid-area:right}
+      .hub{grid-area:hub}
+      .bottom{grid-area:bottom}
+    }
 
-        /* The original layout lives inside wheel-container at 100% of the design canvas */
-        .wheel-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
+    /* Phone / small: clean vertical stack */
+    @media (max-width: 819.98px){
+      .shell{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "hub"
+          "left"
+          "right"
+          "bottom";
+      }
+    }
 
-        /* Optional: viewport units that are projector-safe */
-        @supports (height: 100dvh) {
-            html, body { height: 100dvh; }
-        }
+    /* ---------- Reusable Card / Glass ---------- */
+    .card{
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-lg);
+      padding: clamp(16px, 2vw, 24px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 48px rgba(0,0,0,.35);
+    }
 
-        /* =========================
-           ORIGINAL STYLES (trimmed to remove old scaling rules)
-           ========================= */
+    .section-title{
+      font-size: var(--fs-xl);
+      font-weight: 800;
+      text-align:center;
+      margin-bottom: clamp(12px, 1.5vw, 18px);
+      padding-bottom: clamp(10px, 1.2vw, 14px);
+      border-bottom: 1px solid rgba(255,255,255,.16);
+      letter-spacing:-.2px;
+    }
+    .section-title a{ color:inherit; text-decoration:none }
+    .section-title a:hover{ color:#60a5fa }
 
-        .central-hub {
-            position: absolute;
-            top: 15%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-weight: 600;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            z-index: 10;
-            transition: all 0.5s ease;
-            letter-spacing: -0.3px;
-            cursor: pointer;
-        }
+    /* ---------- Central Hub ---------- */
+    .hub.card{
+      display:flex; align-items:center; justify-content:center; text-align:center;
+      padding: clamp(24px, 3vw, 40px);
+      position:relative;
+      overflow:hidden;
+    }
+    .hub-inner{
+      max-width: 620px;
+      margin-inline:auto;
+    }
+    .logo{
+      width: clamp(86px, 10vw, 120px);
+      height: clamp(86px, 10vw, 120px);
+      object-fit:cover; border-radius:50%;
+      margin: 0 auto clamp(8px, 1vw, 12px);
+      display:block;
+    }
+    .hub-title{
+      font-size: var(--fs-xl);
+      font-weight: 800;
+      margin-bottom: clamp(6px, 0.8vw, 10px);
+    }
+    .hub-subtitle{
+      font-size: var(--fs-xxl);
+      font-weight: 800;
+      margin-bottom: clamp(6px, 0.8vw, 10px);
+      letter-spacing:-.3px;
+    }
+    .hub-tagline{
+      font-size: var(--fs-md);
+      opacity:.95;
+      text-decoration:none;
+      color:#fff;
+    }
+    .hub-tagline:hover{ color:#60a5fa }
 
-        .central-hub .title {
-            font-size: clamp(calc(1.3rem * 0.8), 1.5vw, calc(2rem * 1.2));
-            font-weight: 700;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
+    /* ---------- Side Panels ---------- */
+    .grid{
+      display:grid;
+      gap: var(--gap-lg);
+    }
+    .grid.cols-2{ grid-template-columns: 1fr 1fr }
+    .grid.cols-1{ grid-template-columns: 1fr }
 
-        .central-hub .logo {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 5px;
-            margin-top: -90px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+    .node{
+      background: rgba(255,255,255,.035);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius-md);
+      padding: clamp(14px, 1.6vw, 18px);
+    }
+    .node h3{
+      font-size: var(--fs-lg);
+      font-weight: 800;
+      margin: 0 0 clamp(6px, .8vw, 10px);
+      letter-spacing:-.2px;
+    }
+    .node p{
+      font-size: var(--fs-md);
+      color: rgba(255,255,255,.90);
+      margin: 0 0 clamp(10px, 1.2vw, 12px);
+    }
+    .links{ display:flex; flex-direction:column; gap: clamp(8px, 1vw, 10px) }
+    .link{
+      display:block; text-align:center; text-decoration:none;
+      font-weight:700; font-size: var(--fs-btn);
+      padding: clamp(10px, 1.2vw, 12px) clamp(12px, 1.4vw, 16px);
+      border-radius: 10px;
+      color: rgba(96,165,250,1);        /* blue-400 */
+      background: rgba(59,130,246,.12);
+      border:1px solid rgba(59,130,246,.30);
+    }
+    .link:hover{ background: rgba(59,130,246,.18); color:#60a5fa; border-color: rgba(59,130,246,.45) }
 
-        .central-hub .subtitle {
-            font-size: clamp(calc(2rem * 0.8), 2vw, calc(2rem * 1.2));
-            font-weight: 700;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
+    /* ---------- Bottom Panel (Expertise) ---------- */
+    .pill{
+      background: rgba(59,130,246,.14);
+      border:1px solid rgba(59,130,246,.35);
+      border-radius: 999px;
+      padding: clamp(10px, 1.2vw, 14px) clamp(14px, 1.6vw, 18px);
+      text-align:center;
+      font-weight:700;
+      font-size: var(--fs-md);
+      color: #eaf2ff;
+    }
+    .expertise-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-lg);
+      margin-top: clamp(10px, 1.2vw, 12px);
+    }
+    @media (max-width: 680px){
+      .expertise-grid{ grid-template-columns: 1fr }
+    }
+    .expertise-item{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius-md);
+      padding: clamp(12px, 1.2vw, 14px);
+      font-size: var(--fs-md);
+    }
+    .expertise-item strong{ font-weight:800; color:#fff }
 
-        .central-hub .tagline {
-            font-size: clamp(calc(0.75rem * 0.8), 0.75vw, calc(0.75rem * 1.2));
-            margin-top: 10px;
-            opacity: 0.8;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            color: white;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
+    /* ---------- Interaction States (click focus/dim) ---------- */
+    .click-focus { transition: transform .25s ease, box-shadow .25s ease, background .25s ease, opacity .25s ease }
+    .click-focus.focused{
+      transform: translateY(-4px);
+      box-shadow: 0 22px 60px rgba(0,0,0,.45);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(59,130,246,.40);
+    }
+    .click-focus.dimmed{ opacity:.32 }
+    .hub-expanded .click-focus{ opacity:.2 }
 
-        .central-hub .tagline:hover {
-            opacity: 1;
-            color: #60a5fa;
-            transform: scale(1.02);
-        }
-
-        .central-hub:hover {
-            box-shadow: 0 30px 100px rgba(59, 130, 246, 0.3);
-            border-color: rgba(59, 130, 246, 0.4);
-        }
-
-        .central-hub.expanded {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(1.8);
-            z-index: 50;
-            box-shadow: 0 40px 120px rgba(59, 130, 246, 0.4);
-        }
-
-        .spoke-section {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s ease;
-            cursor: pointer;
-        }
-
-        .spoke-section.focused {
-            transform: scale(1.3) translateY(-10px);
-            z-index: 30;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(59, 130, 246, 0.4);
-        }
-
-        .expertise-section.focused {
-            transform: translateX(-50%) scale(1.3) translateY(-10px);
-        }
-
-        .spoke-section.dimmed {
-            opacity: 0.3;
-            transform: scale(0.95);
-        }
-
-        .expertise-section.dimmed {
-            opacity: 0.3;
-            transform: translateX(-50%) scale(0.95);
-        }
-
-        .spoke-section.hub-expanded {
-            opacity: 0.2;
-            transform: scale(0.8);
-        }
-
-        .expertise-section.hub-expanded {
-            opacity: 0.2;
-            transform: translateX(-50%) scale(0.8);
-        }
-
-        .spoke-section:hover:not(.focused):not(.dimmed):not(.hub-expanded) {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(59, 130, 246, 0.2);
-        }
-
-        .section-title {
-            color: #ffffff;
-            font-size: clamp(calc(1.3rem * 0.8), 1.3vw, calc(1.3rem * 1.2));
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            letter-spacing: -0.3px;
-        }
-
-        .section-title a {
-            color: inherit;
-            text-decoration: none;
-            display: block;
-            transition: all 0.2s ease;
-        }
-
-        .section-title a:hover {
-            color: #3b82f6;
-        }
-
-        /* Positioning */
-        .resources-section {
-            top: 8%;
-            left: 4%;
-            width: 380px;
-        }
-
-        .demos-section {
-            top: 8%;
-            right: 4%;
-            width: 380px;
-        }
-
-        .expertise-section {
-            bottom: -5%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 550px;
-        }
-
-        .node-grid {
-            display: grid;
-            gap: 15px;
-        }
-
-        .resources-grid {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-        }
-
-        .resources-grid .node:nth-child(3) {
-            grid-column: 1 / -1;
-        }
-
-        .demos-grid {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-        }
-
-        .node {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: left;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .node:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(59, 130, 246, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .node h3 {
-            font-size: clamp(calc(1.1rem * 0.8), 1.1vw, calc(1.1rem * 1.2));
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #ffffff;
-            letter-spacing: -0.2px;
-        }
-
-        .node p {
-            font-size: clamp(calc(0.9rem * 0.8), 0.9vw, calc(0.9rem * 1.2));
-            line-height: 1.4;
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.7);
-            font-weight: 400;
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .link-placeholder {
-            background: rgba(59, 130, 246, 0.1);
-            color: rgba(59, 130, 246, 0.9);
-            padding: 8px 14px;
-            border-radius: 6px;
-            font-size: clamp(calc(0.8rem * 0.8), 0.8vw, calc(0.8rem * 1.2));
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            text-align: center;
-        }
-
-        .link-placeholder:hover {
-            background: rgba(59, 130, 246, 0.15);
-            color: #60a5fa;
-            border-color: rgba(59, 130, 246, 0.4);
-        }
-
-        .expertise-intro {
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 20px;
-            text-align: center;
-            border: 1px solid rgba(59, 130, 246, 0.3);
-        }
-
-        .expertise-intro p {
-            font-size: clamp(calc(0.9rem * 0.8), 0.9vw, calc(0.9rem * 1.2));
-            color: rgba(255, 255, 255, 0.9);
-            margin: 0;
-            font-weight: 500;
-        }
-
-        .expertise-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 0;
-        }
-
-        .expertise-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .expertise-item {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 8px;
-            padding: 12px;
-            font-size: clamp(calc(0.9rem * 0.8), 0.9vw, calc(0.9rem * 1.2));
-            line-height: 1.4;
-            color: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            transition: all 0.2s ease;
-            margin-bottom: 8px;
-        }
-
-        .expertise-item:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .expertise-item strong {
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        /* Connection lines */
-        .connection-line {
-            position: absolute;
-            background: linear-gradient(45deg, rgba(59, 130, 246, 0.8), rgba(59, 130, 246, 0.4));
-            height: 2px;
-            z-index: 1;
-            opacity: 0.7;
-            box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
-            border-radius: 1px;
-        }
-
-        .line-1 {
-            top: 30%;
-            left: 27%;
-            width: 14%;
-            transform: rotate(-20deg);
-        }
-
-        .line-2 {
-            top: 30%;
-            right: 27%;
-            width: 14%;
-            transform: rotate(20deg);
-        }
-
-        .line-3 {
-            top: 40%;
-            left: 50%;
-            width: 3%;
-            transform: translateX(-50%) rotate(90deg);
-        }
-    </style>
+  </style>
 </head>
 <body>
-    <div class="stage">
-      <div class="stage-inner">
-        <div class="wheel-container">
-            <!-- Central Hub -->
-            <div class="central-hub" id="centralHub">
-                <img src="logo.png" alt="Logo" class="logo" />
-                <div class="title">UF Health Cancer Center</div>
-                <div class="subtitle">Bioinformatics</div>
-                <a href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/slides.html#/advancing-cancer-center-research-with-experienced-bioinformatics" class="tagline">
-                    Advancing Your Cancer Research<br /> through Rigorous Analyses
-                </a>
-            </div>
+  <div class="shell">
 
-            <!-- Connection Lines -->
-            <div class="connection-line line-1"></div>
-            <div class="connection-line line-2"></div>
-            <div class="connection-line line-3"></div>
-
-            <!-- Resources Section -->
-            <div class="spoke-section resources-section">
-                <div class="section-title">Our Resources</div>
-                <div class="node-grid resources-grid">
-                    <div class="node">
-                        <h3>Unit Webpage</h3>
-                        <p>UF branded introduction and team overview</p>
-                        <div class="links">
-                            <a href="https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/" class="link-placeholder">View Site</a>
-                        </div>
-                    </div>
-                    <div class="node">
-                        <h3>Bioinformatics Hub</h3>
-                        <p>Comprehensive documentation and best practices</p>
-                        <div class="links">
-                            <a href="https://ufhcc-bcbsr.github.io/hub/" class="link-placeholder">View Hub</a>
-                        </div>
-                    </div>
-                    <div class="node">
-                        <h3>Applications Portal</h3>
-                        <p>Showcase of our developed tools and applications</p>
-                        <div class="links">
-                            <a href="https://devbcb-sr.rc.ufl.edu/" class="link-placeholder">View Applications</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Demos Section -->
-            <div class="spoke-section demos-section">
-                <div class="section-title">Live Demonstrations</div>
-                <div class="node-grid demos-grid">
-                    <div class="node">
-                        <h3>Interactive Reports</h3>
-                        <p>Standard assay outputs and analysis reports</p>
-                        <div class="links">
-                            <a href="#rna-seq-report" class="link-placeholder">RNA-seq Report</a>
-                            <a href="https://ufhcc-bcbsr.github.io/atac-reportR/" class="link-placeholder">ATAC-seq Report</a>
-                            <a href="#scrna-seq-report" class="link-placeholder">scRNA-seq Report</a>
-                            <a href="#crispr-screen-report" class="link-placeholder">CRISPR screen Report</a>
-                        </div>
-                    </div>
-                    <div class="node">
-                        <h3>Custom Applications</h3>
-                        <p>Specialized tools for specific research needs</p>
-                        <div class="links">
-                            <a href="https://devbcb-sr.rc.ufl.edu/decoder/" class="link-placeholder">DECODeR</a>
-                            <a href="https://devbcb-sr.rc.ufl.edu/heatpathapp/" class="link-placeholder">HeatPath</a>
-                            <a href="https://devbcb-sr.rc.ufl.edu/clusterpicker/" class="link-placeholder">ClusterPicker</a>
-                            <a href="https://devufbcb-sr.rc.ufl.edu/atacreportr/" class="link-placeholder">Atac-reportR</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Expertise Section -->
-            <div class="spoke-section expertise-section">
-                <div class="section-title">
-                    <a href="slides.html">Our Expertise: Invested In Your Research</a>
-                </div>
-                <div class="expertise-intro">
-                    <p>Essential partners from conception to publication. We bring 20+ years of combined expertise to maximize your research impact.</p>
-                </div>
-                <div class="expertise-content">
-                    <div class="expertise-list">
-                        <div class="expertise-item">
-                            <strong>Project Design</strong><br />Grant writing • Experimental design
-                        </div>
-                        <div class="expertise-item">
-                            <strong>Quality Control</strong><br />Comprehensive QC • Troubleshooting
-                        </div>
-                        <div class="expertise-item">
-                            <strong>Infrastructure</strong><br />HiPerGator • CLI proficiency
-                        </div>
-                    </div>
-                    <div class="expertise-list">
-                        <div class="expertise-item">
-                            <strong>Analysis</strong><br />Statistical modeling • Visualization
-                        </div>
-                        <div class="expertise-item">
-                            <strong>Communication</strong><br />Reports • Publications • Presentations
-                        </div>
-                        <div class="expertise-item">
-                            <strong>Training</strong><br />Walk-in Support • Hands-on workshops
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- LEFT PANEL -->
+    <section class="left card click-focus">
+      <h2 class="section-title">Our Resources</h2>
+      <div class="grid cols-2">
+        <div class="node">
+          <h3>Unit Webpage</h3>
+          <p>UF branded introduction and team overview</p>
+          <div class="links">
+            <a class="link" href="https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/">View Site</a>
+          </div>
+        </div>
+        <div class="node">
+          <h3>Bioinformatics Hub</h3>
+          <p>Comprehensive documentation and best practices</p>
+          <div class="links">
+            <a class="link" href="https://ufhcc-bcbsr.github.io/hub/">View Hub</a>
+          </div>
+        </div>
+        <div class="node" style="grid-column: 1 / -1;">
+          <h3>Applications Portal</h3>
+          <p>Showcase of our developed tools and applications</p>
+          <div class="links">
+            <a class="link" href="https://devbcb-sr.rc.ufl.edu/">View Applications</a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <script>
-        /* ===== Canvas auto-scaler (single source of truth) ===== */
-        (function () {
-          const DESIGN_W = 1440;
-          const DESIGN_H = 900;
-          const stageInner = document.querySelector('.stage-inner');
+    <!-- CENTRAL HUB -->
+    <section class="hub card" id="centralHub">
+      <div class="hub-inner">
+        <img src="logo.png" alt="UF Health Cancer Center" class="logo" />
+        <div class="hub-title">UF Health Cancer Center</div>
+        <div class="hub-subtitle">Bioinformatics</div>
+        <a class="hub-tagline" href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/slides.html#/advancing-cancer-center-research-with-experienced-bioinformatics">
+          Advancing Your Cancer Research<br/>through Rigorous Analyses
+        </a>
+      </div>
+    </section>
 
-          function fit() {
-            const vw = window.innerWidth;
-            const vh = window.innerHeight;
-            const scale = Math.min(vw / DESIGN_W, vh / DESIGN_H);
+    <!-- RIGHT PANEL -->
+    <section class="right card click-focus">
+      <h2 class="section-title">Live Demonstrations</h2>
+      <div class="grid cols-1">
+        <div class="node">
+          <h3>Interactive Reports</h3>
+          <p>Standard assay outputs and analysis reports</p>
+          <div class="links">
+            <a class="link" href="#rna-seq-report">RNA-seq Report</a>
+            <a class="link" href="https://ufhcc-bcbsr.github.io/atac-reportR/">ATAC-seq Report</a>
+            <a class="link" href="#scrna-seq-report">scRNA-seq Report</a>
+            <a class="link" href="#crispr-screen-report">CRISPR screen Report</a>
+          </div>
+        </div>
+        <div class="node">
+          <h3>Custom Applications</h3>
+          <p>Specialized tools for specific research needs</p>
+          <div class="links">
+            <a class="link" href="https://devbcb-sr.rc.ufl.edu/decoder/">DECODeR</a>
+            <a class="link" href="https://devbcb-sr.rc.ufl.edu/heatpathapp/">HeatPath</a>
+            <a class="link" href="https://devbcb-sr.rc.ufl.edu/clusterpicker/">ClusterPicker</a>
+            <a class="link" href="https://devufbcb-sr.rc.ufl.edu/atacreportr/">Atac-reportR</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            const scaledW = DESIGN_W * scale;
-            const scaledH = DESIGN_H * scale;
-            const offsetX = (vw - scaledW) / 2;
-            const offsetY = (vh - scaledH) / 2;
+    <!-- BOTTOM PANEL -->
+    <section class="bottom card click-focus">
+      <h2 class="section-title"><a href="slides.html">Our Expertise: Invested In Your Research</a></h2>
+      <div class="pill">
+        Essential partners from conception to publication. We bring 20+ years of combined
+        expertise to maximize your research impact.
+      </div>
+      <div class="expertise-grid" style="margin-top: var(--gap-lg);">
+        <div class="expertise-item"><strong>Project Design</strong><br/>Grant writing • Experimental design</div>
+        <div class="expertise-item"><strong>Analysis</strong><br/>Statistical modeling • Visualization</div>
+        <div class="expertise-item"><strong>Quality Control</strong><br/>Comprehensive QC • Troubleshooting</div>
+        <div class="expertise-item"><strong>Communication</strong><br/>Reports • Publications • Presentations</div>
+        <div class="expertise-item"><strong>Infrastructure</strong><br/>HiPerGator • CLI proficiency</div>
+        <div class="expertise-item"><strong>Training</strong><br/>Walk-in Support • Hands-on workshops</div>
+      </div>
+    </section>
 
-            stageInner.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
-          }
+  </div><!-- /shell -->
 
-          window.addEventListener('resize', fit, { passive: true });
-          window.addEventListener('orientationchange', fit, { passive: true });
-          fit();
-        })();
-    </script>
+  <script>
+    // Click-to-focus / dim effect (optional, preserved from your version)
+    (function(){
+      const focusables = document.querySelectorAll('.click-focus');
+      const hub = document.getElementById('centralHub');
+      let current = null, hubExpanded = false;
 
-    <script>
-        /* ===== Your existing interaction logic ===== */
-        let currentFocused = null;
-        let hubExpanded = false;
+      function reset(){
+        focusables.forEach(el=>el.classList.remove('focused','dimmed'));
+        document.body.classList.remove('hub-expanded');
+        hubExpanded = false; current = null;
+      }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const spokeSections = document.querySelectorAll('.spoke-section');
-            const centralHub = document.getElementById('centralHub');
-
-            spokeSections.forEach(section => {
-                section.addEventListener('click', function(e) {
-                    if (e.target.tagName === 'A') return;
-                    if (currentFocused === section) {
-                        resetAll();
-                    } else {
-                        resetAll();
-                        section.classList.add('focused');
-                        spokeSections.forEach(other => {
-                            if (other !== section) {
-                                other.classList.add('dimmed');
-                            }
-                        });
-                        currentFocused = section;
-                    }
-                });
-            });
-
-            centralHub.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') return;
-                if (hubExpanded) {
-                    centralHub.classList.remove('expanded');
-                    spokeSections.forEach(s => s.classList.remove('hub-expanded'));
-                    hubExpanded = false;
-                } else {
-                    resetAll();
-                    centralHub.classList.add('expanded');
-                    spokeSections.forEach(s => s.classList.add('hub-expanded'));
-                    hubExpanded = true;
-                }
-            });
-
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.spoke-section') && !e.target.closest('.central-hub')) {
-                    resetAll();
-                }
-            });
-
-            function resetAll() {
-                spokeSections.forEach(section => {
-                    section.classList.remove('focused', 'dimmed', 'hub-expanded');
-                });
-                centralHub.classList.remove('expanded');
-                currentFocused = null;
-                hubExpanded = false;
-            }
+      focusables.forEach(el=>{
+        el.addEventListener('click', (e)=>{
+          if(e.target.closest('a')) return;
+          if(current === el){ reset(); return; }
+          focusables.forEach(x=>{ x.classList.toggle('dimmed', x!==el); });
+          el.classList.add('focused');
+          current = el;
         });
-    </script>
+      });
+
+      hub.addEventListener('click', (e)=>{
+        if(e.target.closest('a')) return;
+        if(hubExpanded){ reset(); return; }
+        focusables.forEach(x=>x.classList.add('dimmed'));
+        document.body.classList.add('hub-expanded');
+        hubExpanded = true;
+      });
+
+      document.addEventListener('click', (e)=>{
+        if(!e.target.closest('.click-focus') && !e.target.closest('#centralHub')) reset();
+      });
+    })();
+  </script>
 </body>
 </html>
