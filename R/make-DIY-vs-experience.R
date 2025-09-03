@@ -23,6 +23,7 @@ without_text <- "📁 my_project/
 ├── notes.txt
 ├── TODO.docx
 └── meeting_notes_scattered.pdf
+
 ❌ No documentation
 ❌ No version control
 ❌ Unclear file organization
@@ -36,6 +37,7 @@ with_text <- "📄 Interactive Report
 ├── 🧬 Differential Expression
 ├── 🔗 Links to Raw Data
 └── 📋 Complete Methods
+
 GitHub Repository
 ├── 📄 README.md
 ├── 📁 data/
@@ -43,45 +45,46 @@ GitHub Repository
 │   └── documented_analysis.R
 ├── 📁 results/
 └── 📁 docs/
+
 ✅ Complete documentation
 ✅ Version controlled
 ✅ Organized file structure
 ✅ Reproducible workflows
 ✅ Methods transparency"
 
-# Create tight plots with minimal spacing
+# Create plots with left-aligned tree structure but centered headers
 p1 <- ggplot() +
-  annotate("text", x = -0.4, y = 0.85,  # Same x as the text below
+  annotate("text", x = 0, y = 0.95,
            label = "New to Bioinformatics",
-           size = 4.5, fontface = "bold", color = "#e74c3c",
-           hjust = 0) +  # Add hjust = 0 for left alignment
-  annotate("text", x = -0.4, y = 0.75,
+           size = 8, fontface = "bold", color = "#e74c3c",
+           hjust = 0.7) +
+  annotate("text", x = -0.35, y = 0.85,  # Left-aligned for tree structure
            label = without_text,
-           size = 2.8, hjust = 0, vjust = 1,
-           color = "white", family = "mono") +
+           size = 4.5, hjust = 0, vjust = 1,  # hjust = 0 for left alignment
+           color = "white", family = "mono", fontface = "bold") +
   xlim(-0.5, 0.5) + ylim(0, 1) +
   theme_void() +
   theme(plot.background = element_rect(fill = "transparent", color = "transparent"),
-        plot.margin = unit(c(0,0,0,0), "cm"))
+        plot.margin = unit(c(0,-3,0,0), "cm")) # B L T R
 
 p2 <- ggplot() +
-  annotate("text", x = -0.4, y = 0.85,  # Same x as the text below
+  annotate("text", x = 0, y = 0.95,
            label = "Experienced Bioinformatician",
-           size = 4.5, fontface = "bold", color = "#27ae60",
-           hjust = 0) +  # Add hjust = 0 for left alignment
-  annotate("text", x = -0.4, y = 0.75,
+           size = 8, fontface = "bold", color = "#27ae60",
+           hjust = 0.5) +
+  annotate("text", x = -0.35, y = 0.85,  # Left-aligned for tree structure
            label = with_text,
-           size = 2.8, hjust = 0, vjust = 1,
-           color = "white") +
+           size = 4.5, hjust = 0, vjust = 1,  # hjust = 0 for left alignment
+           color = "white", family = "mono", fontface = "bold") +
   xlim(-0.5, 0.5) + ylim(0, 1) +
   theme_void() +
   theme(plot.background = element_rect(fill = "transparent", color = "transparent"),
-        plot.margin = unit(c(0,0,0,0), "cm"))
+        plot.margin = unit(c(0,0,0,-3), "cm"))
 
-# Combine with no spacing between panels
+# Combine with minimal spacing
 combined_plot <- grid.arrange(p1, p2, ncol = 2,
                               widths = c(1, 1))
 
-# Save
-ggsave("slide_figures/experience.png", combined_plot,
-       width = 6, height = 6, dpi = 300, bg = "transparent")
+# Save with better dimensions
+ggsave("slide_figures/experience2.png", combined_plot,
+       width = 12, height = 8.1, dpi = 300, bg = "transparent")
