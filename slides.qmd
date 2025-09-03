@@ -265,7 +265,11 @@ Sustainable tools & documentation
 Emerging methodologies integration
 <br>
 <br>
-**Works in progress:** RNA-seq & single-cell reports
+**Works in progress:** 
+
+Hands-on training in Spring 2026
+
+Multi-omics integration in DECODeR
 
 [← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link}
 
