@@ -106,6 +106,7 @@ NIH increasingly emphasizes robust data management and data analysis plans •�
 
 ::: {.notes}
 typical struggle of a newcomer—scattered project backups, outdated data, and a mess of scripts with no version control or clear organization. Multiple ‘final’ versions and non-reproducible code can derail even the best intentions, leaving you lost in meeting notes and random outputs. ••••  Our organized file structure, complete documentation, and controlled, reproducible workflows set you up for success. Partnering with us means leveraging our expertise to turn your data into actionable insights, saving you time and frustration.
+:::
 
 ---
 
