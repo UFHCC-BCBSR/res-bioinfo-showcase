@@ -61,20 +61,38 @@
       grid-template-areas: "left center right";
       align-items: stretch;            /* <- bottom align columns */
     }
+    
+    
+    
 
     /* wrappers use their intrinsic height (no forced stretch) */
-    .left-wrap, .center-wrap, .right-wrap{ display:block; height:auto }
+    .left-wrap, .center-wrap, .right-wrap{
+  display:flex;
+  height:100%;
+}
+
+/* left/right columns should let their card expand */
+.left, .right{
+  flex:1 1 auto;
+  display:flex;
+}
+
+/* make the big structural cards fill the column height */
+.left > .card,
+.right > .card,
+.hub.card,
+.band.card{
+  height:100%;
+}
     .left-wrap  { grid-area:left }
     .center-wrap{ grid-area:center }
     .right-wrap { grid-area:right }
 
-    /* Left & right simple blocks (no flex stretch) */
-    .left, .right{ display:block }
 
     /* Center: stack Hub + Expertise; content-aware rows (no forced fill) */
     .center{
       display:grid;
-      grid-template-rows: minmax(300px, auto) minmax(320px, auto);
+      grid-template-rows: minmax(300px, 0.44fr) 1fr; 
       gap: var(--gap-lg);
       min-height:0;
     }
@@ -250,6 +268,14 @@
       .expertise-grid{ grid-template-columns: 1fr }
       .pill{ max-width:none }
     }
+    
+    @media (max-height: 400px){
+  .card.left .panel-logo img{ width: clamp(80px, 16%, 120px); }
+}
+@media (max-height: 380px){
+  .card.left .panel-logo{ display:none; }   /* hide if space is tight */
+}
+
 
     /* ===== Resources footer logo ===== */
     .card.left { display:flex; flex-direction:column; }
