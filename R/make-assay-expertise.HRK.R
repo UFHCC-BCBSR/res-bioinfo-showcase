@@ -119,6 +119,10 @@ p_bubbles <-
   )
 
 # ---- Save (transparent) ----
-ggsave("slide_figures/assays-bubbles.HRK.png", p_bubbles,
-       width = 12, height = 7, dpi = 300, bg = "transparent")
+#ggsave("slide_figures/assays-bubbles.HRK.png", p_bubbles,
+#       width = 12, height = 7, dpi = 300, bg = "transparent")
+#p_bubbles 
+
+ggsave("slide_figures/assays-bubbles.HRK.black.png", p_bubbles,
+       width = 12, height = 7, dpi = 300, bg = "black")
 p_bubbles 
