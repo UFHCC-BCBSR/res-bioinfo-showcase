@@ -18,7 +18,7 @@ The main hub of the presentation is index.html. This includes click to enlarge s
 
 ## Collaboration
 
-⚠️ **Coordinate changes to avoid conflicts** - especially with the main
+️ **Coordinate changes to avoid conflicts** - especially with the main
 `index.html`
 
 Pull before making changes: `git pull origin main`
