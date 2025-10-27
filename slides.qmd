@@ -1,6 +1,6 @@
 ---
 title: "Bioinformatics Expertise Invested in your Research"
-subtitle: "UFHCC BCB-SR Bioinformatics Team"
+subtitle: "UFHCI BCB-SR Bioinformatics Team"
 format:
   revealjs:
     theme: dark
