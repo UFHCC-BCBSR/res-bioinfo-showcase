@@ -1,0 +1,181 @@
+---
+title: "Bioinformatics Support for Cancer Control & Population Sciences"
+subtitle: "UF Health Cancer Institute BCB-SR Bioinformatics Team"
+format:
+  revealjs:
+    theme: dark
+    margin: 0
+    css: styles.css
+title-slide-attributes:
+  data-background-image: "background.jpeg"
+  data-background-size: "cover"
+  data-background-position: "center"
+  data-background-opacity: "0.05"
+---
+
+## <span style="display: block; text-align: center;">Meet Your Bioinformatics Team</span>
+
+::: {.columns}
+::: {.column width="60%"}
+<img src="slide_figures/about-us.png" alt="Team Bios">
+:::
+::: {.column width="40%"}
+- **3 bioinformaticians** with complementary skills
+- **30+ years** combined experience
+- **Integrated approach** collaborate with one, benefit from all
+:::
+:::
+
+::: {.notes}
+Brief intro - emphasize we're partners, not a service. We become key personnel on grants and are invested in your success.
+:::
+
+---
+
+## <span style="display: block; text-align: center; font-size: 0.95em;">Why Bioinformatics for Cancer Control Research?</span>
+
+<div style="font-size:0.85em; line-height:1.5;">
+<strong>Cutting edge cancer control research requires:</strong>
+<ul>
+  <li><strong>Molecular characterization</strong> of disparities across populations</li>
+  <li><strong>Ancestry analysis</strong> to understand genetic contributions to risk</li>
+  <li><strong>Biomarker discovery</strong> for prevention and early detection</li>
+  <li><strong>Intervention response</strong> measurement at molecular level</li>
+  <li><strong>Integration</strong> of genomic, environmental, and behavioral data</li>
+</ul>
+</div>
+
+::: {.notes}
+CCPS research increasingly uses molecular data to understand disparities, identify who's at risk, and measure intervention effectiveness. This requires specialized bioinformatics expertise to design studies, analyze complex data, and translate findings into actionable insights.
+:::
+---
+
+## <span style="display: block; text-align: center;">Our Collaboration Model</span>
+
+<img src="slide_figures/collaboration-model-rect.png" alt="collaboration model" style="width: 100%; height: auto;">
+
+::: {.notes}
+Not a service core - we're partners. Key personnel on grants, funded through your research, invested in your success.
+:::
+
+---
+
+## Bioinformatics Project Lifecycle
+
+::: columns
+::: {.column width="70%"}
+![](slide_figures/project_lifecycle_transparent.png){width=100%}
+:::
+:::
+
+::: notes
+We support the full lifecycle - from grant writing through publication. This is especially important for longitudinal intervention studies and population-based research where robust data management is critical.
+:::
+
+---
+
+### <span style="display: block; text-align: center; font-size: 0.9em;">Relevant Expertise for Cancer Control Research</span>
+
+<div style="text-align: center;">
+![](slide_figures/assays-bubbles.HRK.png){width=100%}
+</div>
+
+::: {.notes}
+Highlighting our most relevant experience for your research:
+- **RNA-seq**: Hundreds of datasets - biomarker discovery, intervention response, molecular subtyping
+- **Ancestry analysis**: Population genetics, admixture, GWAS in diverse populations  
+- **Methylation**: Environmental exposures, disparities research
+- **Single-cell & spatial**: Emerging tools for understanding heterogeneity in diverse populations
+
+We understand the unique analytical challenges for each platform and can help design studies that work.
+:::
+
+---
+
+### <span style="display: block; text-align: center;">Strengthening Your Grant Applications</span>
+
+:::: {.columns .v-center-container}
+::: {.column width="42%"}
+![](slide_figures/DMSP-plan.png){width=92%}
+<div style="margin-top:0.6em; font-size:0.9em; line-height:1.3;">
+<strong>NIH expects plans for:</strong><br>
+• Code & software<br>
+• Data management & sharing<br>
+• Computational resources
+</div>
+:::
+::: {.column width="58%"}
+<div style="font-size:0.9em; line-height:1.4;">
+**If your project includes high-dimensional data, an expert bioinformatician makes the proposal stronger.**
+</div>
+<div style="margin-top:0.6em; font-size:0.75em; line-height:1.4;">
+  <ul class="checklist">
+    <li>Assays chosen with clear rationale</li>
+    <li>Experimental design avoids QC pitfalls</li>
+    <li>Named personnel to analyze data</li>
+    <li>Code &amp; software packages specified</li>
+    <li>Compute &amp; storage resources identified</li>
+    <li>Results visualization approach defined</li>
+  </ul>
+</div>
+:::
+::::
+
+::: {.notes}
+We help craft compelling data management plans, justify analytical approaches, and budget appropriately. This is especially critical for studies involving diverse populations, longitudinal designs, or multi-omics approaches.
+:::
+
+---
+
+### <span style="display: block; text-align: center;">Experience = Robust, Reproducible Analyses</span>
+
+:::: {.columns style="display: flex; align-items: center;"}
+::: {.column width="50%"}
+![](slide_figures/batch-effect.png){width=100%}
+:::
+::: {.column width="50%"}
+<div style="font-size:0.85em; line-height:1.4;">
+<strong>Critical for cancer control research:</strong>
+<ul>
+  <li>Distinguishing technical artifacts from biological signal</li>
+  <li>Batch effects in longitudinal studies</li>
+  <li>Small sample sizes from diverse populations</li>
+  <li>Complex experimental designs (interventions, time series)</li>
+</ul>
+</div>
+:::
+::::
+
+::: {.notes}
+Our experience with hundreds of datasets means we catch problems early. This is especially important for intervention studies where batch effects could mask real treatment effects, or population studies where technical variation could be confused with biological differences between groups.
+:::
+
+---
+
+## <span style="display: block; text-align: center;">Discussion: Your Research Needs</span> {data-background-image="background.jpeg" data-background-size="cover" data-background-position="center" data-background-opacity="0.05"}
+
+<div style="font-size:1.1em; line-height:1.8;">
+
+<strong>Let's discuss:</strong>
+<ul>
+  <li>Planning studies with RNA-seq or genomic data?</li>
+  <li>Need support for population genetics or ancestry analysis?</li>
+  <li>Intervention studies with molecular endpoints?</li>
+  <li>Grant proposals in development?</li>
+</ul>
+
+<br>
+
+<strong>Contact us:</strong><br>
+Email: <a href="mailto:UFHCC-BCB-SR@ad.ufl.edu">UFHCC-BCB-SR@ad.ufl.edu</a><br>
+<a href="mailto:jobrant@ufl.edu">Jason Orr Brant</a> • <a href="mailto:hkates@ufl.edu">Heather Kates</a> • <a href="mailto:kshirlekar@ufl.edu">Kalyanee Shirlekar</a>
+
+<br>
+
+<small><a href="https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/">More resources & documentation</a></small>
+
+</div>
+
+::: {.notes}
+Open for questions and discussion. Happy to talk about specific analytical challenges or upcoming projects.
+:::
