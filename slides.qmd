@@ -306,7 +306,7 @@ This isn't just familiarity we understand the unique analytical challenges, opti
 
 ---
 
-### Scaling expertise across the cancer center
+### Scaling expertise across the Cancer Institute
 
 ::: {.columns}
 
@@ -325,7 +325,7 @@ Specialized applications
 
 Hands-on Training
 
-[Explore Our Resources](https://ufhcc-bcbsr.github.io/bioinfo-showcase/)
+[Explore Our Resources](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/)
 
 </div>
 :::
@@ -333,12 +333,12 @@ Hands-on Training
 :::
 
 ::: {.notes}
-Last slide before Demos: Our expertise doesn't just benefit direct collaborators—we've built comprehensive resources that support the entire cancer center community. Our Documentation Hub provides dynamic best practices that evolve with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR, HeatPath, and ClusterPicker address specific bottlenecks we see repeatedly. These tools democratize sophisticated analysis while maintaining analytical rigor.
+Last slide before Demos: Our expertise doesn't just benefit direct collaborators—we've built comprehensive resources that support the entire Cancer Institute community. Our Documentation Hub provides dynamic best practices that evolve with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR, HeatPath, and ClusterPicker address specific bottlenecks we see repeatedly. These tools democratize sophisticated analysis while maintaining analytical rigor.
 :::
 
 ---
 
-## <span style="display:block; text-align:center;">Advancing Cancer Center Research with Experienced Bioinformatics</span> {data-background-image="background.jpeg" data-background-size="cover" data-background-position="center" data-background-opacity="0.05"}
+## <span style="display:block; text-align:center;">Advancing Cancer Institute Research with Experienced Bioinformatics</span> {data-background-image="background.jpeg" data-background-size="cover" data-background-position="center" data-background-opacity="0.05"}
 
 **Complete research lifecycle support**
 
@@ -355,7 +355,7 @@ Hands-on training in Spring 2026
 
 Multi-omics integration in DECODeR
 
-[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link}
+[← back to presentation hub](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/){.hub-link}
 
 
 ---
@@ -366,9 +366,9 @@ Multi-omics integration in DECODeR
 
 **Ready to elevate your research?**
 <br>
-[Bioinforamtics Unit webpage](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/) → UF Health Cancer Center  
+[Bioinforamtics Unit webpage](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/) → UF Health Cancer Institute  
 
-[Bioinformatics Hub](https://ufhcc-bcbsr.github.io/hub/) → immediate resources  
+[Bioinformatics Hub](https://ufhcc-bcbsr.github.io/res-hub/) → immediate resources  
 
 [UF Health channels](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/biostatistics-shared-resource-support-request-form/) → request consultation  
 
@@ -377,10 +377,10 @@ Multi-omics integration in DECODeR
 [UFHCC BCB-SR](mailto:UFHCC-BCB-SR@ad.ufl.edu) &nbsp;&nbsp;&nbsp;&nbsp; [Jason Orr Brant](mailto:jobrant@ufl.edu)  
 [Heather Kates](mailto:hkates@ufl.edu) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Kalyanee Shirlekar](mailto:kshirlekar@ufl.edu)
 
-<!-- [← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/){.hub-link} -->
-<!-- <a href="https://ufhcc-bcbsr.github.io/bioinfo-showcase/" style="display: inline-block; padding: 8px 16px; background-color: #0066cc; color: white; text-decoration: none; border-radius: 4px;">← Back to Presentation Hub</a> -->
+<!-- [← back to presentation hub](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/){.hub-link} -->
+<!-- <a href="https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/" style="display: inline-block; padding: 8px 16px; background-color: #0066cc; color: white; text-decoration: none; border-radius: 4px;">← Back to Presentation Hub</a> -->
 <br>
-<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/)</small>
+<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/)</small>
 
 ---
 
@@ -401,4 +401,4 @@ Multi-omics integration in DECODeR
   **Your turn:** Questions about integrating rigorous bioinformatics?
   
  <br>
-<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/bioinfo-showcase/)</small>
+<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/)</small>
