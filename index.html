@@ -232,6 +232,36 @@
       white-space: normal;
     }
     .expertise-item b{ font-weight:800; color:#fff }
+    
+    /* ---- Mini program wells (one-row of 4) ---- */
+.programs-grid{
+  margin-top: 10px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 12px;
+}
+.program-chip{
+  display:block;
+  text-align:center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: clamp(.86rem, .95vw, .98rem);
+  background: rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.10);
+  color:#fff;
+  text-decoration:none;
+}
+.program-chip:hover{ background: rgba(255,255,255,.06); }
+
+/* stack on smaller screens */
+@media (max-width: 980px){
+  .programs-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px){
+  .programs-grid{ grid-template-columns: 1fr; }
+}
+
 
     /* ===== Height-aware tightening ===== */
     @media (max-height: 840px){
@@ -388,6 +418,15 @@
               <div class="expertise-item"><b>Quality Control</b><br/>Comprehensive QC • Troubleshooting</div>
               <div class="expertise-item"><b>Communication</b><br/>Reports • Publications • Presentations</div>
             </div>
+            <!-- Mini program wells (one-row) -->
+<div class="programs-grid">
+  <a class="program-chip" href="https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/slides.html#/title-slide">CTT</a>
+  <a class="program-chip" href="https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/slides.html#/title-slide">MOO</a>
+  <a class="program-chip" href="https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/slides.html#/title-slide">CCPS</a>
+  <a class="program-chip" href="https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/slides.html#/title-slide">IOM</a>
+</div>
+
+
           </section>
 
         </div>
