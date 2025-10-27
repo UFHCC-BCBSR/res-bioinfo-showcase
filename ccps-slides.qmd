@@ -35,7 +35,9 @@ Brief intro - emphasize we're partners, not a service. We become key personnel o
 ## <span style="display: block; text-align: center; font-size: 0.95em;">Why Bioinformatics for Cancer Control Research?</span>
 
 <div style="font-size:0.85em; line-height:1.5;">
+<p style="font-size:1.2em; margin-bottom:0.3em;">
 <strong>Cutting edge cancer control research requires:</strong>
+</p>
 <ul>
   <li><strong>Molecular characterization</strong> of disparities across populations</li>
   <li><strong>Ancestry analysis</strong> to understand genetic contributions to risk</li>
