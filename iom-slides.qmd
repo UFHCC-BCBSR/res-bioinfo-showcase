@@ -1,0 +1,404 @@
+---
+title: "Bioinformatics Expertise Invested in your Research"
+subtitle: "UFHCI BCB-SR Bioinformatics Team"
+format:
+  revealjs:
+    theme: dark
+    margin: 0
+    css: styles.css
+title-slide-attributes:
+  data-background-image: "background.jpeg"
+  data-background-size: "cover"
+  data-background-position: "center"
+  data-background-opacity: "0.05"   # must be a string
+---
+
+
+
+## <span style="display: block; text-align: center;">Meet Your Bioinformatics Team</span>
+
+::: {.columns}
+
+::: {.column width="60%"}
+<img src="slide_figures/about-us.png" alt="Team Bios">
+:::
+
+::: {.column width="40%"}
+- **3 bioinformaticians** with complementary skills
+- **30+ years** combined experience
+- **Integrated approach** collaborate with one, benefit from all
+:::
+
+:::
+
+::: {.notes}
+Emphasize team’s diverse skills: computational biology, stats, cancer genomics.  
+- Stress 20+ years of collective omics experience.  
+- Highlight collaboration: “Work with one, get all of us.”  
+:::
+---
+
+## <span style="display: block; text-align: center;">Our Collaboration Model</span>
+
+<img src="slide_figures/collaboration-model-rect.png" alt="collaboration model" style="width: 100%; height: auto;">
+
+::: {.notes}
+**Not a service core we're partners** • Key personnel on grants • Funded through your research • Invested in your success
+:::
+
+---
+
+### <span style="display: block; text-align: center;">Strengthening Your Grant Applications</span>
+
+:::: {.columns .v-center-container}
+
+::: {.column width="42%"}
+![](slide_figures/DMSP-plan.png){width=92%}
+
+<div style="margin-top:0.6em; font-size:0.9em; line-height:1.3;">
+<strong>NIH expects plans for:</strong><br>
+• Code & software<br>
+• Data management & sharing<br>
+• Computational resources
+</div>
+:::
+
+::: {.column width="58%"}
+<div style="font-size:0.9em; line-height:1.4;">
+
+**If your project includes high-dimensional data, an expert bioinformatician makes the proposal stronger.**
+
+</div>
+
+<div style="margin-top:0.6em; font-size:0.75em; line-height:1.4;">
+  <ul class="checklist">
+    <li>Assays chosen with clear rationale</li>
+    <li>Experimental design avoids QC pitfalls</li>
+    <li>Named personnel to analyze data</li>
+    <li>Code &amp; software packages specified</li>
+    <li>Compute &amp; storage resources identified</li>
+    <li>Results visualization approach defined</li>
+  </ul>
+</div>
+
+:::
+
+::::
+
+::: {.notes}
+NIH increasingly emphasizes robust data management and data analysis plans •• We help you craft compelling data management and sharing plans, justify your analytical approaches, and budget appropriately for computational resources
+:::
+
+---
+
+### <span style="display: block; text-align: center;">Experience = Robust, Reproducible Analyses</span>
+
+:::: {.columns style="display: flex; align-items: center;"}
+
+::: {.column width="75%"}
+![](slide_figures/experience.png){width=100%}
+:::
+
+::: {.column width="25%"}
+<div style="font-size: 0.8em; line-height: 1.4;">
+- **Hundreds** of datasets analyzed  
+- **Every** major omics assay  
+- **Problems solved** before they derail your project  
+</div>
+:::
+
+::::
+
+::: {.notes}
+newbie chaos vs. our organized expertise.  
+- Highlight hundreds of datasets analyzed, omics assay experience.  
+- Mention tools (GitHub, READMEs, reports) for transparency.  
+- End strong: we save time and deliver insights 
+:::
+
+---
+
+## Bioinformatics Project Lifecycle
+
+::: columns
+::: {.column width="60%"}
+![](slide_figures/project_lifecycle_transparent.png){width=100%}
+:::
+::: {.column width="40%"}
+
+::: {.r-stack style="position: relative; min-height: 250px; display: flex; align-items: center; justify-content: center; text-align: left;"}
+
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+Proposal & Funding 
+<ul style="font-size:70%">
+  <li>Assist in grant writing</li>
+  <li>Experimental design planning and choosing the protocol</li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+Data Generation & Delivery  
+<ul style="font-size:70%">
+  <li>Coordination with the sequencing core</li>
+  <li>Data storage on HiPerGator</li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+Data Pre-Processing  
+<ul style="font-size:70%">
+  <li>Rigorous quality control </li>
+  <li>Troubleshooting at multiple levels </li>
+  <li>MultiQC reports </li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+Primary and Secondary Analysis  
+<ul style="font-size:70%">
+  <li>Use of scalable best-practice pipelines</li>
+  <li>Downstream analysis: differential analysis, pathway analysis, tool building etc. </li>
+  <li>Access to in-house tools </li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="5">
+Reports Delivery  
+<ul style="font-size:70%">
+  <li>Automated project tracking</li>
+  <li>Traceable and extensive reports</li>
+</ul>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="6">
+Publication & Data Management  
+<ul style="font-size:70%">
+  <li>Transfer of analysis files </li>
+  <li>Generation of publication quality images</li>
+  <li>Uploading files to SRA</li>
+</ul>
+</div>
+
+:::
+
+:::
+:::
+
+::: notes
+- People familiar with software development know about the **Software Development Life Cycle (SDLC)**.  
+  Similarly, for a bioinformatics project, this is how a typical lifecycle looks with us.  
+
+- **Project Proposal**: We often get involved early, helping collaborators with grant writing (e.g., NIH) and advising on study design, feasibility, and data requirements.  
+
+- **Data Generation & Delivery**: We coordinate with sequencing cores to ensure smooth and well-documented data transfer. Raw FASTQ files are stored on HiPerGator, and we also help set up dedicated PI resources or temporary BCBSR resources.  
+
+- **QC & Pre-processing**: Once data are in hand, we perform QC, processing, and analysis using best-practice pipelines (often ENCODE-based). QC reports summarize results, but a “perfect” QC is rare — troubleshooting may involve revisiting tapestation results, over-digestion, high PCR cycles, or small insert sizes.  
+
+- **Analysis & Interpretation**: We then carry out primary and secondary analyses, working closely with collaborators to ensure findings are biologically meaningful and aligned with their goals.  
+
+- **Reporting & Outputs**: Throughout, collaborators expect transparent communication, reproducible workflows, and clear reports/visualizations. We often assist in manuscript preparation and grant support to help translate analyses into impactful scientific outputs.  
+:::
+
+---
+
+
+
+
+### <span style="display: block; text-align: center;">Our Deep Experience Across Cancer Omics</span>
+
+<div style="text-align: center;">
+![](slide_figures/assays-bubbles.HRK.png){width=100%}
+</div>
+
+::: {.notes}
+Full list of assays we have experience with:
+RNA-seq, ATAC-seq, CUT&RUN
+Methyl-Seq (EM-Seq, RRBS, WGBS)  
+MAPit/NOMe-Seq
+Single-cell approaches, spatial transcriptomics
+CRISPR screens, AI-driven rare disease research
+
+This isn't just familiarity we understand the unique analytical challenges, optimal parameters, and common pitfalls for each platform.
+:::
+
+---
+
+#### <span style="display: block; text-align: center;">Experienced Quality Control Saves Time + Improves Results</span>
+
+:::: {.columns .v-center-container}
+::: {.column width="50%"}
+![](slide_figures/insert-size-good.png){width=100%}
+:::
+::: {.column width="50%"}
+![](slide_figures/batch-effect.png){width=80%}
+:::
+::::
+
+<div style="margin-top:0.4em; font-size:0.8em; line-height:1.3;">
+
+**Catch critical issues early:**
+
+<ul>
+  <li>Failed library prep detection</li>
+  <li>Contamination identification</li>
+  <li>Sequencing quality issues</li>
+</ul>
+
+</div>
+
+::: notes
+- QC is the foundation of any bioinformatics project — it helps us spot technical problems before they impact results.
+- Example 1: The Picard insert size plot showed a very narrow distribution with a shift toward small fragments.  
+  This flagged **over-digestion or library prep issues**, which would have biased downstream mapping and peak calling
+- Example 2: A PCA revealed strong **batch effects** — samples clustering by sequencing batch rather than biological condition.  
+  Without QC, this artifact could easily be mistaken for a biological signal.  
+- These checks save time, prevent misinterpretation, and ensure our analyses reflect true biology rather than technical noise.  
+:::
+---
+
+### Analysis That Answers Your Questions
+
+:::: {.columns .v-center-container}
+
+::: {.column width="50%"}
+![](slide_figures/exp-design-mouse.png){width=100%}
+
+:::
+
+::: {.column width="50%"}
+![](slide_figures/simple-vs-complex-models.png){width=100%}
+
+:::
+
+
+::::
+
+<div style="margin-top:0.4em; font-size:0.8em; line-height:1.3;">
+
+<ul>
+  <li>Common tools provide simple analysis  </li>
+  <li>Standard approaches may **throw away information** or lead to false positives  </li>
+  <li>We can fit mixed models that match the design and interpret the results </li>
+</ul>
+
+</div>
+
+---
+
+## Proven Track Record of Success
+
+::: columns
+
+::: {.column width="55%"}
+
+![Research outcomes supported by BCB-SR Bioinformatics](slide_figures/track-record.png){fig-align="center"}
+
+:::
+
+::: {.column width="45%"}
+
+- **Project completion:** Most funded projects progress to manuscripts or other outputs.  
+- **Sustained collaboration:** Ongoing partnerships with investigators across disciplines.  
+
+:::
+
+:::
+
+---
+
+### Scaling expertise across the Cancer Institute
+
+::: {.columns}
+
+::: {.column width="60%"}
+![](slide_figures/resources-ecosystem.png){fig-align="center" width="80%"}
+:::
+
+::: {.column width="40%"}
+<div style="padding-left: 1.5rem; padding-top: 1rem;">
+
+Our collaborative insights become accessible tools: 
+
+Comprehensive documentation
+
+Specialized applications
+
+Hands-on Training
+
+[Explore Our Resources](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/)
+
+</div>
+:::
+
+:::
+
+::: {.notes}
+Last slide before Demos: Our expertise doesn't just benefit direct collaborators—we've built comprehensive resources that support the entire Cancer Institute community. Our Documentation Hub provides dynamic best practices that evolve with the field. We create interactive reports that transform standard pipeline outputs into comprehensive, explorable documents. Our custom applications like DECODeR, HeatPath, and ClusterPicker address specific bottlenecks we see repeatedly. These tools democratize sophisticated analysis while maintaining analytical rigor.
+:::
+
+---
+
+## <span style="display:block; text-align:center;">Advancing Cancer Institute Research with Experienced Bioinformatics</span> {data-background-image="background.jpeg" data-background-size="cover" data-background-position="center" data-background-opacity="0.05"}
+
+**Complete research lifecycle support**
+
+Experimental design → Publication  
+
+Sustainable tools & documentation 
+
+Emerging methodologies integration
+<br>
+<br>
+**Works in progress:** 
+
+Hands-on training in Spring 2026
+
+Multi-omics integration in DECODeR
+
+[← back to presentation hub](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/){.hub-link}
+
+
+---
+
+## <span style="display: block; text-align: center;">Contact and Work With Us </span>
+
+<!--<img src="slide_figures/collaboration-pathways.png" alt="Flowchart showing different entry points: unit webpage, bioinformatics hub, UF Health channels leading to collaboration types">-->
+
+**Ready to elevate your research?**
+<br>
+[Bioinforamtics Unit webpage](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/bioinformatics-unit/) → UF Health Cancer Institute  
+
+[Bioinformatics Hub](https://ufhcc-bcbsr.github.io/res-hub/) → immediate resources  
+
+[UF Health channels](https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/biostatistics-shared-resource-support-request-form/) → request consultation  
+
+
+*email us: *  
+[UFHCC BCB-SR](mailto:UFHCC-BCB-SR@ad.ufl.edu) &nbsp;&nbsp;&nbsp;&nbsp; [Jason Orr Brant](mailto:jobrant@ufl.edu)  
+[Heather Kates](mailto:hkates@ufl.edu) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Kalyanee Shirlekar](mailto:kshirlekar@ufl.edu)
+
+<!-- [← back to presentation hub](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/){.hub-link} -->
+<!-- <a href="https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/" style="display: inline-block; padding: 8px 16px; background-color: #0066cc; color: white; text-decoration: none; border-radius: 4px;">← Back to Presentation Hub</a> -->
+<br>
+<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/)</small>
+
+---
+
+## <span style="display: block; text-align: center;">Discussion and Questions </span>
+
+<!--<img src="slide_figures/discussion-topics.png" alt="Word cloud or icon grid showing research challenges, analytical bottlenecks, collaboration opportunities">-->
+
+**Let's discuss your research challenges**
+  
+  Analytical bottlenecks limiting progress?  
+  
+  How could interactive tools accelerate discoveries?  
+  
+  What collaborations might amplify impact?
+  
+  <br>
+  
+  **Your turn:** Questions about integrating rigorous bioinformatics?
+  
+ <br>
+<small>[← back to presentation hub](https://ufhcc-bcbsr.github.io/res-bioinfo-showcase/)</small>
